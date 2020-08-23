@@ -1,3 +1,9 @@
+$bs-footer-heading-color: $bs-cyan-5;
+$bs-footer-bg-color: #333333;
+$bs-footer-link-color: $bs-white;
+$bs-footer-link-active-color: $bs-cyan-5;
+$bs-copyright-text-color: #959BA6;
+
 .site-footer {
   display: flex;
   flex-direction: column;
@@ -66,7 +72,7 @@
 
   .copyright {
     background-color: $bs-black;
-    color: #959BA6;
+    color: $bs-copyright-text-color;
     font-weight: 400;
     font-size: 14px;
     text-align: center;

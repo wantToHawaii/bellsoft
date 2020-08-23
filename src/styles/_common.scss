@@ -1,73 +1,19 @@
 // Colors
 
-$bs-cyan-1: #00D4EB; // figma(menu item:active border)
-$bs-cyan-2: #00C7DD; // figma(banner main subtitle)
-$bs-cyan-3: #009CAD; // figma(button contained, button outlined in main banner)
-$bs-cyan-4: #008B9A; // adobeXD(button contained in section, section background), figma(button outlined header, header icons)
-$bs-cyan-5: #3fc8d6; // adobeXD(section icons, footer headers)
+$bs-cyan-1: #00D4EB;
+$bs-cyan-2: #00C7DD;
+$bs-cyan-3: #009CAD;
+$bs-cyan-4: #008B9A;
+$bs-cyan-5: #3fc8d6;
 
 $bs-black: #000;
 $bs-white: #fff;
 
-$bs-button-color: $bs-cyan-3;
-
-
-$bs-link-color: $bs-cyan-4;
-
-
-$bs-heading-color-default: #333;
-
-
 $bs-font-main: 'Titillium Web', sans-serif;
-
 
 $bs-z-index-top: 1000;
 
-$bs-form-controls-border-color: #DADDE2;
-$bs-form-controls-placeholder-color: #959BA6;
-
-
-$bs-header-menu-bg-color: $bs-white;
-$bs-header-menu-link-color: #202020;
-$bs-header-menu-link-active-color: $bs-cyan-1;
-$bs-header-menu-icons-color: $bs-cyan-4;
-
-$bs-footer-heading-color: $bs-cyan-5;
-$bs-footer-bg-color: #333333;
-$bs-footer-link-color: $bs-white;
-$bs-footer-link-active-color: $bs-cyan-5;
-
-$bs-section-hero-bg-color: #1D1D1F;
-$bs-section-hero-text-color: #F5F5F7;
-$bs-section-hero-secondary-color: $bs-cyan-2;
-
-$bs-section-benefits-bg-color: #EFF0F2;
-$bs-section-benefits-card-bg-color: $bs-white;
-$bs-section-benefits-heading-color: $bs-black;
-$bs-section-benefits-text-color: #747A86;
-
-$bs-section-plan-bg-color: $bs-cyan-4;
-$bs-section-plan-button-color: $bs-white;
-$bs-section-plan-card-bg-color: $bs-white;
-$bs-section-plan-card-icons-premium-color: $bs-cyan-5;
-$bs-section-plan-card-icons-standard-color: #747A86;
-
-$bs-section-calculator-icons-color: $bs-cyan-5;
-
-$bs-section-customers-bg-color: #F9F9FA;
-$bs-section-customers-card-bg-color: $bs-white;
-
-$bs-section-articles-bg-color: #333333;
-$bs-section-articles-card-bg-color: $bs-white;
-$bs-section-articles-card-border-color: #DADDE2;
-$bs-section-articles-card-link-color: $bs-cyan-4;
-
-$bs-section-contact-bg-color: #F9F9FA;
-
-
 // Media queries
-
-$bs-content-max-width: 1280px;
 
 $bs-phone: 360px;
 $bs-tablet: 768px;
@@ -94,7 +40,7 @@ $bs-desktop: 1280px;
 
 /*
  * Spacing uses 8px space maker strategy (like material design)
- * 1 size === 8px
+ * 1 size = 8px
  */
  @function spacing($size: 1) {
   @return $size * 8px;
