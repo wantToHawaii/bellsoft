@@ -1,0 +1,186 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  background-color: $bs-header-menu-bg-color;
+  padding-top: spacing(2);
+  padding-bottom: spacing(2);
+  position: sticky;
+  top: 0;
+  z-index: $bs-z-index-top;
+
+  @include media('tablet') {
+    padding-top: spacing(1);
+    padding-bottom: spacing(1);
+  }
+
+  @include media('sm-desktop', 'desktop') {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .bs-flex-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav {
+      flex: 0 1 33.3333%;
+      max-width: 33.3333%;
+      position: relative;
+
+      @include media('sm-desktop', 'desktop') {
+        flex: 0 0 auto;
+        max-width: 100%;
+        order: 2;
+        margin-left: auto;
+      }
+
+      .icon-menu-button {
+        fill: $bs-header-menu-icons-color;
+        
+        @include media('sm-desktop', 'desktop') {
+          display: none;
+        }
+      }
+
+      .menu {
+        background: $bs-header-menu-bg-color;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        overflow: hidden;
+        position: absolute;
+        left: spacing(-2);
+        top: calc(100% + #{spacing(2)});
+        padding: 0 spacing(2);
+        margin: 0;
+        width: 100vw;
+
+        height: auto;
+        max-height: 0;
+
+        transition: max-height 300ms ease-in-out;
+
+        @include media('sm-desktop', 'desktop') {
+          overflow: visible;
+          position: static;
+          flex-direction: row;
+          max-height: initial;
+          width: auto;
+
+          &.active {
+            max-height: initial;
+          }
+        }
+
+        &.active {
+          max-height: 1000px;
+          transition: max-height 300ms ease-in-out;
+        }
+
+        .item {
+          flex: 0 0 100%;
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 auto;
+            
+            & + .item {
+              margin-left: spacing(3);
+            }
+          }
+
+          .link {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: $bs-header-menu-link-color;
+            display: block;
+            text-decoration: none;
+            padding: spacing(1) 0;
+            color: $bs-header-menu-link-color;
+
+            &:hover {
+              color: $bs-header-menu-link-active-color;
+            }
+
+            @include media('sm-desktop', 'desktop') {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-bottom: 4px solid transparent;
+              height: 80px;
+
+              &:hover {
+                color: $bs-header-menu-link-color;
+                border-color: $bs-header-menu-link-active-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+
+      @include media('sm-desktop', 'desktop') {
+        flex: 0 0 auto;
+        max-width: 100%;
+        order: 1;
+        justify-content: flex-start;
+        margin-right: spacing(1);
+      }
+
+      .image {
+        display: none;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          display: block;
+        }
+      }
+
+      .image-mobile {
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          display: none;
+        }
+      }
+    }
+
+    .contact-container {
+      display: flex;
+      flex: 0 1 33.3333%;
+      max-width: 33.3333%;
+      justify-content: flex-end;
+
+      @include media('sm-desktop', 'desktop') {
+        flex: 0 0 auto;
+        max-width: 100%;
+        order: 3;
+        margin-left: spacing(1);
+      }
+
+      .icon-info-button {
+        fill: $bs-header-menu-icons-color;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          display: none;
+        }
+      }
+
+      .bs-button {
+        display: none;
+
+        @include media('sm-desktop', 'desktop') {
+          margin-left: spacing(3);
+        }
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          display: block;
+        }
+      }
+    }
+  }
+}

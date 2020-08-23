@@ -1,0 +1,70 @@
+.bs-form-label {
+  display: block;
+  color: $bs-black;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: spacing(1);
+}
+
+.bs-form-input {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $bs-black;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $bs-form-controls-border-color;
+  display: block;
+  padding: spacing(1);
+  margin-top: spacing(1);
+  width: 100%;
+  max-width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.bs-form-textarea {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $bs-black;
+  background-color: $bs-white;
+  border: 1px solid $bs-form-controls-border-color;
+  padding: spacing(1);
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  margin-top: spacing(1);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.bs-form-input, .bs-form-textarea {
+  @mixin placeholder() {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $bs-form-controls-placeholder-color;
+  }
+
+  &::-webkit-input-placeholder {
+    @include placeholder();
+  }
+  &::-moz-placeholder {
+    @include placeholder();
+  }
+  &:-ms-input-placeholder {
+    @include placeholder();
+  }
+  &:-moz-placeholder {
+    @include placeholder();
+  }
+}

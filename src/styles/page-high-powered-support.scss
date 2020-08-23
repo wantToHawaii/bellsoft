@@ -1,0 +1,715 @@
+@mixin sectionGaps() {
+  padding-top: spacing(6);
+  padding-bottom: spacing(6);
+
+  @include media('sm-desktop', 'desktop') {
+    padding-top: spacing(7);
+    padding-bottom: spacing(15);
+  }
+}
+
+/*
+ * Hero
+ */
+.section-hero {
+  background-color: $bs-section-hero-bg-color;
+  color: $bs-section-hero-text-color;
+  padding-top: spacing(1);
+  padding-bottom:spacing(3);
+
+  @include media('tablet') {
+    padding-top: spacing(3);
+    padding-bottom: spacing(8);
+  }
+
+  @include media('tablet', 'sm-desktop', 'desktop') {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    padding-top: spacing(3);
+    padding-bottom: spacing(3);
+  }
+
+  .bs-flex-container {
+    @include media('sm-desktop', 'desktop') {
+      flex-direction: row;
+    }
+
+    .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include media('sm-desktop', 'desktop') {
+        order: 2;
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding-left: spacing(1);
+      }
+
+      .image {
+        max-width: 100%;
+
+        @include media('desktop') {
+          max-width: initial;
+        }
+      }
+    }
+
+    .content {
+      margin-top: -70px;
+
+      @include media('sm-desktop', 'desktop') {
+        order: 1;
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding-right: spacing(1);
+        margin-top: spacing(7);
+      }
+
+      .bs-heading-h1 {
+        color: $bs-section-hero-text-color;
+        font-size: 24px;
+        line-height: 37px;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          font-size: 48px;
+          line-height: 73px;
+        }
+      }
+
+      .heading-h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        color: $bs-section-hero-secondary-color;
+        margin: spacing(2) 0 0 0;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          font-size: 24px;
+          line-height: 37px;
+          margin: 0;
+        }
+      }
+
+      .text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: spacing(1) 0 0 0;
+
+        br {
+          display: none;
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            display: initial;
+          }
+        }
+      }
+
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: spacing(3);
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          align-items: center;
+          flex-direction: row;
+          margin-top: spacing(6);
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          margin-top: spacing(12);
+        }
+
+        .bs-button {
+          flex: 0 0 100%;
+          max-width: 100%;
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            flex: 0 0 auto;
+          }
+  
+          & + .bs-button {
+            margin-top: spacing(2);
+
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              margin-top: 0;
+              margin-left: spacing(3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Benefits
+ */
+.section-benefits {
+  background-color: $bs-section-benefits-bg-color;
+  @include sectionGaps();
+
+  .bs-flex-container {
+    .bs-heading-h2 {
+      text-align: center;
+    }
+
+    .bs-flex-row {
+      flex-direction: column;
+      margin-top: spacing(6);
+
+      @include media('sm-desktop', 'desktop') {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & + .bs-flex-row {
+          margin-top: spacing(-6);
+        }
+      }
+
+      .bs-flex-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        &:last-child {
+          margin-top: spacing(6);
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          flex: 0 0 50%;
+          max-width: 600px;
+
+          &:last-child {
+            margin-top: spacing(21);
+          }
+        }
+
+        .card {
+          background-color: $bs-section-benefits-card-bg-color;
+          border-radius: 20px;
+          box-shadow: 0px 2px 26px #959BA633;
+          padding: spacing(4);
+
+          @include media('sm-desktop', 'desktop') {
+            padding: spacing(7);
+          }
+  
+          .bs-heading-h5 {
+            color: $bs-section-benefits-heading-color;
+          }
+  
+          .text {
+            color: $bs-section-benefits-text-color;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 27px;
+            margin: spacing(4) 0 0 0;
+          }
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: spacing(6);
+
+      @include media('sm-desktop', 'desktop') {
+        margin-top: spacing(9);
+      }
+    }
+  }
+}
+
+/*
+ * About
+ */
+.section-about {
+  background-color: $bs-white;
+  @include sectionGaps();
+
+  .bs-flex-container {
+    max-width: 900px;
+
+    .bs-heading-h2 {
+      text-align: center;
+    }
+
+    .bs-subtitle {
+      margin-top: spacing(6);
+    }
+
+    .text { 
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 25px;
+      color: $bs-black;
+      margin-top: spacing(5);
+
+      .link {
+        color: $bs-link-color;
+        text-decoration: none;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}
+
+/*
+ * Plan
+ */
+.section-plan {
+  background-color: $bs-section-plan-bg-color;
+  @include sectionGaps();
+
+  .bs-flex-container {
+    max-width: 900px;
+
+    .bs-heading-h3 {
+      color: $bs-white;
+      text-align: center;
+    }
+
+    .bs-subtitle {
+      color: $bs-white;
+      margin-top: spacing(1);
+      text-align: center;
+    }
+
+    .bs-flex-row {
+      flex-direction: column;
+      align-items: center;
+
+      @include media('tablet', 'sm-desktop', 'desktop') {
+        align-items: stretch;
+        flex-direction: row;
+      }
+
+      .bs-flex-item {
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: spacing(5);
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .card {
+          background-color: $bs-section-plan-card-bg-color;
+          border-radius: 10px;
+          box-shadow: 0px 2px 6px #00000029;
+          padding: spacing(2) spacing(2) spacing(2) spacing(4);
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            padding: spacing(2) spacing(6) spacing(5);
+          }
+
+          &.standard {
+            opacity: 0.9;
+
+            .bs-heading-h4 {
+              .icon {
+                fill: $bs-section-plan-card-icons-standard-color;
+              }
+            }
+
+            .plan-options {
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                margin-top: spacing(6);
+              }
+
+              .item {
+                &:before {
+                  color: $bs-section-plan-card-icons-standard-color;
+                }
+              }
+            }
+          }
+
+          &.premium {
+            .bs-heading-h4 {
+              .icon {
+                fill: $bs-section-plan-card-icons-premium-color;
+              }
+            }
+
+            .plan-options {
+              .item {
+                &:before {
+                  color: $bs-section-plan-card-icons-premium-color;
+                }
+              }
+            }
+          }
+
+          .bs-heading-h4 {
+            display: flex;
+            align-items: center;
+            color: $bs-black;
+
+            .icon {
+              margin-right: spacing(2);
+            }
+          }
+
+          .plan-options {
+            margin-top: spacing(2);
+            list-style-type: none;
+            margin-left: spacing(-2);
+
+            .item {
+              color: $bs-black;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+
+              & + .item {
+                margin-top: spacing(2);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: spacing(6);
+
+      @include media('tablet', 'sm-desktop', 'desktop') {
+        margin-top: spacing(7);
+      }
+
+      .bs-button {
+        color: $bs-section-plan-button-color;
+        border-color: $bs-section-plan-button-color;
+      }
+    }
+  }
+}
+
+/*
+ * Calculator
+ */
+.section-calculator {
+  @include sectionGaps();
+
+  .bs-flex-container {
+    max-width: 900px;
+
+    .bs-heading-h2 {
+      text-align: center;
+    }
+
+    .bs-subtitle {
+      margin-top: spacing(5);
+    }
+
+    .calculator-options {
+      margin-top: spacing(5);
+
+      .item {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 25px;
+        padding-left: spacing(4);
+
+        &:before {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $bs-section-calculator-icons-color;
+          border-radius: 50%;
+          color: $bs-section-calculator-icons-color;
+          top: 2px;
+          height: 20px;
+          width: 20px;
+        }
+
+        & + .item {
+          margin-top: spacing(2);
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: spacing(6);
+
+      @include media('tablet', 'sm-desktop', 'desktop') {
+        margin-top: spacing(10);
+      }
+    }
+  }
+}
+
+/*
+ * Reviews
+ */
+.section-reviews {
+  background-color: $bs-section-customers-bg-color;
+
+  .bs-flex-container {
+    @include sectionGaps();
+
+    .bs-heading-h2 {
+      text-align: center;
+    }
+
+    .customers-logos {
+      margin-top: spacing(6);
+
+      @include media('tablet', 'sm-desktop', 'desktop') {
+        margin-top: spacing(8);
+      }
+
+      .bs-flex-row {
+        flex-direction: column;
+        align-items: center;
+
+        @include media('tablet') {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 100%;
+          max-width: 100%;
+
+          @include media('tablet') {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 16.6666%;
+            max-width: 16.6666%;
+          }
+
+          & + .bs-flex-item {
+            margin-top: spacing(4);
+          }
+
+          .logo {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .customers-reviews {
+      margin-top: spacing(6);
+
+      @include media('tablet', 'sm-desktop', 'desktop') {
+        margin-top: spacing(11);
+      }
+
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          display: flex;
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+          }
+
+          & + .bs-flex-item {
+            margin-top: spacing(4);
+
+            @include media('sm-desktop', 'desktop') {
+              margin-top: 0;
+            }
+          }
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            background-color: $bs-section-customers-card-bg-color;
+            border-radius: 20px;
+            box-shadow: 0px 2px 26px #959BA633;
+            padding: spacing(2);
+            max-width: 100%;
+            width: 100%;
+
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              padding: spacing(3) spacing(5) spacing(5);
+            }
+
+            .text {
+              font-size: 19px;
+              font-weight: 400;
+              line-height: 27px;
+              color: $bs-black;
+              margin-top: spacing(3);
+              margin-top: spacing(4);
+            }
+
+            .customer-info {
+              font-size: 15px;
+              line-height: 21px;
+              color: $bs-black;
+              margin-top: auto;
+
+              .name {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Articles
+ */
+.section-articles {
+  background-color: $bs-section-articles-bg-color;
+  @include sectionGaps();
+
+  .bs-flex-container {
+    .bs-heading-h2 {
+      color: $bs-white;
+      text-align: center;
+    }
+
+    .articles {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+          margin-left: spacing(-1);
+          margin-right: spacing(-1);
+        }
+
+        .bs-flex-item {
+          display: flex;
+          margin-top: spacing(5);
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+            padding-left: spacing(1);
+            padding-right: spacing(1);
+          }
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            background-color: $bs-section-articles-card-bg-color;
+            border: 1px solid $bs-section-articles-card-border-color;
+            padding: spacing(3);
+            max-width: 100%;
+            width: 100%;
+
+            .image-container {
+              background-color: #EFF0F2;
+              border-radius: 10px;
+              height: 200px;
+              width: 100%;
+            }
+
+            .bs-heading-h5 {
+              margin-top: spacing(3);
+            }
+
+            .text {
+              color: $bs-black;
+              font-size: 17px;
+              font-weight: 400;
+              line-height: 25px;
+              margin-top: spacing(3);
+              margin-top: spacing(2);
+            }
+
+            .link {
+              color: $bs-section-articles-card-link-color;
+              font-size: 17px;
+              font-weight: 400;
+              line-height: 25px;
+              margin-top: auto;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Contact Us
+ */
+.section-contact-us {
+  background-color: $bs-section-contact-bg-color;
+  @include sectionGaps();
+
+  .bs-flex-container {
+    max-width: 650px;
+
+    .bs-heading-h2 {
+      text-align: center;
+    }
+
+    .contact-form {
+      margin-top: spacing(5);
+
+      .form-control {
+        margin-top: spacing(3);
+
+        &.row {
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .bs-form-label {
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            flex: 0 0 35%;
+            max-width: 35%;
+          }
+        }
+
+        .bs-form-input {
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            flex: 0 0 65%;
+            max-width: 65%;
+          }
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: spacing(3);
+
+      .bs-button {
+        min-width: 162px;
+      }
+    }
+  }
+}

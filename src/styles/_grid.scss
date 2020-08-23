@@ -1,0 +1,23 @@
+.bs-flex-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: spacing(2);
+  padding-right: spacing(2);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $bs-content-max-width;
+  width: 100%;
+}
+
+.bs-flex-row {
+  display: flex;
+  margin-left: spacing(-2);
+  margin-right: spacing(-2);
+  flex: 0 0 calc(100% + #{spacing(4)});
+  max-width: calc(100% + #{spacing(4)});
+}
+
+.bs-flex-item {
+  padding-left: spacing(2);
+  padding-right: spacing(2);
+}

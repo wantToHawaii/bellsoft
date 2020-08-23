@@ -1,0 +1,43 @@
+.bs-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: $bs-button-color;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  padding: spacing(2) spacing(3);
+  text-decoration: none;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.small {
+    padding: spacing(1) spacing(3);
+  }
+
+  &.contained {
+    background-color: $bs-button-color;
+    border-color: $bs-button-color;
+    color: $bs-white;
+
+    &:hover {
+      color: $bs-black;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border-color: $bs-button-color;
+    color: $bs-button-color;
+
+    &:hover {
+      background-color: $bs-button-color;
+      color: $bs-white;
+    }
+  }
+}
