@@ -46,125 +46,122 @@ $bs-section-contact-bg-color: #F9F9FA;
   padding-top: spacing(1);
   padding-bottom:spacing(3);
 
-  @include media('tablet') {
+  @include media('tablet', 'sm-desktop', 'desktop') {
     padding-top: spacing(3);
     padding-bottom: spacing(8);
   }
 
-  @include media('tablet', 'sm-desktop', 'desktop') {
-    min-height: 560px;
-    display: flex;
-    align-items: center;
-    padding-top: spacing(3);
-    padding-bottom: spacing(3);
-  }
-
   .bs-flex-container {
-    @include media('sm-desktop', 'desktop') {
-      flex-direction: row;
-    }
-
-    .image-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .bs-flex-row {
+      flex-direction: column;
 
       @include media('sm-desktop', 'desktop') {
-        order: 2;
-        flex: 0 0 40%;
-        max-width: 40%;
-        padding-left: spacing(1);
+        flex-direction: row;
       }
 
-      .image {
-        max-width: 100%;
-
-        @include media('desktop') {
-          max-width: initial;
-        }
-      }
-    }
-
-    .content {
-      margin-top: -70px;
-
-      @include media('sm-desktop', 'desktop') {
-        order: 1;
-        flex: 0 0 60%;
-        max-width: 60%;
-        padding-right: spacing(1);
-        margin-top: spacing(7);
-      }
-
-      .bs-heading-h1 {
-        color: $bs-section-hero-text-color;
-        font-size: 24px;
-        line-height: 37px;
-
-        @include media('tablet', 'sm-desktop', 'desktop') {
-          font-size: 48px;
-          line-height: 73px;
-        }
-      }
-
-      .heading-h2 {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 30px;
-        color: $bs-section-hero-secondary-color;
-        margin: spacing(2) 0 0 0;
-
-        @include media('tablet', 'sm-desktop', 'desktop') {
-          font-size: 24px;
-          line-height: 37px;
-          margin: 0;
-        }
-      }
-
-      .text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        margin: spacing(1) 0 0 0;
-
-        br {
-          display: none;
-
-          @include media('tablet', 'sm-desktop', 'desktop') {
-            display: initial;
-          }
-        }
-      }
-
-      .buttons-container {
-        display: flex;
-        flex-direction: column;
-        margin-top: spacing(3);
-
-        @include media('tablet', 'sm-desktop', 'desktop') {
+      .bs-flex-item {
+        &.image-container {
+          display: flex;
           align-items: center;
-          flex-direction: row;
-          margin-top: spacing(6);
-        }
+          justify-content: center;
 
-        @include media('sm-desktop', 'desktop') {
-          margin-top: spacing(12);
-        }
-
-        .bs-button {
-          flex: 0 0 100%;
-          max-width: 100%;
-
-          @include media('tablet', 'sm-desktop', 'desktop') {
-            flex: 0 0 auto;
+          @include media('sm-desktop', 'desktop') {
+            order: 2;
+            flex: 0 0 45%;
+            max-width: 45%;
+            justify-content: flex-end;
           }
-  
-          & + .bs-button {
-            margin-top: spacing(2);
 
+          .image {
+            max-width: 100%;
+
+            @include media('desktop') {
+              max-width: initial;
+            }
+          }
+        }
+
+        &.content {
+          @include media('sm-desktop', 'desktop') {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            order: 1;
+            flex: 0 0 55%;
+            max-width: 55%;
+          }
+
+          .bs-heading-h1 {
+            color: $bs-section-hero-text-color;
+            font-size: 24px;
+            line-height: 37px;
+    
             @include media('tablet', 'sm-desktop', 'desktop') {
-              margin-top: 0;
-              margin-left: spacing(3);
+              font-size: 48px;
+              line-height: 73px;
+            }
+          }
+    
+          .heading-h2 {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: $bs-section-hero-secondary-color;
+            margin: spacing(2) 0 0 0;
+    
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              font-size: 24px;
+              line-height: 37px;
+              margin: 0;
+            }
+          }
+    
+          .text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin: spacing(1) 0 0 0;
+    
+            br {
+              display: none;
+    
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                display: initial;
+              }
+            }
+          }
+    
+          .buttons-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: spacing(3);
+    
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              align-items: center;
+              flex-direction: row;
+              margin-top: spacing(6);
+            }
+    
+            @include media('sm-desktop', 'desktop') {
+              margin-top: spacing(12);
+            }
+    
+            .bs-button {
+              flex: 0 0 100%;
+              max-width: 100%;
+    
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                flex: 0 0 auto;
+              }
+      
+              & + .bs-button {
+                margin-top: spacing(2);
+    
+                @include media('tablet', 'sm-desktop', 'desktop') {
+                  margin-top: 0;
+                  margin-left: spacing(3);
+                }
+              }
             }
           }
         }
