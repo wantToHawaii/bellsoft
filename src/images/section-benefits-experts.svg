@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="294" height="140" viewBox="0 0 294 140">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.502"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3fc8d6"/>
+      <stop offset="1" stop-color="#3fc8d6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_660" data-name="Group 660" transform="translate(77)">
+    <rect id="Rectangle_2865" data-name="Rectangle 2865" width="140" height="140" rx="40" fill="none"/>
+    <path id="Union_35" data-name="Union 35" d="M0,89V68A31.01,31.01,0,0,1,18.885,39.458L31,54,43.117,39.458A31,31,0,0,1,62,68V89ZM13,18A18,18,0,1,1,31,36,18,18,0,0,1,13,18Z" transform="translate(39 22)" fill="#3fc8d6"/>
+    <path id="Subtraction_19" data-name="Subtraction 19" d="M62,89H31v-35l0,0L43.119,39.458A31.007,31.007,0,0,1,62,68V89ZM0,89H0V68q0-.205,0-.41V89ZM31,36h0V0h.006A17.994,17.994,0,0,1,43.729,30.727,17.944,17.944,0,0,1,31,36Z" transform="translate(38.999 22)" fill="#008b9a"/>
+    <path id="Union_37" data-name="Union 37" d="M10.245,68H0V49.188A22.415,22.415,0,0,1,12.786,28.964L22.865,46.3l9.92-17.058a22.689,22.689,0,0,1,4.184,2.777A34.948,34.948,0,0,0,32,50V68ZM9.438,13.022A13.066,13.066,0,1,1,22.5,26.042,13.044,13.044,0,0,1,9.438,13.022Z" transform="translate(2.998 40)" fill="#dadde2"/>
+    <path id="Union_41" data-name="Union 41" d="M10.245,0H0V18.813A22.415,22.415,0,0,0,12.786,39.037L22.865,21.7l9.92,17.058a22.689,22.689,0,0,0,4.184-2.777A34.948,34.948,0,0,1,32,18V0ZM9.438,54.979A13.066,13.066,0,1,0,22.5,41.959,13.044,13.044,0,0,0,9.438,54.979Z" transform="translate(136.968 108.001) rotate(180)" fill="#959ba6"/>
+    <path id="Path_1059" data-name="Path 1059" d="M2,0,22.142,14.142s2,.9,2,2v6a2,2,0,0,1-2,2h-6c-1.1,0-2-2-2-2L0,2A2,2,0,0,1,2,0Z" transform="translate(70 70.929) rotate(45)" fill="#fff"/>
+    <path id="Intersection_10" data-name="Intersection 10" d="M0,6.332C-.079,4.515,5.028,0,6.642,0H52.405L12.474,36.762A45.89,45.89,0,0,1,0,6.332Z" transform="translate(41.034 18)" fill="url(#linear-gradient)"/>
+    <ellipse id="Ellipse_102" data-name="Ellipse 102" cx="147" cy="56" rx="147" ry="56" transform="translate(-77 28)" opacity="0.4" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

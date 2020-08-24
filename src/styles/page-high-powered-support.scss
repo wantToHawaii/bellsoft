@@ -216,10 +216,10 @@ $bs-section-contact-bg-color: #F9F9FA;
           background-color: $bs-section-benefits-card-bg-color;
           border-radius: 20px;
           box-shadow: 0px 2px 26px #959BA633;
-          padding: spacing(4);
+          padding: spacing(4) spacing(4) spacing(3);
 
           @include media('sm-desktop', 'desktop') {
-            padding: spacing(7);
+            padding: spacing(7) spacing(7) spacing(6);
           }
   
           .bs-heading-h5 {
@@ -232,6 +232,17 @@ $bs-section-contact-bg-color: #F9F9FA;
             font-weight: 400;
             line-height: 27px;
             margin: spacing(4) 0 0 0;
+          }
+
+          .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: spacing(3);
+
+            .image {
+              max-width: 100%;
+            }
           }
         }
       }
