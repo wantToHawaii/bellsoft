@@ -176,6 +176,7 @@ $bs-header-menu-icons-color: $bs-cyan-4;
       }
 
       .bs-button {
+        font-size: 16px;
         display: none;
 
         @include media('sm-desktop', 'desktop') {
