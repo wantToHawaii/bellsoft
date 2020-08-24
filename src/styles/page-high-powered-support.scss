@@ -480,7 +480,7 @@ $bs-section-contact-bg-color: #F9F9FA;
 }
 
 /*
- * Reviews
+ * Customers Reviews
  */
 .section-reviews {
   background-color: $bs-section-customers-bg-color;
@@ -493,7 +493,7 @@ $bs-section-contact-bg-color: #F9F9FA;
     }
 
     .customers-logos {
-      margin-top: spacing(6);
+      margin-top: spacing(1);
 
       @include media('tablet', 'sm-desktop', 'desktop') {
         margin-top: spacing(8);
@@ -518,6 +518,7 @@ $bs-section-contact-bg-color: #F9F9FA;
           justify-content: center;
           flex: 0 0 100%;
           max-width: 100%;
+          margin-top: spacing(4);
 
           @include media('tablet') {
             flex: 0 0 50%;
@@ -527,10 +528,6 @@ $bs-section-contact-bg-color: #F9F9FA;
           @include media('sm-desktop', 'desktop') {
             flex: 0 0 16.6666%;
             max-width: 16.6666%;
-          }
-
-          & + .bs-flex-item {
-            margin-top: spacing(4);
           }
 
           .logo {
