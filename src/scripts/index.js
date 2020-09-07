@@ -2,17 +2,24 @@ import initBsSlider from './bsSlider';
 
 window.addEventListener('load', () => {
   const initHeaderMenu = () => {
-    const iconMenuButton = document.querySelector('#icon-menu-button');
-    const headerMenu = document.querySelector('#header-menu');
-  
+    const header = document.querySelector('#site-header');
+
+    if (!header) return;
+
+    const menu = header.querySelector('#header-menu');
+    const iconMenuButton = header.querySelector('#icon-menu-button');
+
     iconMenuButton.addEventListener('click', () => {
-      headerMenu.classList.toggle('active');
+      menu.classList.toggle('active');
     });
   };
   
   const initFooterMenu = () => {
     const footer = document.querySelector('#site-footer');
-    const toggleMenuButtons = footer.querySelectorAll('.button-toggle-menu');
+
+    if (!footer) return;
+
+    const toggleMenuButtons = footer ? footer.querySelectorAll('.button-toggle-menu') : null;
     
     for (let button of toggleMenuButtons) {
       button.addEventListener('click', function() {
@@ -37,8 +44,8 @@ window.addEventListener('load', () => {
     }
   };
   
-  const onContactFormSubmit = () => {
-    const form = document.querySelector('#contact-form');
+  const onContactFormSubmit = (selector) => {
+    const form = document.querySelector(selector);
     const modal = form ? form.querySelector('.bs-callback-modal') : null;
     
     if (!form || !modal) return;
@@ -60,7 +67,7 @@ window.addEventListener('load', () => {
   initHeaderMenu();
   initFooterMenu();
   initCardsWithDropDownText();
-  onContactFormSubmit();
+  onContactFormSubmit('#contact-form');
   initBsSlider('#java-runtime-slider');
   initBsSlider('#reviews-slider');
 });

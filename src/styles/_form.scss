@@ -51,6 +51,9 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
 }
 
 @mixin textFieldStyles() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -146,8 +149,6 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
   @include textFieldStyles();
   resize: none;
 }
-
-.bs-form-select {}
 
 .bs-form-checkbox {
   -webkit-appearance: none;
@@ -292,6 +293,96 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
     &:before {
       top: -6px;
       left: -6px;
+    }
+  }
+}
+
+.bs-form-select {
+  @mixin itemStyles() {
+    color: $bs-black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px spacing(2);
+    transition: all $bs-transition-base;
+  }
+
+  .choices[data-type*=select-one] {
+    margin-top: spacing(1);
+
+    &:after {
+      background: transparent url(../images/select-toggle-arrow-icon.svg) no-repeat center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      height: 100%;
+      top: 0;
+      right: 0;
+      margin: 0;
+      width: 56px;
+      transition: transform $bs-transition-base;
+    }
+
+    .choices__inner {
+      display: block;
+      background-color: #EFF0F2;
+      border: 1px solid #EFF0F2;
+      border-radius: 4px;
+      padding: 0;
+      transition: all $bs-transition-base;
+
+      &:hover {
+        border-color: rgba(0, 120, 133, 0.1);
+      }
+
+      .choices__list--single {
+        padding: 0;
+
+        .choices__item {
+          @include itemStyles();
+        }
+      }
+    }
+
+    .choices__list--dropdown {
+      border: none;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0px 4px 4px rgba(0, 108, 120, 0.2);
+      opacity: 0;
+      transition: all $bs-transition-base;
+
+      .choices__item {
+        @include itemStyles();
+        transition: all $bs-transition-base;
+  
+        &.is-highlighted {
+          background-color: #EEFAF9;
+          color: $bs-cyan-6;
+        }
+      }
+    }
+    
+    &.is-open {
+      &:after {
+        transform: rotate(180deg);
+      }
+
+      .choices__inner {
+        border-color: $bs-cyan-4;
+        box-shadow: 0px 4px 4px rgba(0, 108, 120, 0.2);
+
+        .choices__item {
+          background-color: #fff;
+        }
+      }
+
+      .choices__list--dropdown {
+        display: block;
+        opacity: 1;
+        transform: translateY(#{spacing(1)});
+      }
     }
   }
 }

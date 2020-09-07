@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Components sandbox</title>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@8.0.0/public/assets/styles/choices.min.css" />
 
   <style>
     body {
@@ -70,8 +71,8 @@
     <label class="bs-form-label" for="fullName">Full Name</label>
     <input class="bs-form-input" id="fullName" name="fullName" type="text" placeholder="Enter Your Full Name" />
     <h2>Input invalid:</h2>
-    <label class="bs-form-label" for="fullName">Full Name <sup>*</sup></label>
-    <input class="bs-form-input" id="fullName" name="fullName" type="text" placeholder="Enter Your Full Name" required />
+    <label class="bs-form-label" for="fullName1">Full Name <sup>*</sup></label>
+    <input class="bs-form-input" id="fullName1" name="fullName1" type="text" placeholder="Enter Your Full Name" required />
     <div class="bs-form-error">Error</div>
     <h2>Label, textarea:</h2>
     <label class="bs-form-label" for="message">Your Message</label>
@@ -86,6 +87,23 @@
       <input type="radio" id="radio" class="bs-form-radio" />
       Radio
     </label>
+    <h2>Select:</h2>
+    <h5><a href="https://github.com/jshjohnson/Choices">choices.js</a></h5>
+    <label class="bs-form-label" for="select">Select</label>
+    <div class="bs-form-select">
+      <select name="select">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </select>
+    </div>
+    <script>
+      window.onload = function() {
+        const select = new Choices('.bs-form-select select', {
+          searchEnabled: false,
+          itemSelectText: '',
+        });
+      };
+    </script>
   </div>
 
   <br />
@@ -126,7 +144,7 @@
   </div>
 
   <div class="block">
-    <h1>Slider:</h1>
+    <h1>Slider elements:</h1>
     <h2>Arrows:</h2>
     <div class="bs-slider-arrow left"></div>
     <div class="bs-slider-arrow right"></div>
@@ -141,5 +159,6 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@8.0.0/public/assets/scripts/choices.min.js"></script>
 </body>
 </html>

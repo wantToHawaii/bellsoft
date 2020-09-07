@@ -6,7 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3001
+    port: 3001,
+    host: '0.0.0.0',
   },
   devtool: 'inline-source-map',
   mode: 'development',
