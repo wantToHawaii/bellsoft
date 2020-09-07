@@ -24,6 +24,10 @@ module.exports = {
       template: './src/index.html',
     }),
     new HtmlWebpackPlugin({
+      filename: 'high-powered-support.html',
+      template: './src/high-powered-support.html',
+    }),
+    new HtmlWebpackPlugin({
       filename: 'components.html',
       template: './src/components.html',
     }),

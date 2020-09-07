@@ -1,0 +1,1163 @@
+$header-height: 80px;
+$page-anchors-height: 72px;
+$scroll-margin-top: $header-height + $page-anchors-height;
+
+$bs-section-hero-bg-color: $bs-black;
+$bs-section-hero-text-color: #F5F5F7;
+$bs-section-hero-secondary-color: $bs-cyan-2;
+
+$bs-page-navigation-background: $bs-black;
+$bs-page-navigation-link-color: #F5F5F7;
+$bs-page-navigation-link-active-color: #fff;
+
+$bs-section-java-runtime-background-color: #E5E5E5;
+$bs-section-java-runtime-card-bg-color: #fff;
+$bs-section-java-runtime-card-title-color: $bs-black;
+$bs-section-java-runtime-card-text-color: #7B7C83;
+
+$bs-section-oracle-jdk-background-color: #E5E5E5;
+$bs-section-oracle-jdk-title-color: #F5F5F7;
+$bs-section-oracle-jdk-text-color: #A8A8A8;
+$bs-section-oracle-jdk-content-background-color: $bs-black;
+
+$bs-section-industry-background-color: #E5E5E5;
+
+$bs-section-discover-background-color: #E5E5E5;
+$bs-section-discover-card-background-color: #fff;
+$bs-section-discover-card-title-color: #fff;
+$bs-section-discover-card-value-color: $bs-cyan-3;
+
+$bs-section-find-value-background-color: $bs-black;
+$bs-section-find-value-title-color: #F5F5F7;
+$bs-section-find-value-subtitle-color: #F5F5F7;
+$bs-section-find-value-text-color: #A8A8A8;
+
+$bs-section-reviews-card-bg-color: $bs-black;
+$bs-section-reviews-text-color: #E5E5E5;
+$bs-section-reviews-image-bs-color: #EFF0F2;
+
+$bs-section-contact-us-subtitle-color: #7B7C83;
+$bs-section-contact-us-link-color: $bs-cyan-4;
+
+body.page-liberica-jdk {
+  
+  /*
+  * Hero
+  */
+  .section-hero {
+    background-color: $bs-section-hero-bg-color;
+    color: $bs-section-hero-text-color;
+    padding-top: spacing(3);
+    padding-bottom:spacing(4);
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          &.image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media('sm-desktop', 'desktop') {
+              order: 2;
+              flex: 0 0 50%;
+              max-width: 50%;
+              justify-content: flex-start;
+            }
+
+            .image {
+              max-width: 100%;
+
+              @media screen and (min-width: 1440px) {
+                max-width: initial;
+              }
+            }
+          }
+
+          &.content {
+            text-align: center;
+            margin-top: spacing(4);
+
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              text-align: left;
+              align-items: center;
+            }
+
+            @include media('sm-desktop', 'desktop') {
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-top: spacing(8);
+            }
+
+            .bs-heading-h1 {
+              color: $bs-section-hero-text-color;
+              font-size: 48px;
+              line-height: 73px;
+      
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                font-size: 64px;
+                line-height: 97px;
+              }
+            }
+      
+            .bs-subtitle {
+              color: $bs-section-hero-text-color;
+              margin: spacing(1) 0 0 0;
+
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                margin: spacing(2) 0 0 0;
+              }
+            }
+      
+            .buttons-container {
+              display: flex;
+              flex-direction: column;
+              margin-top: spacing(4);
+      
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                align-items: center;
+                flex-direction: row;
+                margin-top: spacing(6);
+              }
+      
+              @include media('sm-desktop', 'desktop') {
+                margin-top: spacing(8);
+              }
+      
+              .bs-button {
+                flex: 0 0 100%;
+                max-width: 100%;
+      
+                @include media('tablet', 'sm-desktop', 'desktop') {
+                  flex: 0 0 auto;
+                }
+        
+                & + .bs-button {
+                  margin-top: spacing(2);
+      
+                  @include media('tablet', 'sm-desktop', 'desktop') {
+                    margin-top: 0;
+                    margin-left: spacing(2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+  * Page Navigation
+  */
+  .section-page-anchors {
+    position: sticky;
+    top: 80px;
+    background-color: $bs-page-navigation-background;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    padding: spacing(2) 0;
+    z-index: $bs-z-index-top;
+
+    @include media('phone', 'tablet') { display: none; }
+
+    .bs-flex-container {
+      .bs-flex-row {
+        align-items: center;
+
+        .bs-flex-item {
+          flex: 0 0 50%;
+          max-width: 50%;
+
+          .logo {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: $bs-white;
+
+            .contrast {
+              color: $bs-cyan-5;
+            }
+          }
+
+          .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .nav {
+              .menu {
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+
+                .item {
+                  & + .item {
+                    margin-left: spacing(5);
+                  }
+
+                  .link {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: $bs-page-navigation-link-color;
+                    opacity: 0.5;
+                    text-decoration: none;
+                    transition: opacity $bs-transition-base;
+
+                    &:hover {
+                      color: $bs-page-navigation-link-active-color;
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+
+            .bs-button {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 21px;
+              margin-left: spacing(4);
+              padding: spacing(1) spacing(2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Java runtime
+   */
+  .section-java-runtime {
+    background-color: $bs-section-java-runtime-background-color;
+    padding: spacing(5) 0;
+
+    @include media('sm-desktop', 'desktop') {
+      padding: spacing(7) 0 spacing(9);
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        text-align: center;
+
+        @include media('phone') {
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+
+      .bs-subtitle {
+        text-align: center;
+        margin-top: spacing(1);
+
+        @include media('phone') {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .slider-container {
+        margin-top: spacing(2);
+
+        @include media('sm-desktop', 'desktop') {
+          margin-top: spacing(5);
+        }
+
+        .slider {
+          position: relative;
+
+          .bs-slider-arrow {
+            display: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -32px;
+
+            @media screen and (min-width: 1250px) {
+              display: flex;
+            }
+
+            &.left {
+              left: -56px;
+            }
+        
+            &.right {
+              right: -56px;
+            }
+          }
+
+          .slide {
+            background-color: $bs-section-java-runtime-card-bg-color;
+            border-radius: spacing(1);
+            padding: spacing(3);
+            transition: all 0.5s cubic-bezier(0.18, 0.98, 0.45, 1);
+            min-height: 460px;
+
+            @include media('sm-desktop', 'desktop') {
+              padding: spacing(8);
+              min-height: 500px;
+            }
+
+            // TODO: automate
+            &[data-index='0'] {
+              position: relative;
+              transform: translate(0px, 0px) scale(1);
+              z-index: 3;
+              opacity: 1;
+            }
+
+            &[data-index='1'] {
+              transform: translate(0px, #{spacing(2)}) scale(.98);
+              z-index: 2;
+              opacity: 0.5;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+
+            &[data-index='2'] {
+              transform: translate(0px, #{spacing(4)}) scale(.96);
+              z-index: 1;
+              opacity: 0.5;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+    
+            .bs-flex-row {
+              flex-direction: column-reverse;
+
+              @include media('sm-desktop', 'desktop') {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                &.reverse {
+                  flex-direction: row-reverse;
+                }
+              }
+    
+              .bs-flex-item {
+                @include media('sm-desktop', 'desktop') {
+                  flex: 0 0 50%;
+                  max-width: 50%;
+                }
+
+                .content {
+                  .title {
+                    color: $bs-section-java-runtime-card-title-color;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 37px;
+                    margin: spacing(2) 0 0 0;
+
+                    @include media('sm-desktop', 'desktop') {
+                      font-size: 36px;
+                      line-height: 55px;
+                      margin: 0;
+                    }
+                  }
+    
+                  .text {
+                    color: $bs-section-java-runtime-card-text-color;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: spacing(1) 0 0 0;
+
+                    @include media('sm-desktop', 'desktop') {
+                      font-size: 20px;
+                      line-height: 32px;
+                    }
+                  }
+                }
+    
+                .image-container {
+                  height: 160px;
+
+                  @include media('sm-desktop', 'desktop') {
+                    height: 240px;
+                  }
+
+                  .image {
+                    object-position: center;
+                    object-fit: contain;
+                    height: 100%;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .bs-slider-dots {
+          margin-top: spacing(7);
+
+          @include media('sm-desktop', 'desktop') {
+            margin-top: spacing(9);
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Oracle JDK
+   */
+  .section-oracle-jdk {
+    background-color: $bs-section-oracle-jdk-background-color;
+    scroll-margin-top: $scroll-margin-top;
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        text-align: center;
+        color: $bs-section-oracle-jdk-title-color;
+
+        @include media('phone') {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+
+      .content {
+        padding-top: spacing(6);
+        padding-bottom: spacing(4);
+        text-align: center;
+        width: 100%;
+        margin-left: spacing(-2);
+        margin-right: spacing(-2);
+        width: calc(100% + #{spacing(4)});
+
+        background: no-repeat url(../images/section-oracle-jdk-image-phone-1.svg) left center,
+                    no-repeat url(../images/section-oracle-jdk-image-phone-2.svg) right 8px top 96px;
+        background-color: $bs-section-oracle-jdk-content-background-color;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          padding-top: spacing(9);
+          padding-bottom: spacing(13);
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          background: no-repeat url(../images/section-oracle-jdk-image-1.svg) left 76px top 54px,
+                      no-repeat url(../images/section-oracle-jdk-image-2.svg) right 98px top 62px;
+          background-color: $bs-section-oracle-jdk-content-background-color;
+          border-radius: spacing(1);
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+        }
+
+        .text {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: $bs-section-oracle-jdk-text-color;
+          margin: spacing(2) auto 0;
+          max-width: 260px;
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            font-size: 20px;
+            line-height: 32px;
+            margin: spacing(4) auto 0;
+            max-width: 665px;
+          }
+
+          & + .text {
+            margin: spacing(4) auto 0;
+          }
+        }
+
+        .bs-button {
+          display: inline-flex;
+          margin-top: spacing(6);
+
+          @include media('phone') {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            margin-top: spacing(7);
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Industry must haves
+   */
+  .section-industry {
+    background-color: $bs-section-industry-background-color;
+    padding-top: spacing(5);
+    padding-bottom: spacing(3);
+    text-align: center;
+    scroll-margin-top: $scroll-margin-top;
+
+    @include media('sm-desktop', 'desktop') {
+      padding-top: spacing(9);
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        @include media('phone') {
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+
+      .bs-subtitle {
+        margin-top: spacing(1);
+        @include media('phone') {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .bs-flex-row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: spacing(3);
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: stretch;
+        }
+
+        .bs-flex-item {
+          display: flex;
+          justify-content: center;
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: spacing(2);
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+            margin-top: spacing(3);
+          }
+
+          .block {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            max-width: 246px;
+
+            .title {
+              color: $bs-black;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+              margin: spacing(2) 0 0 0;
+
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                font-size: 20px;
+                line-height: 30px;
+              }
+            }
+
+            .text {
+              color: $bs-black;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+              margin: spacing(1) 0 spacing(2);
+
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+
+            .bs-button {
+              font-size: 16px;
+              line-height: 24px;
+              margin-top: spacing(2);
+              margin-bottom: spacing(2);
+
+              @include media('phone') {
+                padding: spacing(2);
+              }
+
+              @include media('sm-desktop', 'desktop') {
+                margin-top: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Discover
+   */
+  .section-discover {
+    background-color: $bs-section-discover-background-color;
+    padding-top: spacing(5);
+    padding-bottom: spacing(5);
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        text-align: center;
+
+        @include media('phone') {
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+
+      .bs-subtitle {
+        text-align: center;
+        margin: spacing(1) 0 0 0;
+
+        @include media('phone') {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      
+      .bs-flex-row {
+        flex-direction: column;
+        align-items: center;
+        margin-top: spacing(2);
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+          align-items: stretch;
+          margin-top: spacing(3);
+        }
+
+        .bs-flex-item {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: spacing(2);
+          max-width: 360px;
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 33.3333%;
+            max-width: 33.333%;
+          }
+
+          .card {
+            $card-lp: spacing(3);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $bs-section-discover-card-background-color;
+            border-radius: spacing(1);
+            padding: $card-lp;
+            height: 100%;
+            min-height: 535px;
+
+            &.drop-down-text-visible {
+              .image-container,
+              .value,
+              .text {
+                display: none;
+              }
+
+              .drop-down-text {
+                display: block;
+              }
+            }
+
+            .title {
+              background: linear-gradient(90deg, #009CAD 0%, #00D6CD 100%);
+              border-radius: 0px 0px 6px 0px;
+              display: block;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 30px;
+              text-transform: uppercase;
+              margin-bottom: spacing(3);
+              color: $bs-section-discover-card-title-color;
+              padding: spacing(1) spacing(4) spacing(1) spacing(3);
+              position: relative;
+              left: -$card-lp;
+            }
+
+            .image-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 180px;
+
+              .image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+              }
+            }
+
+            .value {
+              color: $bs-section-discover-card-value-color;
+              font-weight: 600;
+              font-size: 40px;
+              line-height: 61px;
+            }
+
+            .text {
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 30px;
+              color: $bs-black;
+              margin: 0;
+            }
+
+            .drop-down-text {
+              display: none;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              margin: 0;
+            }
+
+            .button-container {
+              margin-top: auto;
+
+              .bs-button {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: spacing(3);
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Find the value 
+  */
+  .section-find-value {
+    background-color: $bs-section-find-value-background-color;
+    padding-top: spacing(13);
+    padding-bottom: spacing(5);
+    text-align: center;
+    margin-top: spacing(-18);
+
+    @include media('sm-desktop', 'desktop') {
+      padding-bottom: spacing(12);
+    }
+
+    .bs-flex-container {
+      max-width: 720px;
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: spacing(6);
+
+        @include media('sm-desktop', 'desktop') {
+          margin-top: spacing(10);
+        }
+      }
+
+      .bs-heading-h2 {
+        color: $bs-section-find-value-title-color;
+        margin-top: spacing(4);
+
+        @include media('phone') {
+          font-size: 24px;
+          line-height: 37px;
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          margin-top: spacing(3);
+        }
+      }
+
+      .bs-subtitle {
+        color: $bs-section-find-value-subtitle-color;
+        margin-top: spacing(2);
+
+        @include media('phone') {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .text {
+        color: $bs-section-find-value-text-color;
+        font-size: 16px;
+        line-height: 24px;
+        margin: spacing(4) 0 0 0;
+
+        @include media('sm-desktop', 'desktop') {
+          font-size: 20px;
+          line-height: 32px;
+          padding-left: spacing(4);
+          padding-right: spacing(4);
+        }
+      }
+
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: spacing(4);
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+          justify-content: center;
+          margin-top: spacing(5);
+        }
+
+        .bs-button {
+          width: 100%;
+
+          @include media('sm-desktop', 'desktop') {
+            width: auto;
+            max-width: 50%;
+          }
+
+          @include media('phone') {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          & + .bs-button {
+            margin-top: spacing(2);
+
+            @include media('sm-desktop', 'desktop') {
+              margin-top: 0;
+              margin-left: spacing(2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Customers reviews
+   */
+  .section-customers-reviews {
+    padding-top: spacing(5);
+    padding-bottom: spacing(5);
+    scroll-margin-top: $scroll-margin-top;
+
+    @include media('sm-desktop', 'desktop') {
+      padding-top: spacing(10);
+      padding-bottom: spacing(8);
+    }
+
+    .bs-flex-container {
+      align-items: center;
+
+      .bs-heading-h2 {
+        text-align: center;
+        margin-bottom: spacing(4);
+        max-width: 840px;
+
+        @include media('phone') {
+          font-size: 24px;
+          line-height: 37px;
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          margin-bottom: spacing(6);
+        }
+      }
+
+      .slider-container {
+        .slider {
+          position: relative;
+
+          .bs-slider-arrow {
+            display: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -24px;
+
+            @media screen and (min-width: 1250px) {
+              display: flex;
+            }
+
+            &.left {
+              left: -56px;
+            }
+
+            &.right {
+              right: -56px;
+            }
+          }
+
+          .slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            transition: opacity 0.5s cubic-bezier(0.18, 0.98, 0.45, 1);
+
+            &[data-index] {
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+
+            &[data-index="0"] {
+              opacity: 1;
+              z-index: 1;
+              position: relative;
+            }
+
+            @include media('sm-desktop', 'desktop') {
+              flex-direction: row;
+              align-items: stretch;
+              max-width: 100%;
+              min-height: 420px;
+            }
+
+            .customer-info {
+              background-color: $bs-section-reviews-card-bg-color;
+              border-radius: spacing(1);
+              padding: spacing(4) spacing(3);
+              order: 2;
+
+              @include media('sm-desktop', 'desktop') {
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 50%;
+                max-width: 50%;
+                order: 1;
+                padding: spacing(7) spacing(4);
+              }
+
+              .quotes-image {
+                height: 52px;
+                width: 70px;
+              }
+      
+              .text {
+                color: $bs-section-reviews-text-color;
+                font-size: 14px;
+                line-height: 20px;
+                margin: spacing(-2) 0 0 0;
+                height: 100%;
+
+                @include media('sm-desktop', 'desktop') {
+                  font-size: 16px;
+                  line-height: 24px;
+                  display: flex;
+                  flex-direction: column;
+                  padding-left: spacing(5);
+                  padding-right: spacing(5);
+                }
+
+                .review {
+                  margin: 0 0 spacing(4);
+                }
+
+                .name {
+                  margin: auto 0 0 0;
+                }
+        
+                .position {
+                  margin: spacing(1) 0 0 0;
+                }
+              }
+            }
+
+            .customer-photo {
+              background-color: $bs-section-reviews-image-bs-color;
+              border-radius: spacing(1);
+              overflow: hidden;
+              display: flex;
+              order: 1;
+
+              @include media('sm-desktop', 'desktop') {
+                flex: 0 0 50%;
+                max-width: 50%;
+                order: 2;
+                max-height: 100%;
+              }
+
+              .image {
+                object-position: center bottom;
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+                max-width: 100%;
+              }
+            }
+          }
+        }
+
+        .bs-slider-dots {
+          margin-top: spacing(5);
+
+          @include media('sm-desktop', 'desktop') {
+            margin-top: spacing(6);
+          }
+        }
+      }
+    }
+  }
+
+  /*
+  * Contact Us
+  */
+  .section-contact-us {
+    $max-control-width: 550px;
+
+    padding-top: spacing(5);
+    padding-bottom: spacing(5);
+
+    @include media('sm-desktop', 'desktop') {
+      padding-top: spacing(8);
+      padding-bottom: spacing(8);
+    }
+
+    .bs-flex-container {
+      max-width: 780px;
+
+      .bs-heading-h2 {
+        text-align: center;
+
+        @include media('phone') {
+          font-size: 24px;
+          line-height: 37px;
+        }
+      }
+
+      .bs-subtitle {
+        text-align: center;
+        color: $bs-section-contact-us-subtitle-color;
+        margin: spacing(1) 0 0 0;
+
+        @include media('phone') {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: spacing(2);
+        position: relative;
+        min-height: 588px;
+
+        @include media('sm-desktop', 'desktop') {
+          margin-top: spacing(4);
+          min-height: 522px;
+        }
+
+        .form-control {
+          margin-top: spacing(1);
+          width: 100%;
+          max-width: $max-control-width;
+
+          .bs-flex-row {
+            flex-direction: column;
+
+            @include media('sm-desktop', 'desktop') {
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              margin-left: spacing(-1);
+              margin-right: spacing(-1);
+              width: calc(100% + spacing(2));
+            }
+
+            .bs-flex-item {
+              flex: 0 0 100%;
+              max-width: 100%;
+
+              @include media('sm-desktop', 'desktop') {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding-left: spacing(1);
+                padding-right: spacing(1);
+              }
+
+              & + .bs-flex-item {
+                margin-top: spacing(1);
+
+                @include media('sm-desktop', 'desktop') {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .bs-callback-modal {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          max-width: 100%;
+          display: none;
+        }
+
+        &.submitted {
+          .bs-callback-modal {
+            display: flex;
+          }
+        }
+      }
+
+      .button-container {
+        width: 100%;
+        max-width: $max-control-width;
+        margin-top: spacing(3);
+
+        @include media('sm-desktop', 'desktop') {
+          margin-top: spacing(4);
+        }
+
+        .bs-button {
+          width: 100%;
+
+          @include media('sm-desktop', 'desktop') {
+            width: 187px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+
+      .link-container {
+        margin-top: spacing(4);
+        width: 100%;
+        max-width: $max-control-width;
+        text-align: left;
+  
+        @include media('sm-desktop', 'desktop') {
+          text-align: center;
+        }
+  
+        .link {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          color: $bs-section-contact-us-link-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

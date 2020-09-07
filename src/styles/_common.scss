@@ -5,24 +5,32 @@ $bs-cyan-2: #00C7DD;
 $bs-cyan-3: #009CAD;
 $bs-cyan-4: #008B9A;
 $bs-cyan-5: #3fc8d6;
+$bs-cyan-6: #007885;
+$bs-cyan-7: #006C78;
 
-$bs-black: #000;
+$bs-black: #202020;
 $bs-white: #fff;
+
+$bs-error-color: #DE5A5A;
 
 $bs-font-main: 'Titillium Web', sans-serif;
 
 $bs-z-index-top: 1000;
+$bs-z-index-middle: 100;
+$bs-z-index-below: -1;
+
+$bs-transition-base: 150ms ease-in-out;
 
 // Media queries
 
 $bs-phone: 360px;
 $bs-tablet: 768px;
 $bs-sm-desktop: 1024px;
-$bs-desktop: 1280px;
+$bs-desktop: 1160px;
 
 @function translate-media-condition($c) {
   $conditionsMap: (
-    "phone": "(max-width: #{$bs-phone - 1px})",
+    "phone": "(max-width: #{$bs-tablet - 1px})",
     "tablet": "(min-width: #{$bs-tablet}) and (max-width: #{$bs-sm-desktop - 1px})",
     "sm-desktop": "(min-width: #{$bs-sm-desktop}) and (max-width: #{$bs-desktop - 1px})",
     "desktop": "(min-width: #{$bs-desktop})",

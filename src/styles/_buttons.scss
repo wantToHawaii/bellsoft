@@ -1,4 +1,12 @@
-$bs-button-color: $bs-cyan-3;
+$bs-button-color: $bs-cyan-4;
+
+$bs-button-disabled-color: #D1D7D8;
+
+$bs-button-contained-hover: $bs-cyan-6;
+$bs-button-contained-active: $bs-cyan-7;
+
+$bs-button-outlined-background-hover: rgba(0, 234, 220, 0.05);
+$bs-button-outlined-background-active: rgba(0, 234, 220, 0.1);
 
 .bs-button {
   background-color: transparent;
@@ -9,8 +17,8 @@ $bs-button-color: $bs-cyan-3;
   display: block;
   font-weight: 600;
   font-size: 20px;
-  line-height: 24px;
-  padding: spacing(2) spacing(3);
+  line-height: 30px;
+  padding: spacing(2) spacing(4);
   text-decoration: none;
   text-align: center;
 
@@ -26,9 +34,19 @@ $bs-button-color: $bs-cyan-3;
     background-color: $bs-button-color;
     border-color: $bs-button-color;
     color: $bs-white;
+    transition: background-color $bs-transition-base;
 
     &:hover {
-      color: $bs-black;
+      background-color: $bs-button-contained-hover;
+    }
+
+    &:active {
+      background-color: $bs-button-contained-active;
+    }
+
+    &:disabled {
+      background-color: $bs-button-disabled-color;
+      border-color: $bs-button-disabled-color;
     }
   }
 
@@ -38,8 +56,17 @@ $bs-button-color: $bs-cyan-3;
     color: $bs-button-color;
 
     &:hover {
-      background-color: $bs-button-color;
-      color: $bs-white;
+      background-color: $bs-button-outlined-background-hover;
+    }
+
+    &:active {
+      background-color: $bs-button-outlined-background-active;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: $bs-button-disabled-color;
+      color: $bs-button-disabled-color;
     }
   }
 }

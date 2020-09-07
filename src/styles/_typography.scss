@@ -1,4 +1,4 @@
-$bs-heading-color-default: #333;
+$bs-heading-color-default: $bs-black;
 
 .bs-heading-h1 {
   color: $bs-heading-color-default;
@@ -9,7 +9,7 @@ $bs-heading-color-default: #333;
 
 .bs-heading-h2 {
   color: $bs-heading-color-default;
-  font: 400 44px/67px $bs-font-main;
+  font: 600 40px/61px $bs-font-main;
   margin: 0;
   width: 100%;
 }
@@ -30,14 +30,14 @@ $bs-heading-color-default: #333;
 
 .bs-heading-h5 {
   color: $bs-heading-color-default;
-  font: 400 24px/30px $bs-font-main;
+  font: 400 20px/30px $bs-font-main;
   margin: 0;
   width: 100%;
 }
 
 .bs-subtitle {
   color: $bs-black;
-  font: 400 24px/30px $bs-font-main;
+  font: 600 20px/30px $bs-font-main;
   margin: 0;
   width: 100%;
 }
