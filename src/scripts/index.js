@@ -1,5 +1,3 @@
-import initBsSlider from './bsSlider';
-
 window.addEventListener('load', () => {
   const initHeaderMenu = () => {
     const header = document.querySelector('#site-header');

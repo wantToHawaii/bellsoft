@@ -32,9 +32,10 @@ $bs-section-find-value-title-color: #F5F5F7;
 $bs-section-find-value-subtitle-color: #F5F5F7;
 $bs-section-find-value-text-color: #A8A8A8;
 
-$bs-section-reviews-card-bg-color: $bs-black;
+$bs-section-bg-color: #E5E5E5;
+$bs-section-reviews-card-bg-color: #F9F9F9;
 $bs-section-reviews-text-color: #E5E5E5;
-$bs-section-reviews-image-bs-color: #EFF0F2;
+$bs-section-reviews-image-bg-color: #FFF;
 
 $bs-section-contact-us-subtitle-color: #7B7C83;
 $bs-section-contact-us-link-color: $bs-cyan-4;
@@ -241,7 +242,7 @@ body.page-liberica-jdk {
     padding: spacing(5) 0;
 
     @include media('sm-desktop', 'desktop') {
-      padding: spacing(7) 0 spacing(9);
+      padding: spacing(7) 0 spacing(6);
     }
 
     .bs-flex-container {
@@ -264,141 +265,59 @@ body.page-liberica-jdk {
         }
       }
 
-      .slider-container {
-        margin-top: spacing(2);
+      .bs-flex-row {
+        flex-direction: column;
+        align-items: center;
 
         @include media('sm-desktop', 'desktop') {
+          align-items: stretch;
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
           margin-top: spacing(5);
-        }
-
-        .slider {
-          position: relative;
-
-          .bs-slider-arrow {
-            display: none;
-            position: absolute;
-            top: 50%;
-            margin-top: -32px;
-
-            @media screen and (min-width: 1250px) {
-              display: flex;
-            }
-
-            &.left {
-              left: -56px;
-            }
-        
-            &.right {
-              right: -56px;
-            }
-          }
-
-          .slide {
-            background-color: $bs-section-java-runtime-card-bg-color;
-            border-radius: spacing(1);
-            padding: spacing(3);
-            transition: all 0.5s cubic-bezier(0.18, 0.98, 0.45, 1);
-            min-height: 460px;
-
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            @include media('sm-desktop', 'desktop') {
-              padding: spacing(8);
-              min-height: 500px;
-            }
-
-            &[data-index='0'] {
-              position: relative;
-              z-index: 3;
-              opacity: 1;
-            }
-
-            &[data-index='1'] {
-              transform: translate(0px, #{spacing(2)}) scale(.98);
-              z-index: 2;
-              opacity: 0.5;
-            }
-
-            &[data-index='2'] {
-              transform: translate(0px, #{spacing(4)}) scale(.96);
-              z-index: 1;
-              opacity: 0.5;
-            }
-    
-            .bs-flex-row {
-              flex-direction: column-reverse;
-
-              @include media('sm-desktop', 'desktop') {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-
-                &.reverse {
-                  flex-direction: row-reverse;
-                }
-              }
-    
-              .bs-flex-item {
-                @include media('sm-desktop', 'desktop') {
-                  flex: 0 0 50%;
-                  max-width: 50%;
-                }
-
-                .content {
-                  .title {
-                    color: $bs-section-java-runtime-card-title-color;
-                    font-weight: 600;
-                    font-size: 24px;
-                    line-height: 37px;
-                    margin: spacing(2) 0 0 0;
-
-                    @include media('sm-desktop', 'desktop') {
-                      font-size: 36px;
-                      line-height: 55px;
-                      margin: 0;
-                    }
-                  }
-    
-                  .text {
-                    color: $bs-section-java-runtime-card-text-color;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 24px;
-                    margin: spacing(1) 0 0 0;
-
-                    @include media('sm-desktop', 'desktop') {
-                      font-size: 20px;
-                      line-height: 32px;
-                    }
-                  }
-                }
-    
-                .image-container {
-                  height: 160px;
-
-                  @include media('sm-desktop', 'desktop') {
-                    height: 240px;
-                  }
-
-                  .image {
-                    object-position: center;
-                    object-fit: contain;
-                    height: 100%;
-                    width: 100%;
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .bs-slider-dots {
-          margin-top: spacing(7);
+          max-width: 360px;
 
           @include media('sm-desktop', 'desktop') {
-            margin-top: spacing(9);
+            align-items: stretch;
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+          }
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            background-color: $bs-section-java-runtime-card-bg-color;
+            box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.05);
+            border-radius: spacing(1);
+            padding: spacing(7) spacing(4);
+            height: 100%;
+
+            .title {
+              color: $bs-section-java-runtime-card-title-color;
+              font-size: 24px;
+              line-height: 37px;
+            }
+
+            .text {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+              color: $bs-section-java-runtime-card-text-color;
+              margin: spacing(1) 0 spacing(3) 0;
+            }
+
+            .image-container {
+              margin-top: auto;
+              height: 165px;
+
+              .image {
+                object-position: center;
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+              }
+            }
           }
         }
       }
@@ -657,6 +576,8 @@ body.page-liberica-jdk {
             padding: $card-lp;
             height: 100%;
             min-height: 535px;
+            position: relative;
+            z-index: $bs-z-index-middle;
 
             &.drop-down-text-visible {
               .image-container,
@@ -846,6 +767,7 @@ body.page-liberica-jdk {
    * Customers reviews
    */
   .section-customers-reviews {
+    background-color: $bs-section-bg-color;
     padding-top: spacing(5);
     padding-bottom: spacing(5);
     scroll-margin-top: $scroll-margin-top;
@@ -860,7 +782,6 @@ body.page-liberica-jdk {
 
       .bs-heading-h2 {
         text-align: center;
-        margin-bottom: spacing(4);
         max-width: 840px;
 
         @include media('phone') {
@@ -869,141 +790,78 @@ body.page-liberica-jdk {
         }
 
         @include media('sm-desktop', 'desktop') {
-          margin-bottom: spacing(6);
+          margin-bottom: spacing(3);
         }
       }
 
-      .slider-container {
-        .slider {
-          position: relative;
+      .card {
+        background-color: $bs-section-reviews-card-bg-color;
+        border-radius: spacing(1);
+        overflow: hidden;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: spacing(4);
+        max-width: 328px;
 
-          .bs-slider-arrow {
-            display: none;
-            position: absolute;
-            top: 50%;
-            margin-top: -24px;
+        @include media('sm-desktop', 'desktop') {
+          display: flex;
+          height: 420px;
+          max-width: 100%;
 
-            @media screen and (min-width: 1250px) {
-              display: flex;
-            }
-
-            &.left {
-              left: -56px;
-            }
-
-            &.right {
-              right: -56px;
-            }
-          }
-
-          .slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 400px;
-            transition: opacity 0.5s cubic-bezier(0.18, 0.98, 0.45, 1);
-
-            &[data-index] {
-              opacity: 0;
-              position: absolute;
-              top: 0;
-              left: 0;
-            }
-
-            &[data-index="0"] {
-              opacity: 1;
-              z-index: 1;
-              position: relative;
-            }
-
-            @include media('sm-desktop', 'desktop') {
-              flex-direction: row;
-              align-items: stretch;
-              max-width: 100%;
-              min-height: 420px;
-            }
-
-            .customer-info {
-              background-color: $bs-section-reviews-card-bg-color;
-              border-radius: spacing(1);
-              padding: spacing(4) spacing(3);
-              order: 2;
-
-              @include media('sm-desktop', 'desktop') {
-                display: flex;
-                flex-direction: column;
-                flex: 0 0 50%;
-                max-width: 50%;
-                order: 1;
-                padding: spacing(7) spacing(4);
-              }
-
-              .quotes-image {
-                height: 52px;
-                width: 70px;
-              }
-      
-              .text {
-                color: $bs-section-reviews-text-color;
-                font-size: 14px;
-                line-height: 20px;
-                margin: spacing(-2) 0 0 0;
-                height: 100%;
-
-                @include media('sm-desktop', 'desktop') {
-                  font-size: 16px;
-                  line-height: 24px;
-                  display: flex;
-                  flex-direction: column;
-                  padding-left: spacing(5);
-                  padding-right: spacing(5);
-                }
-
-                .review {
-                  margin: 0 0 spacing(4);
-                }
-
-                .name {
-                  margin: auto 0 0 0;
-                }
-        
-                .position {
-                  margin: spacing(1) 0 0 0;
-                }
-              }
-            }
-
-            .customer-photo {
-              background-color: $bs-section-reviews-image-bs-color;
-              border-radius: spacing(1);
-              overflow: hidden;
-              display: flex;
-              order: 1;
-
-              @include media('sm-desktop', 'desktop') {
-                flex: 0 0 50%;
-                max-width: 50%;
-                order: 2;
-                max-height: 100%;
-              }
-
-              .image {
-                object-position: center bottom;
-                object-fit: contain;
-                height: 100%;
-                width: 100%;
-                max-width: 100%;
-              }
-            }
+          &:nth-of-type(odd) {
+            flex-direction: row-reverse;
           }
         }
 
-        .bs-slider-dots {
-          margin-top: spacing(5);
+        .customer-info {
+          margin-top: spacing(2);
+          padding: spacing(3) spacing(3) spacing(4);
 
           @include media('sm-desktop', 'desktop') {
-            margin-top: spacing(6);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: spacing(6) spacing(9) spacing(7);
+          }
+
+          .review {
+            color: $bs-black;
+            margin: spacing(3) 0;
+
+            @include media('sm-desktop', 'desktop') {
+              margin-top: spacing(4);
+            }
+          }
+
+          .name,
+          .position {
+            color: $bs-cyan-4;
+          }
+
+          .name {
+            margin-top: auto;
+          }
+        }
+
+        .customer-photo {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          background-color: $bs-section-reviews-image-bg-color;
+          min-height: 230px;
+          padding: spacing(2);
+          padding-bottom: 0;
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          .image {
+            max-height: 100%;
+            max-width: 100%;
           }
         }
       }
