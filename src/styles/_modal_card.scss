@@ -1,0 +1,54 @@
+$bs-callback-modal-background-color: #fff;
+$bs-callback-modal-close-button-background-color: #EFF0F2;
+$bs-callback-modal-text-color: #7B7C83;
+
+.bs-callback-modal {
+  background-color: $bs-callback-modal-background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $bs-z-index-middle;
+
+  .card {
+    background-color: $bs-callback-modal-background-color;
+    padding: spacing(6) spacing(8);
+    box-shadow: 0px 12px 36px rgba(32, 32, 32, 0.1);
+    position: relative;
+    max-width: 400px;
+
+    .close {
+      background-color: $bs-callback-modal-close-button-background-color;
+      background-image: url(../images/modal-card-close-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 32px;
+      width: 32px;
+      max-width: 32px;
+      position: absolute;
+      top: spacing(2);
+      right: spacing(2);
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 24px;
+      margin-top: spacing(3);
+    }
+
+    .text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: $bs-callback-modal-text-color;
+      margin-top: spacing(4);
+    }
+
+    .bs-button {
+      margin-top: spacing(4);
+      min-width: 129px;
+    }
+  }
+}
