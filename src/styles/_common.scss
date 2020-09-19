@@ -18,6 +18,8 @@ $bs-font-main: 'Titillium Web', sans-serif;
 $bs-z-index-top: 1000;
 $bs-z-index-middle: 100;
 $bs-z-index-below: -1;
+// ---------------------
+$bs-z-index-popup: $bs-z-index-top + 10;
 
 $bs-transition-base: 150ms ease-in-out;
 

@@ -1,0 +1,277 @@
+$bs-popup-card-background-color: #fff;
+$bs-popup-overlay-background-color: rgba(26,49,48, .25);
+$bs-popup-card-subtitle-color: #7B7C83;
+$bs-popup-card-service-background-color: #EFF0F2;
+
+.bs-popup {
+  display: flex;
+  justify-content: center;
+  padding: spacing(2) spacing(0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  z-index: $bs-z-index-popup;
+
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity $bs-transition-base;
+
+  @include media('sm-desktop', 'desktop') {
+    align-items: center;
+  }
+
+  &.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .overlay {
+    background-color: $bs-popup-overlay-background-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: $bs-z-index-popup + 1;
+
+    // @supports not (backdrop-filter: none)
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .card {
+    background-color: $bs-popup-card-background-color;
+    box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.25);
+    border-radius: spacing(2);
+    padding: spacing(2);
+    position: relative;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 100%;
+    z-index: $bs-z-index-popup + 2;
+
+    @include media('sm-desktop', 'desktop') {
+      padding: spacing(4) spacing(10) spacing(8);
+    }
+
+    .button-close {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 2px solid $bs-cyan-4;
+      border-radius: 50%;
+      padding: 0;
+      height: 32px;
+      width: 32px;
+      transition: opacity $bs-transition-base;
+
+      @include media('sm-desktop', 'desktop') {
+        transform: translateX(spacing(-8));
+      }
+
+      &:hover {
+        opacity: .65;
+      }
+  
+      &:focus {
+        outline: none;
+      }
+  
+      .image {
+        path {
+          stroke: $bs-cyan-4;
+        }
+      }
+    }
+
+    .title {
+      color: $bs-black;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      margin: spacing(4) 0 0 0;
+
+      @include media('sm-desktop', 'desktop') {
+        font-size: 36px;
+        line-height: 54px;
+        margin: spacing(3) 0 0 0;
+      }
+    }
+
+    .subtitle {
+      color: $bs-popup-card-subtitle-color;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      margin: spacing(2) 0 0 0;
+
+      @include media('sm-desktop', 'desktop') {
+        font-size: 20px;
+        line-height: 32px;
+        margin-top: spacing(1);
+      }
+    }
+
+    .form-additional-services {
+      .services-list {
+        margin-top: spacing(1);
+
+        .bs-flex-row {
+          flex-direction: column;
+
+          @include media('sm-desktop', 'desktop') {
+            flex-direction: row;
+            margin-left: spacing(-1);
+            margin-right: spacing(-1);
+          }
+
+          .bs-flex-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-top: spacing(2);
+            position: relative;
+
+            @include media('sm-desktop', 'desktop') {
+              flex: 0 0 33.333%;
+              max-width: 33.333%;
+              padding-left: spacing(1);
+              padding-right: spacing(1);
+              margin-top: spacing(3);
+            }
+
+            .bs-form-checkbox {
+              position: absolute;
+              top: spacing(3);
+              margin-left: spacing(2);
+              z-index: 1;
+
+              @include media('sm-desktop', 'desktop') {
+                margin-left: spacing(3);
+              }
+
+              &:checked + .service-card {
+                border-color: $bs-cyan-4;
+                box-shadow: 0px 4px 16px rgba(0, 139, 154, 0.1);
+              }
+            }
+
+            .service-card {
+              background-color: $bs-popup-card-service-background-color;
+              border-radius: spacing(1);
+              border: 2px solid $bs-popup-card-service-background-color;
+              cursor: pointer;
+              display: block;
+              padding: spacing(6) spacing(2) spacing(2);
+              height: 100%;
+              width: 100%;
+
+              @include media('sm-desktop', 'desktop') {
+                padding: spacing(6) spacing(3) spacing(3);
+              }
+
+              .option-text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: spacing(2);
+
+                @include media('sm-desktop', 'desktop') {
+                  font-size: 20px;
+                  line-height: 30px;
+                }
+
+                strong {
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+
+        & + .bs-flex-row {
+          margin-top: spacing(3);
+          flex-direction: column;
+
+          @include media('sm-desktop', 'desktop') {
+            margin-top: spacing(5);
+          }
+
+          @include media('sm-desktop', 'desktop') {
+            align-items: flex-end;
+            flex-direction: row;
+            margin-left: spacing(-1);
+            margin-right: spacing(-1);
+          }
+  
+          .bs-flex-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            @include media('sm-desktop', 'desktop') {
+              padding-left: spacing(1);
+              padding-right: spacing(1);
+            }
+
+            &:first-child {
+              @include media('sm-desktop', 'desktop') {
+                flex: 0 0 66.666%;
+                max-width: 66.666%;
+              }
+            }
+
+            &:last-child {
+              @include media('sm-desktop', 'desktop') {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+              }
+            }
+
+            .bs-button {
+              margin-top: spacing(3);
+              padding-top: 13px;
+              padding-bottom: 13px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .socials {
+      margin-top: spacing(4);
+
+      .socials-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $bs-black;
+      }
+
+      .list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin-top: spacing(2);
+
+        .item {
+          & + .item {
+            margin-left: spacing(3);
+          }
+
+          .link {
+            .image {
+              fill: $bs-cyan-4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
