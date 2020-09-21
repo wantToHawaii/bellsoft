@@ -300,6 +300,14 @@ $bs-road-map-section-table-row-even-body-bg-color: #fff;
           color: $bs-black;
           margin: 0;
 
+          & + .text {
+            margin-top: spacing(2);
+
+            @include media('sm-desktop', 'desktop') {
+              margin-top: spacing(4);
+            }
+          }
+
           @include media('sm-desktop', 'desktop') {
             font-size: 16px;
             line-height: 24px;

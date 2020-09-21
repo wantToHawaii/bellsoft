@@ -23,6 +23,7 @@ module.exports = {
     new HtmlWebpackPlugin({ filename: 'index.html', template: './src/index.html' }),
     new HtmlWebpackPlugin({ filename: 'high-powered-support.html', template: './src/high-powered-support.html' }),
     new HtmlWebpackPlugin({ filename: 'road-map.html', template: './src/road-map.html' }),
+    new HtmlWebpackPlugin({ filename: 'pricing.html', template: './src/pricing.html' }),
     new HtmlWebpackPlugin({ filename: 'components.html', template: './src/components.html' }),
   ],
   output: {
