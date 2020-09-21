@@ -66,6 +66,4 @@ window.addEventListener('load', () => {
   initFooterMenu();
   initCardsWithDropDownText();
   onContactFormSubmit('#contact-form');
-  initBsSlider('#java-runtime-slider');
-  initBsSlider('#reviews-slider');
 });
