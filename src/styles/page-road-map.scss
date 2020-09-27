@@ -5,8 +5,17 @@ $bs-road-map-section-block-white-bg-color: #fff;
 $bs-road-map-section-block-label-dark-color: #7B7C83;
 $bs-road-map-section-block-label-light-color: #EFF0F2;
 
-$bs-road-map-section-table-row-body-bg-color: #FBFBFB;
+$bs-road-map-section-table-row-odd-head-bg-color: $bs-black;
+
+$bs-road-map-section-table-row-odd-body-bg-color: #FBFBFB;
 $bs-road-map-section-table-row-even-body-bg-color: #fff;
+$bs-road-map-section-table-cyan-row-odd-body-bg-color: $bs-cyan-4;
+$bs-road-map-section-table-cyan-row-even-body-bg-color: $bs-cyan-8;
+
+$bs-road-map-section-table-cell-odd-bg-color: #E0F0F3;
+$bs-road-map-section-table-cell-even-bg-color: #ECF7F9;
+$bs-road-map-section-table-cyan-cell-odd-bg-color: #0DA2B2;
+$bs-road-map-section-table-cyan-cell-even-bg-color: #0BB6C9;
 
 .page-road-map {
 
@@ -194,57 +203,82 @@ $bs-road-map-section-table-row-even-body-bg-color: #fff;
             width: 100%;
 
             &.cyan {
-              tr {
-                background-color: $bs-cyan-4;
-                color: $bs-white;
-  
-                &:nth-child(even) {
-                  background-color: $bs-cyan-8;
+              tbody {
+                tr {
+                  color: $bs-white;
+                  
+                  &:nth-child(odd) {
+                    background-color: $bs-road-map-section-table-cyan-row-odd-body-bg-color;
+
+                    .has-colored-overlay {
+                      &:before {
+                        background-color: $bs-road-map-section-table-cyan-cell-odd-bg-color;
+                      }
+                    }
+                  }
+
+                  &:nth-child(even) {
+                    background-color: $bs-road-map-section-table-cyan-row-even-body-bg-color;
+
+                    .has-colored-overlay {
+                      &:before {
+                        background-color: $bs-road-map-section-table-cyan-cell-even-bg-color;
+                      }
+                    }
+                  }
                 }
               }
             }
 
-            td, th {
-              width: 25%;
+            tr {
+              td, th {
+                padding-left: spacing(4);
+                padding-right: spacing(4);
+                position: relative;
+                width: 20%;
 
-              &.fixed-width {
-                &:after {
-                  display: block;
-                  content: '';
-                  width: 200px;
+                &:first-child {
+                  border-radius: spacing(1) 0 0 spacing(1);
                 }
-                width: 200px;
-              }
 
-              &.compact {
-                width: 12.5%;
-              }
+                &:nth-of-type(3) {
+                  width: 25%;
+                }
 
-              &.bottom-align {
-                vertical-align: bottom;
+                &:nth-of-type(4) {
+                  width: 15%;
+                }
+
+                &:last-child {
+                  border-radius: 0 spacing(1) spacing(1) 0;
+                  width: 20%;
+                }
+
+                &.text-center {
+                  text-align: center;
+                }
               }
             }
   
             thead {
               tr {
                 th {
-                  background-color: $bs-black;
+                  background-color: $bs-road-map-section-table-row-odd-head-bg-color;
                   color: $bs-white;
-                  padding-top: 6px;
-                  padding-bottom: 6px;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
 
-                  &:first-child {
-                    border-radius: spacing(1) 0 0 spacing(1);
-                    padding-left: spacing(4);
-                  }
-    
-                  &:last-child {
-                    border-radius: 0 spacing(1) spacing(1) 0;
-                    padding-right: spacing(4);
+                  .cell-title {
+                    position: absolute;
+                    top: 6px;
+                    left: spacing(4);
+                    white-space: nowrap;
+                    z-index: 1;
                   }
 
-                  .th-subtitle {
+                  .cell-subtitle {
                     font-weight: 400;
+                    margin-top: 20px;
                   }
                 }
               }
@@ -253,11 +287,26 @@ $bs-road-map-section-table-row-even-body-bg-color: #fff;
             tbody {
               tr {
                 $border: 1px solid rgba(32, 32, 32, 0.1);
-                background-color: $bs-road-map-section-table-row-body-bg-color;
                 color: $bs-black;
+  
+                &:nth-child(odd) {
+                  background-color: $bs-road-map-section-table-row-odd-body-bg-color;
+
+                  .has-colored-overlay {
+                    &:before {
+                      background-color: $bs-road-map-section-table-cell-odd-bg-color;
+                    }
+                  }
+                }
   
                 &:nth-child(even) {
                   background-color: $bs-road-map-section-table-row-even-body-bg-color;
+
+                  .has-colored-overlay {
+                    &:before {
+                      background-color: $bs-road-map-section-table-cell-even-bg-color;
+                    }
+                  }
                 }
   
                 td {
@@ -266,15 +315,28 @@ $bs-road-map-section-table-row-even-body-bg-color: #fff;
                   padding-bottom: 20px;
   
                   &:first-child {
-                    border-radius: spacing(1) 0 0 spacing(1);
                     border-left: $border;
-                    padding-left: spacing(4);
                   }
     
                   &:last-child {
-                    border-radius: 0 spacing(1) spacing(1) 0;
                     border-right: $border;
-                    padding-right: spacing(4);
+                  }
+
+                  &.has-colored-overlay {
+                    overflow: hidden;
+                    z-index: 1;
+
+                    &:before {
+                      background-color: lightblue;
+                      border-radius: spacing(1);
+                      content: '';
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 100%;
+                      width: 100%;
+                      z-index: -1;
+                    }
                   }
                 }
               }
