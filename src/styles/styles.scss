@@ -5,11 +5,14 @@
 @import 'grid';
 @import 'form';
 @import 'modal_card';
+@import 'popup';
 @import 'header';
 @import 'footer';
 
 @import 'page-liberica-jdk';
 @import 'page-high-powered-support';
+@import 'page-road-map';
+@import 'page-pricing';
 
 body {
   background-color: #fff;
@@ -19,6 +22,23 @@ body {
 h1, h2, h3, h4, h5, h6, ul, ol {
   margin: 0;
   padding: 0;
+}
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-collapse: inherit;
+  border-spacing: 0;
+  border-color: inherit;
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
 }
 
 * {

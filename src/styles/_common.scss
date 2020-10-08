@@ -7,6 +7,7 @@ $bs-cyan-4: #008B9A;
 $bs-cyan-5: #3fc8d6;
 $bs-cyan-6: #007885;
 $bs-cyan-7: #006C78;
+$bs-cyan-8: #079FAF;
 
 $bs-black: #202020;
 $bs-white: #fff;
@@ -18,6 +19,8 @@ $bs-font-main: 'Titillium Web', sans-serif;
 $bs-z-index-top: 1000;
 $bs-z-index-middle: 100;
 $bs-z-index-below: -1;
+// ---------------------
+$bs-z-index-popup: $bs-z-index-top + 10;
 
 $bs-transition-base: 150ms ease-in-out;
 

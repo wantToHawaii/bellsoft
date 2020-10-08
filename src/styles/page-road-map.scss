@@ -1,0 +1,381 @@
+$bs-road-map-section-hero-title-color: #F5F5F7;
+$bs-road-map-section-bg-color: #E5E5E5;
+$bs-road-map-section-block-grey-bg-color: #FBFBFB;
+$bs-road-map-section-block-white-bg-color: #fff;
+$bs-road-map-section-block-label-dark-color: #7B7C83;
+$bs-road-map-section-block-label-light-color: #EFF0F2;
+
+$bs-road-map-section-table-row-odd-head-bg-color: $bs-black;
+
+$bs-road-map-section-table-row-odd-body-bg-color: #FBFBFB;
+$bs-road-map-section-table-row-even-body-bg-color: #fff;
+$bs-road-map-section-table-cyan-row-odd-body-bg-color: $bs-cyan-4;
+$bs-road-map-section-table-cyan-row-even-body-bg-color: $bs-cyan-8;
+
+$bs-road-map-section-table-cell-odd-bg-color: #E0F0F3;
+$bs-road-map-section-table-cell-even-bg-color: #ECF7F9;
+$bs-road-map-section-table-cyan-cell-odd-bg-color: #0DA2B2;
+$bs-road-map-section-table-cyan-cell-even-bg-color: #0BB6C9;
+
+.page-road-map {
+
+  .section-hero {
+    background: right top 20px / auto 95% no-repeat url('../images/page-roadmap-hero-bg-right-mobile.svg'),
+                left 8px bottom 55px no-repeat url('../images/page-roadmap-hero-bg-left-mobile.svg');
+    background-color: $bs-black;
+    padding: spacing(5) 0;
+
+    @include media('sm-desktop', 'desktop') {
+      background: $bs-black center top 8px no-repeat url('../images/page-roadmap-hero-bg-desktop.svg');
+    }
+
+    .bs-flex-container {
+      padding-left: spacing(6);
+      padding-right: spacing(6);
+
+      @include media('sm-desktop', 'desktop') {
+        padding-left: spacing(2);
+        padding-right: spacing(2);
+      }
+
+      .bs-heading-h1 {
+        font-weight: 700;
+        color: $bs-road-map-section-hero-title-color;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include media('sm-desktop', 'desktop') {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .section-road-map {
+    background-color: $bs-road-map-section-bg-color;
+    padding: spacing(3) 0 spacing(12);
+
+    @include media('sm-desktop', 'desktop') {
+      padding-top: spacing(8);
+    }
+
+    .road-map {
+      .mobile-layout {
+        @include media('sm-desktop', 'desktop') {
+          display: none;
+        }
+
+        .bs-flex-container {
+          .title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: $bs-black;
+            text-transform: uppercase;
+            margin-top: spacing(3);
+            margin-bottom: spacing(1);
+  
+            &:first-child {
+              margin-top: 0;
+            }
+          }
+  
+          .block {
+            border: 1px solid rgba(32, 32, 32, 0.1);
+            border-radius: spacing(1);
+            padding: spacing(3);
+  
+            &.grey {
+              background-color: $bs-road-map-section-block-grey-bg-color;
+  
+              &:nth-of-type(even) {
+                background-color: $bs-road-map-section-block-white-bg-color;
+              }
+  
+              .label {
+                color: $bs-road-map-section-block-label-dark-color;
+              }
+  
+              .text {
+                color: $bs-black;
+              }
+            }
+  
+            &.cyan {
+              background-color: $bs-cyan-4;
+            }
+  
+            &.cyan-light {
+              background-color: $bs-cyan-8;
+            }
+  
+            &.cyan,
+            &.cyan-light {
+              .label {
+                color: $bs-road-map-section-block-label-light-color;
+              }
+  
+              .text {
+                color: $bs-white;
+              }
+            }
+  
+            .label {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 21px;
+              margin-top: spacing(2);
+  
+              &:first-child {
+                margin-top: 0;
+              }
+  
+              & + .label {
+                margin-top: spacing(1);
+              }
+  
+              & + .row {
+                margin-top: spacing(1);
+              }
+            }
+  
+            .text {
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 24px;
+              margin: 0;
+            }
+  
+            .row {
+              display: flex;
+              margin-top: spacing(2);
+  
+              .col {
+                flex: 0 0 50%;
+              }
+            }
+          }
+        }
+      }
+
+      .desktop-layout {
+        display: none;
+
+        @include media('sm-desktop', 'desktop') {
+          display: block;
+        }
+
+        .table-title {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: $bs-black;
+          margin: spacing(3) 0;
+          text-align: center;
+        }
+
+        .table-container {
+          position: relative;
+          padding-left: spacing(5);
+
+          .table-side-title {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 33px;
+            color: $bs-black;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+          }
+
+          table {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: left;
+            width: 100%;
+
+            &.cyan {
+              tbody {
+                tr {
+                  color: $bs-white;
+                  
+                  &:nth-child(odd) {
+                    background-color: $bs-road-map-section-table-cyan-row-odd-body-bg-color;
+
+                    .has-colored-overlay {
+                      &:before {
+                        background-color: $bs-road-map-section-table-cyan-cell-odd-bg-color;
+                      }
+                    }
+                  }
+
+                  &:nth-child(even) {
+                    background-color: $bs-road-map-section-table-cyan-row-even-body-bg-color;
+
+                    .has-colored-overlay {
+                      &:before {
+                        background-color: $bs-road-map-section-table-cyan-cell-even-bg-color;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            tr {
+              td, th {
+                padding-left: spacing(4);
+                padding-right: spacing(4);
+                position: relative;
+                width: 20%;
+
+                &:first-child {
+                  border-radius: spacing(1) 0 0 spacing(1);
+                }
+
+                &:nth-of-type(3) {
+                  width: 25%;
+                }
+
+                &:nth-of-type(4) {
+                  width: 15%;
+                }
+
+                &:last-child {
+                  border-radius: 0 spacing(1) spacing(1) 0;
+                  width: 20%;
+                }
+
+                &.text-center {
+                  text-align: center;
+                }
+              }
+            }
+  
+            thead {
+              tr {
+                th {
+                  background-color: $bs-road-map-section-table-row-odd-head-bg-color;
+                  color: $bs-white;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+
+                  .cell-title {
+                    position: absolute;
+                    top: 6px;
+                    left: spacing(4);
+                    white-space: nowrap;
+                    z-index: 1;
+                  }
+
+                  .cell-subtitle {
+                    font-weight: 400;
+                    margin-top: 20px;
+                  }
+                }
+              }
+            }
+  
+            tbody {
+              tr {
+                $border: 1px solid rgba(32, 32, 32, 0.1);
+                color: $bs-black;
+  
+                &:nth-child(odd) {
+                  background-color: $bs-road-map-section-table-row-odd-body-bg-color;
+
+                  .has-colored-overlay {
+                    &:before {
+                      background-color: $bs-road-map-section-table-cell-odd-bg-color;
+                    }
+                  }
+                }
+  
+                &:nth-child(even) {
+                  background-color: $bs-road-map-section-table-row-even-body-bg-color;
+
+                  .has-colored-overlay {
+                    &:before {
+                      background-color: $bs-road-map-section-table-cell-even-bg-color;
+                    }
+                  }
+                }
+  
+                td {
+                  border-bottom: $border;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+  
+                  &:first-child {
+                    border-left: $border;
+                  }
+    
+                  &:last-child {
+                    border-right: $border;
+                  }
+
+                  &.has-colored-overlay {
+                    overflow: hidden;
+                    z-index: 1;
+
+                    &:before {
+                      background-color: lightblue;
+                      border-radius: spacing(1);
+                      content: '';
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 100%;
+                      width: 100%;
+                      z-index: -1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .description {
+      margin-top: spacing(6);
+
+      @include media('sm-desktop', 'desktop') {
+        margin-top: spacing(8);
+      }
+
+      .bs-flex-container {
+        .text {
+          display: block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: $bs-black;
+          margin: 0;
+
+          & + .text {
+            margin-top: spacing(2);
+
+            @include media('sm-desktop', 'desktop') {
+              margin-top: spacing(4);
+            }
+          }
+
+          @include media('sm-desktop', 'desktop') {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
