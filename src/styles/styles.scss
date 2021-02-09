@@ -1,25 +1,33 @@
-@import 'common';
-@import 'normalize';
-@import 'typography';
-@import 'buttons';
-@import 'grid';
-@import 'form';
-@import 'modal_card';
-@import 'popup';
-@import 'header';
-@import 'footer';
+@import "common";
+@import "normalize";
+@import "typography";
+@import "buttons";
+@import "grid";
+@import "form";
+@import "modal_card";
+@import "popup";
+@import "header";
+@import "footer";
 
-@import 'page-liberica-jdk';
-@import 'page-high-powered-support';
-@import 'page-road-map';
-@import 'page-pricing';
+@import "page-liberica-jdk";
+@import "page-liberica-native-image";
+@import "page-high-powered-support";
+@import "page-road-map";
+@import "page-pricing";
 
 body {
   background-color: #fff;
   font-family: $bs-font-main;
 }
 
-h1, h2, h3, h4, h5, h6, ul, ol {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
   margin: 0;
   padding: 0;
 }

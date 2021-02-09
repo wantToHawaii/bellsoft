@@ -1,0 +1,639 @@
+$bs-section-hero-bg-color: $bs-black;
+$bs-section-hero-text-color: #f5f5f7;
+$bs-section-hero-secondary-color: $bs-cyan-2;
+
+$bs-section-description-text-color: #7b7c83;
+
+$section-features-card-bg-color: #eff0f2;
+$section-features-card-text-color: #7b7c83;
+
+$section-impact-code-color: #00ded3;
+
+$section-explore-bg-color: #eff0f2;
+$section-explore-card-bg-color: #fff;
+$section-explore-card-text-color: #7b7c83;
+
+body.page-liberica-native-image {
+  /*
+  * Hero
+  */
+  .section-hero {
+    background-color: $bs-section-hero-bg-color;
+    color: $bs-section-hero-text-color;
+    padding-top: spacing(3);
+    padding-bottom: spacing(4);
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media("sm-desktop", "desktop") {
+          flex-direction: row;
+          align-items: center;
+          padding-top: spacing(10);
+        }
+
+        .bs-flex-item {
+          &.image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media("sm-desktop", "desktop") {
+              order: 2;
+              flex: 0 0 45%;
+              max-width: 45%;
+              justify-content: flex-start;
+            }
+
+            .image {
+              max-width: 100%;
+
+              @media screen and (min-width: 1440px) {
+                max-width: initial;
+              }
+            }
+          }
+
+          &.content {
+            text-align: center;
+            margin-top: spacing(1);
+
+            @include media("sm-desktop", "desktop") {
+              text-align: left;
+              align-items: center;
+            }
+
+            @include media("sm-desktop", "desktop") {
+              flex: 0 0 55%;
+              max-width: 55%;
+            }
+
+            .bs-heading-h1 {
+              color: $bs-section-hero-text-color;
+              font-size: 40px;
+              line-height: 56px;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                font-size: 64px;
+                line-height: 72px;
+              }
+            }
+
+            .bs-subtitle {
+              color: $bs-section-hero-text-color;
+              margin: spacing(1) 0 0 0;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                margin: spacing(2) 0 0 0;
+              }
+            }
+
+            .buttons-container {
+              display: flex;
+              flex-direction: column;
+              margin-top: spacing(4);
+
+              @include media("sm-desktop", "desktop") {
+                align-items: center;
+                flex-direction: row;
+                margin-top: spacing(6);
+              }
+
+              @include media("sm-desktop", "desktop") {
+                margin-top: spacing(8);
+              }
+
+              .bs-button {
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  flex: 0 0 auto;
+                }
+
+                & + .bs-button {
+                  margin-top: spacing(2);
+
+                  @include media("tablet", "sm-desktop", "desktop") {
+                    margin-top: 0;
+                    margin-left: spacing(2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Description
+   */
+  .section-description {
+    padding: spacing(6) 0 spacing(3);
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      padding: spacing(12) 0 spacing(6);
+    }
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          & + .bs-flex-item {
+            margin-top: spacing(6);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              flex: 0 0 50%;
+              max-width: 50%;
+              margin-top: 0;
+            }
+          }
+
+          .bs-heading-h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              font-size: 36px;
+              line-height: 48px;
+            }
+          }
+
+          .text {
+            color: $bs-section-description-text-color;
+            font-size: 16px;
+            line-height: 24px;
+            margin: spacing(1) 0 0 0;
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              font-size: 20px;
+              line-height: 32px;
+              margin-top: spacing(2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Features
+   */
+  .section-features {
+    padding: spacing(3) 0;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      padding: spacing(6) 0;
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        text-align: center;
+        line-height: 56px;
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          font-size: 64px;
+          line-height: 72px;
+        }
+      }
+
+      .features-container {
+        position: relative;
+        margin-top: spacing(3);
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          margin-top: spacing(6);
+        }
+
+        .swiper-wrapper {
+          @include media("tablet", "sm-desktop", "desktop") {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .feature {
+            background-color: $section-features-card-bg-color;
+            border-radius: spacing(1);
+            padding: spacing(6) spacing(3) spacing(4);
+            min-height: 500px;
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex: 0 0 100%;
+              padding: spacing(8);
+              min-height: auto;
+              max-width: 100%;
+
+              // clear slider styles
+              opacity: 1 !important;
+              transform: translate3d(0, 0, 0) !important;
+              width: 100% !important;
+
+              & + .feature {
+                margin-top: spacing(3);
+              }
+
+              &:nth-of-type(odd) {
+                flex-direction: row-reverse;
+              }
+            }
+
+            .image-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                padding: 0 spacing(4);
+              }
+
+              .image {
+                max-width: 150px;
+
+                @include media("tablet") {
+                  max-width: 200px;
+                }
+
+                @include media("sm-desktop", "desktop") {
+                  max-width: 325px;
+                }
+              }
+            }
+
+            .content {
+              margin-top: spacing(2);
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                padding: 0 spacing(4);
+                max-width: 500px;
+              }
+
+              .title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  font-size: 36px;
+                  line-height: 48px;
+                }
+              }
+
+              .text {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                color: $section-features-card-text-color;
+                margin: 0;
+                margin-top: spacing(1);
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  font-size: 20px;
+                  line-height: 32px;
+                  margin-top: spacing(2);
+                }
+              }
+
+              .list {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                .list-item {
+                  font-size: 16px;
+                  font-weight: 600;
+                  line-height: 24px;
+                  color: $section-features-card-text-color;
+                  padding-left: spacing(1);
+                  position: relative;
+
+                  @include media("tablet", "sm-desktop", "desktop") {
+                    font-size: 20px;
+                    line-height: 32px;
+                    padding-left: spacing(2);
+                  }
+
+                  &:before {
+                    background-color: $bs-black;
+                    border-radius: 50%;
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 2px);
+                    left: 0;
+                    width: 4px;
+                    height: 4px;
+
+                    @include media("tablet", "sm-desktop", "desktop") {
+                      height: 6px;
+                      width: 6px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .swiper-pagination {
+          @include media("tablet", "sm-desktop", "desktop") {
+            display: none;
+          }
+
+          .swiper-pagination-bullet {
+            background-color: $section-features-card-text-color;
+            transition: all 200ms;
+          }
+
+          .swiper-pagination-bullet-active {
+            background-color: $bs-cyan-4;
+            transform: scale(1.22);
+          }
+        }
+      }
+
+      .bs-button {
+        margin-top: spacing(3);
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          margin-top: spacing(6);
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  /*
+  * Impact
+  */
+  .section-impact {
+    color: $bs-white;
+    padding: spacing(3) 0 0;
+    text-align: center;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      padding: spacing(6) 0 0;
+    }
+
+    .section-wrapper {
+      background-image: url(../images/page-native-image-section-impact-bg.svg);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-color: $bs-black;
+      padding: spacing(6) 0 spacing(12);
+
+      @include media("tablet", "sm-desktop", "desktop") {
+        background-image: url(../images/page-native-image-section-impact-bg-mobile.svg);
+        padding: spacing(12) 0;
+      }
+
+      .bs-flex-container {
+        .content {
+          @include media("tablet", "sm-desktop", "desktop") {
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .bs-heading-h2 {
+            line-height: 56px;
+            color: inherit;
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              font-size: 64px;
+              line-height: 72px;
+            }
+          }
+
+          .bs-subtitle {
+            font-size: 16px;
+            line-height: 24px;
+            color: inherit;
+            margin-top: spacing(2);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              font-size: 20px;
+              line-height: 32px;
+              margin-top: spacing(3);
+            }
+          }
+
+          .code {
+            margin-top: spacing(6);
+            padding: spacing(3) 0;
+            color: $section-impact-code-color;
+            border-top: 1px solid $section-impact-code-color;
+            border-bottom: 1px solid $section-impact-code-color;
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              padding: spacing(6) 0;
+            }
+
+            pre {
+              font-size: 14px;
+              line-height: 4px;
+              text-align: left;
+              margin: 0;
+
+              .code-line {
+                line-height: 26px;
+                white-space: pre-wrap;
+                word-break: break-all;
+
+                $indent-step: 24px;
+                &.indent-1 {
+                  padding-left: $indent-step;
+                }
+                &.indent-2 {
+                  padding-left: calc(#{$indent-step} * 2);
+                }
+                &.indent-3 {
+                  padding-left: calc(#{$indent-step} * 3);
+                }
+              }
+            }
+          }
+
+          .callback-container {
+            margin-top: spacing(6);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              margin-top: spacing(12);
+            }
+
+            .text {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 32px;
+              margin: 0;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                font-size: 36px;
+                line-height: 48px;
+              }
+            }
+
+            .bs-button {
+              margin-top: spacing(3);
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                margin-top: spacing(6);
+                display: inline-flex;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+  * Explore
+  */
+  .section-explore {
+    background-color: $section-explore-bg-color;
+    padding: spacing(6) 0;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      padding: spacing(12) 0;
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        text-align: center;
+        line-height: 56px;
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          font-size: 62px;
+          line-height: 72px;
+        }
+      }
+
+      .bs-flex-row {
+        flex-direction: column;
+        margin-top: spacing(4);
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-top: spacing(6);
+        }
+
+        .bs-flex-item {
+          @include media("tablet", "sm-desktop", "desktop") {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          & + .bs-flex-item {
+            margin-top: spacing(2);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              margin-top: spacing(3);
+            }
+          }
+
+          &.fullwidth {
+            @include media("tablet", "sm-desktop", "desktop") {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+          }
+
+          .card {
+            background-color: $section-explore-card-bg-color;
+            border-radius: spacing(1);
+            padding: spacing(6) spacing(3);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              padding: spacing(9) spacing(6);
+            }
+
+            &.has-image {
+              @include media("tablet", "sm-desktop", "desktop") {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              }
+
+              .image-container {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: spacing(6);
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  align-items: flex-end;
+                  position: static;
+                  margin-left: spacing(2);
+                  margin-bottom: spacing(-9);
+                }
+
+                .image {
+                  max-width: 100%;
+                }
+              }
+
+              .content {
+                @include media("tablet", "sm-desktop", "desktop") {
+                  max-width: 500px;
+                }
+              }
+            }
+
+            .content {
+              text-align: center;
+
+              .icon {
+                margin-bottom: spacing(3);
+              }
+
+              .title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 32px;
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  font-size: 36px;
+                  line-height: 48px;
+                }
+              }
+
+              .text {
+                font-size: 16px;
+                line-height: 24px;
+                color: $section-explore-card-text-color;
+                margin: spacing(3) 0 0;
+              }
+
+              .bs-button.outlined {
+                border-color: transparent;
+                margin-top: spacing(3);
+                padding: 0;
+
+                &:hover,
+                &:active {
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,45 +3,44 @@ $page-anchors-height: 72px;
 $scroll-margin-top: $header-height + $page-anchors-height;
 
 $bs-section-hero-bg-color: $bs-black;
-$bs-section-hero-text-color: #F5F5F7;
+$bs-section-hero-text-color: #f5f5f7;
 $bs-section-hero-secondary-color: $bs-cyan-2;
 
 $bs-page-navigation-background: $bs-black;
-$bs-page-navigation-link-color: #F5F5F7;
+$bs-page-navigation-link-color: #f5f5f7;
 $bs-page-navigation-link-active-color: #fff;
 
-$bs-section-java-runtime-background-color: #E5E5E5;
+$bs-section-java-runtime-background-color: #e5e5e5;
 $bs-section-java-runtime-card-bg-color: #fff;
 $bs-section-java-runtime-card-title-color: $bs-black;
-$bs-section-java-runtime-card-text-color: #7B7C83;
+$bs-section-java-runtime-card-text-color: #7b7c83;
 
-$bs-section-oracle-jdk-background-color: #E5E5E5;
-$bs-section-oracle-jdk-title-color: #F5F5F7;
-$bs-section-oracle-jdk-text-color: #A8A8A8;
+$bs-section-oracle-jdk-background-color: #e5e5e5;
+$bs-section-oracle-jdk-title-color: #f5f5f7;
+$bs-section-oracle-jdk-text-color: #a8a8a8;
 $bs-section-oracle-jdk-content-background-color: $bs-black;
 
-$bs-section-industry-background-color: #E5E5E5;
+$bs-section-industry-background-color: #e5e5e5;
 
-$bs-section-discover-background-color: #E5E5E5;
+$bs-section-discover-background-color: #e5e5e5;
 $bs-section-discover-card-background-color: #fff;
 $bs-section-discover-card-title-color: #fff;
 $bs-section-discover-card-value-color: $bs-cyan-3;
 
 $bs-section-find-value-background-color: $bs-black;
-$bs-section-find-value-title-color: #F5F5F7;
-$bs-section-find-value-subtitle-color: #F5F5F7;
-$bs-section-find-value-text-color: #A8A8A8;
+$bs-section-find-value-title-color: #f5f5f7;
+$bs-section-find-value-subtitle-color: #f5f5f7;
+$bs-section-find-value-text-color: #a8a8a8;
 
-$bs-section-bg-color: #E5E5E5;
-$bs-section-reviews-card-bg-color: #F9F9F9;
-$bs-section-reviews-text-color: #E5E5E5;
-$bs-section-reviews-image-bg-color: #FFF;
+$bs-section-bg-color: #e5e5e5;
+$bs-section-reviews-card-bg-color: #f9f9f9;
+$bs-section-reviews-text-color: #e5e5e5;
+$bs-section-reviews-image-bg-color: #fff;
 
-$bs-section-contact-us-subtitle-color: #7B7C83;
+$bs-section-contact-us-subtitle-color: #7b7c83;
 $bs-section-contact-us-link-color: $bs-cyan-4;
 
 body.page-liberica-jdk {
-  
   /*
   * Hero
   */
@@ -49,13 +48,13 @@ body.page-liberica-jdk {
     background-color: $bs-section-hero-bg-color;
     color: $bs-section-hero-text-color;
     padding-top: spacing(3);
-    padding-bottom:spacing(4);
+    padding-bottom: spacing(4);
 
     .bs-flex-container {
       .bs-flex-row {
         flex-direction: column;
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           flex-direction: row;
         }
 
@@ -65,7 +64,7 @@ body.page-liberica-jdk {
             align-items: center;
             justify-content: center;
 
-            @include media('sm-desktop', 'desktop') {
+            @include media("sm-desktop", "desktop") {
               order: 2;
               flex: 0 0 50%;
               max-width: 50%;
@@ -85,12 +84,12 @@ body.page-liberica-jdk {
             text-align: center;
             margin-top: spacing(4);
 
-            @include media('tablet', 'sm-desktop', 'desktop') {
+            @include media("tablet", "sm-desktop", "desktop") {
               text-align: left;
               align-items: center;
             }
 
-            @include media('sm-desktop', 'desktop') {
+            @include media("sm-desktop", "desktop") {
               flex: 0 0 50%;
               max-width: 50%;
               margin-top: spacing(8);
@@ -100,49 +99,49 @@ body.page-liberica-jdk {
               color: $bs-section-hero-text-color;
               font-size: 48px;
               line-height: 73px;
-      
-              @include media('tablet', 'sm-desktop', 'desktop') {
+
+              @include media("tablet", "sm-desktop", "desktop") {
                 font-size: 64px;
                 line-height: 97px;
               }
             }
-      
+
             .bs-subtitle {
               color: $bs-section-hero-text-color;
               margin: spacing(1) 0 0 0;
 
-              @include media('tablet', 'sm-desktop', 'desktop') {
+              @include media("tablet", "sm-desktop", "desktop") {
                 margin: spacing(2) 0 0 0;
               }
             }
-      
+
             .buttons-container {
               display: flex;
               flex-direction: column;
               margin-top: spacing(4);
-      
-              @include media('tablet', 'sm-desktop', 'desktop') {
+
+              @include media("tablet", "sm-desktop", "desktop") {
                 align-items: center;
                 flex-direction: row;
                 margin-top: spacing(6);
               }
-      
-              @include media('sm-desktop', 'desktop') {
+
+              @include media("sm-desktop", "desktop") {
                 margin-top: spacing(8);
               }
-      
+
               .bs-button {
                 flex: 0 0 100%;
                 max-width: 100%;
-      
-                @include media('tablet', 'sm-desktop', 'desktop') {
+
+                @include media("tablet", "sm-desktop", "desktop") {
                   flex: 0 0 auto;
                 }
-        
+
                 & + .bs-button {
                   margin-top: spacing(2);
-      
-                  @include media('tablet', 'sm-desktop', 'desktop') {
+
+                  @include media("tablet", "sm-desktop", "desktop") {
                     margin-top: 0;
                     margin-left: spacing(2);
                   }
@@ -162,11 +161,13 @@ body.page-liberica-jdk {
     position: sticky;
     top: 80px;
     background-color: $bs-page-navigation-background;
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: spacing(2) 0;
     z-index: $bs-z-index-top;
 
-    @include media('phone', 'tablet') { display: none; }
+    @include media("phone", "tablet") {
+      display: none;
+    }
 
     .bs-flex-container {
       .bs-flex-row {
@@ -241,7 +242,7 @@ body.page-liberica-jdk {
     background-color: $bs-section-java-runtime-background-color;
     padding: spacing(5) 0;
 
-    @include media('sm-desktop', 'desktop') {
+    @include media("sm-desktop", "desktop") {
       padding: spacing(7) 0 spacing(6);
     }
 
@@ -249,7 +250,7 @@ body.page-liberica-jdk {
       .bs-heading-h2 {
         text-align: center;
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 24px;
           line-height: 37px;
         }
@@ -259,7 +260,7 @@ body.page-liberica-jdk {
         text-align: center;
         margin-top: spacing(1);
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 16px;
           line-height: 24px;
         }
@@ -269,7 +270,7 @@ body.page-liberica-jdk {
         flex-direction: column;
         align-items: center;
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           align-items: stretch;
           flex-direction: row;
         }
@@ -278,7 +279,7 @@ body.page-liberica-jdk {
           margin-top: spacing(5);
           max-width: 360px;
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             align-items: stretch;
             flex: 0 0 33.3333%;
             max-width: 33.3333%;
@@ -336,7 +337,7 @@ body.page-liberica-jdk {
         text-align: center;
         color: $bs-section-oracle-jdk-title-color;
 
-        @include media('phone') {
+        @include media("phone") {
           font-weight: 600;
           font-size: 24px;
           line-height: 37px;
@@ -352,18 +353,22 @@ body.page-liberica-jdk {
         margin-right: spacing(-2);
         width: calc(100% + #{spacing(4)});
 
-        background: no-repeat url(../images/section-oracle-jdk-image-phone-1.svg) left center,
-                    no-repeat url(../images/section-oracle-jdk-image-phone-2.svg) right 8px top 96px;
+        background: no-repeat
+            url(../images/section-oracle-jdk-image-phone-1.svg) left center,
+          no-repeat url(../images/section-oracle-jdk-image-phone-2.svg) right
+            8px top 96px;
         background-color: $bs-section-oracle-jdk-content-background-color;
 
-        @include media('tablet', 'sm-desktop', 'desktop') {
+        @include media("tablet", "sm-desktop", "desktop") {
           padding-top: spacing(9);
           padding-bottom: spacing(13);
         }
 
-        @include media('sm-desktop', 'desktop') {
-          background: no-repeat url(../images/section-oracle-jdk-image-1.svg) left 76px top 54px,
-                      no-repeat url(../images/section-oracle-jdk-image-2.svg) right 98px top 62px;
+        @include media("sm-desktop", "desktop") {
+          background: no-repeat url(../images/section-oracle-jdk-image-1.svg)
+              left 76px top 54px,
+            no-repeat url(../images/section-oracle-jdk-image-2.svg) right 98px
+              top 62px;
           background-color: $bs-section-oracle-jdk-content-background-color;
           border-radius: spacing(1);
           margin-left: 0;
@@ -379,7 +384,7 @@ body.page-liberica-jdk {
           margin: spacing(2) auto 0;
           max-width: 260px;
 
-          @include media('tablet', 'sm-desktop', 'desktop') {
+          @include media("tablet", "sm-desktop", "desktop") {
             font-size: 20px;
             line-height: 32px;
             margin: spacing(4) auto 0;
@@ -395,12 +400,12 @@ body.page-liberica-jdk {
           display: inline-flex;
           margin-top: spacing(6);
 
-          @include media('phone') {
+          @include media("phone") {
             font-size: 16px;
             line-height: 24px;
           }
 
-          @include media('tablet', 'sm-desktop', 'desktop') {
+          @include media("tablet", "sm-desktop", "desktop") {
             margin-top: spacing(7);
           }
         }
@@ -418,13 +423,13 @@ body.page-liberica-jdk {
     text-align: center;
     scroll-margin-top: $scroll-margin-top;
 
-    @include media('sm-desktop', 'desktop') {
+    @include media("sm-desktop", "desktop") {
       padding-top: spacing(9);
     }
 
     .bs-flex-container {
       .bs-heading-h2 {
-        @include media('phone') {
+        @include media("phone") {
           font-size: 24px;
           line-height: 37px;
         }
@@ -432,7 +437,7 @@ body.page-liberica-jdk {
 
       .bs-subtitle {
         margin-top: spacing(1);
-        @include media('phone') {
+        @include media("phone") {
           font-size: 16px;
           line-height: 24px;
         }
@@ -443,7 +448,7 @@ body.page-liberica-jdk {
         flex-wrap: wrap;
         margin-top: spacing(3);
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           flex-direction: row;
           justify-content: space-between;
           align-items: stretch;
@@ -456,7 +461,7 @@ body.page-liberica-jdk {
           max-width: 100%;
           margin-top: spacing(2);
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             flex: 0 0 33.3333%;
             max-width: 33.3333%;
             margin-top: spacing(3);
@@ -476,7 +481,7 @@ body.page-liberica-jdk {
               line-height: 24px;
               margin: spacing(2) 0 0 0;
 
-              @include media('tablet', 'sm-desktop', 'desktop') {
+              @include media("tablet", "sm-desktop", "desktop") {
                 font-size: 20px;
                 line-height: 30px;
               }
@@ -489,7 +494,7 @@ body.page-liberica-jdk {
               line-height: 20px;
               margin: spacing(1) 0 spacing(2);
 
-              @include media('tablet', 'sm-desktop', 'desktop') {
+              @include media("tablet", "sm-desktop", "desktop") {
                 font-size: 16px;
                 line-height: 24px;
               }
@@ -501,11 +506,11 @@ body.page-liberica-jdk {
               margin-top: spacing(2);
               margin-bottom: spacing(2);
 
-              @include media('phone') {
+              @include media("phone") {
                 padding: spacing(2);
               }
 
-              @include media('sm-desktop', 'desktop') {
+              @include media("sm-desktop", "desktop") {
                 margin-top: auto;
               }
             }
@@ -527,7 +532,7 @@ body.page-liberica-jdk {
       .bs-heading-h2 {
         text-align: center;
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 24px;
           line-height: 37px;
         }
@@ -537,18 +542,18 @@ body.page-liberica-jdk {
         text-align: center;
         margin: spacing(1) 0 0 0;
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 16px;
           line-height: 24px;
         }
       }
-      
+
       .bs-flex-row {
         flex-direction: column;
         align-items: center;
         margin-top: spacing(2);
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           flex-direction: row;
           align-items: stretch;
           margin-top: spacing(3);
@@ -560,7 +565,7 @@ body.page-liberica-jdk {
           margin-top: spacing(2);
           max-width: 360px;
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             flex: 0 0 33.3333%;
             max-width: 33.333%;
           }
@@ -592,7 +597,7 @@ body.page-liberica-jdk {
             }
 
             .title {
-              background: linear-gradient(90deg, #009CAD 0%, #00D6CD 100%);
+              background: linear-gradient(90deg, #009cad 0%, #00d6cd 100%);
               border-radius: 0px 0px 6px 0px;
               display: block;
               font-weight: 600;
@@ -669,7 +674,7 @@ body.page-liberica-jdk {
     text-align: center;
     margin-top: spacing(-18);
 
-    @include media('sm-desktop', 'desktop') {
+    @include media("sm-desktop", "desktop") {
       padding-bottom: spacing(12);
     }
 
@@ -682,7 +687,7 @@ body.page-liberica-jdk {
         justify-content: center;
         margin-top: spacing(6);
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           margin-top: spacing(10);
         }
       }
@@ -691,12 +696,12 @@ body.page-liberica-jdk {
         color: $bs-section-find-value-title-color;
         margin-top: spacing(4);
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 24px;
           line-height: 37px;
         }
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           margin-top: spacing(3);
         }
       }
@@ -705,7 +710,7 @@ body.page-liberica-jdk {
         color: $bs-section-find-value-subtitle-color;
         margin-top: spacing(2);
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 16px;
           line-height: 24px;
         }
@@ -717,7 +722,7 @@ body.page-liberica-jdk {
         line-height: 24px;
         margin: spacing(4) 0 0 0;
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           font-size: 20px;
           line-height: 32px;
           padding-left: spacing(4);
@@ -731,7 +736,7 @@ body.page-liberica-jdk {
         align-items: center;
         margin-top: spacing(4);
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           flex-direction: row;
           justify-content: center;
           margin-top: spacing(5);
@@ -740,12 +745,12 @@ body.page-liberica-jdk {
         .bs-button {
           width: 100%;
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             width: auto;
             max-width: 50%;
           }
 
-          @include media('phone') {
+          @include media("phone") {
             font-size: 16px;
             line-height: 24px;
           }
@@ -753,7 +758,7 @@ body.page-liberica-jdk {
           & + .bs-button {
             margin-top: spacing(2);
 
-            @include media('sm-desktop', 'desktop') {
+            @include media("sm-desktop", "desktop") {
               margin-top: 0;
               margin-left: spacing(2);
             }
@@ -772,7 +777,7 @@ body.page-liberica-jdk {
     padding-bottom: spacing(5);
     scroll-margin-top: $scroll-margin-top;
 
-    @include media('sm-desktop', 'desktop') {
+    @include media("sm-desktop", "desktop") {
       padding-top: spacing(10);
       padding-bottom: spacing(8);
     }
@@ -784,12 +789,12 @@ body.page-liberica-jdk {
         text-align: center;
         max-width: 840px;
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 24px;
           line-height: 37px;
         }
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           margin-bottom: spacing(3);
         }
       }
@@ -803,7 +808,7 @@ body.page-liberica-jdk {
         margin-top: spacing(4);
         max-width: 328px;
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           display: flex;
           height: 420px;
           max-width: 100%;
@@ -817,7 +822,7 @@ body.page-liberica-jdk {
           margin-top: spacing(2);
           padding: spacing(3) spacing(3) spacing(4);
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -830,7 +835,7 @@ body.page-liberica-jdk {
             color: $bs-black;
             margin: spacing(3) 0;
 
-            @include media('sm-desktop', 'desktop') {
+            @include media("sm-desktop", "desktop") {
               margin-top: spacing(4);
             }
           }
@@ -854,7 +859,7 @@ body.page-liberica-jdk {
           padding: spacing(2);
           padding-bottom: 0;
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             flex: 0 0 50%;
             max-width: 50%;
           }
@@ -877,7 +882,7 @@ body.page-liberica-jdk {
     padding-top: spacing(5);
     padding-bottom: spacing(5);
 
-    @include media('sm-desktop', 'desktop') {
+    @include media("sm-desktop", "desktop") {
       padding-top: spacing(8);
       padding-bottom: spacing(8);
     }
@@ -888,7 +893,7 @@ body.page-liberica-jdk {
       .bs-heading-h2 {
         text-align: center;
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 24px;
           line-height: 37px;
         }
@@ -899,7 +904,7 @@ body.page-liberica-jdk {
         color: $bs-section-contact-us-subtitle-color;
         margin: spacing(1) 0 0 0;
 
-        @include media('phone') {
+        @include media("phone") {
           font-size: 16px;
           line-height: 24px;
         }
@@ -913,7 +918,7 @@ body.page-liberica-jdk {
         position: relative;
         min-height: 588px;
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           margin-top: spacing(4);
           min-height: 522px;
         }
@@ -926,7 +931,7 @@ body.page-liberica-jdk {
           .bs-flex-row {
             flex-direction: column;
 
-            @include media('sm-desktop', 'desktop') {
+            @include media("sm-desktop", "desktop") {
               flex-direction: row;
               align-items: center;
               justify-content: center;
@@ -939,7 +944,7 @@ body.page-liberica-jdk {
               flex: 0 0 100%;
               max-width: 100%;
 
-              @include media('sm-desktop', 'desktop') {
+              @include media("sm-desktop", "desktop") {
                 flex: 0 0 50%;
                 max-width: 50%;
                 padding-left: spacing(1);
@@ -949,7 +954,7 @@ body.page-liberica-jdk {
               & + .bs-flex-item {
                 margin-top: spacing(1);
 
-                @include media('sm-desktop', 'desktop') {
+                @include media("sm-desktop", "desktop") {
                   margin-top: 0;
                 }
               }
@@ -979,14 +984,14 @@ body.page-liberica-jdk {
         max-width: $max-control-width;
         margin-top: spacing(3);
 
-        @include media('sm-desktop', 'desktop') {
+        @include media("sm-desktop", "desktop") {
           margin-top: spacing(4);
         }
 
         .bs-button {
           width: 100%;
 
-          @include media('sm-desktop', 'desktop') {
+          @include media("sm-desktop", "desktop") {
             width: 187px;
             margin-left: auto;
             margin-right: auto;
@@ -999,11 +1004,11 @@ body.page-liberica-jdk {
         width: 100%;
         max-width: $max-control-width;
         text-align: left;
-  
-        @include media('sm-desktop', 'desktop') {
+
+        @include media("sm-desktop", "desktop") {
           text-align: center;
         }
-  
+
         .link {
           font-weight: 400;
           font-size: 14px;

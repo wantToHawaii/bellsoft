@@ -1,25 +1,24 @@
 // Colors
 
-$bs-cyan-1: #00D4EB;
-$bs-cyan-2: #00C7DD;
-$bs-cyan-3: #009CAD;
-$bs-cyan-4: #008B9A;
+$bs-cyan-1: #00d4eb;
+$bs-cyan-2: #00c7dd;
+$bs-cyan-3: #009cad;
+$bs-cyan-4: #008b9a;
 $bs-cyan-5: #3fc8d6;
 $bs-cyan-6: #007885;
-$bs-cyan-7: #006C78;
-$bs-cyan-8: #079FAF;
+$bs-cyan-7: #006c78;
+$bs-cyan-8: #079faf;
 
 $bs-black: #202020;
 $bs-white: #fff;
 
-$bs-error-color: #DE5A5A;
+$bs-error-color: #de5a5a;
 
-$bs-font-main: 'Titillium Web', sans-serif;
+$bs-font-main: "Titillium Web", sans-serif;
 
 $bs-z-index-top: 1000;
 $bs-z-index-middle: 100;
 $bs-z-index-below: -1;
-// ---------------------
 $bs-z-index-popup: $bs-z-index-top + 10;
 
 $bs-transition-base: 150ms ease-in-out;
@@ -34,18 +33,22 @@ $bs-desktop: 1160px;
 @function translate-media-condition($c) {
   $conditionsMap: (
     "phone": "(max-width: #{$bs-tablet - 1px})",
-    "tablet": "(min-width: #{$bs-tablet}) and (max-width: #{$bs-sm-desktop - 1px})",
-    "sm-desktop": "(min-width: #{$bs-sm-desktop}) and (max-width: #{$bs-desktop - 1px})",
+    "tablet":
+      "(min-width: #{$bs-tablet}) and (max-width: #{$bs-sm-desktop - 1px})",
+    "sm-desktop":
+      "(min-width: #{$bs-sm-desktop}) and (max-width: #{$bs-desktop - 1px})",
     "desktop": "(min-width: #{$bs-desktop})",
   );
-  @return map-get( $conditionsMap, $c );
+  @return map-get($conditionsMap, $c);
 }
 
 @mixin media($args...) {
   $result: "";
   @each $arg in $args {
     $result: translate-media-condition($arg);
-    @media #{$result}  { @content; }
+    @media #{$result} {
+      @content;
+    }
   }
 }
 
@@ -53,6 +56,6 @@ $bs-desktop: 1160px;
  * Spacing uses 8px space maker strategy (like material design)
  * 1 size = 8px
  */
- @function spacing($size: 1) {
+@function spacing($size: 1) {
   @return $size * 8px;
 }
