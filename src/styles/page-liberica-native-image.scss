@@ -225,6 +225,19 @@ body.page-liberica-native-image {
             border-radius: spacing(1);
             padding: spacing(6) spacing(3) spacing(4);
             min-height: 500px;
+            height: 100%;
+
+            &.swiper-slide {
+              visibility: hidden;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                visibility: visible;
+              }
+
+              &.swiper-slide-active {
+                visibility: visible;
+              }
+            }
 
             @include media("tablet", "sm-desktop", "desktop") {
               display: flex;
@@ -253,13 +266,15 @@ body.page-liberica-native-image {
               display: flex;
               align-items: center;
               justify-content: center;
+              height: 170px;
 
               @include media("tablet", "sm-desktop", "desktop") {
                 padding: 0 spacing(4);
+                height: auto;
               }
 
               .image {
-                max-width: 150px;
+                max-height: 100%;
 
                 @include media("tablet") {
                   max-width: 200px;
