@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "choices.js": "^8.0.0",
     "swiper": "^6.4.11"
   }
 }

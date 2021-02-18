@@ -808,4 +808,92 @@ body.page-career {
       }
     }
   }
+
+  .callback-popup {
+    padding-bottom: 0;
+
+    .bs-flex-container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: spacing(4);
+
+      .card {
+        .button-close {
+          margin-left: auto;
+        }
+
+        .fieldset {
+          border: none;
+          margin: 0;
+          padding: 0;
+          margin-top: spacing(3);
+
+          &:first-of-type {
+            margin-top: spacing(2);
+          }
+
+          &.force-half-width {
+            display: flex;
+            margin-left: spacing(-1);
+            margin-right: spacing(-1);
+
+            > .col {
+              flex: 0 0 50%;
+              max-width: 50%;
+              padding-left: spacing(1);
+              padding-right: spacing(1);
+
+              & + .col {
+                margin-top: 0;
+              }
+            }
+          }
+
+          .col {
+            & + .col {
+              margin-top: spacing(3);
+            }
+          }
+        }
+
+        .file-upload {
+          .dropzone {
+            border: 1px dashed $bs-cyan-4;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #8a9496;
+            display: flex;
+            align-items: center;
+            height: 64px;
+            margin-top: spacing(1);
+            padding: 0 spacing(4);
+          }
+
+          .button {
+            margin-top: spacing(2);
+            width: 100%;
+          }
+        }
+
+        .button-submit {
+          margin-top: spacing(4);
+          width: 100%;
+        }
+
+        .checkbox-privacy-policy {
+          margin-top: spacing(4);
+
+          .link {
+            color: $bs-cyan-4;
+            text-decoration: none;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
 }

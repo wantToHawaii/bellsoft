@@ -288,7 +288,7 @@
                   </button>
                   <div class="toggled-container">
                     <div class="actions">
-                      <a href='#' class="bs-button contained">Apply</a>
+                      <a href='#' class="bs-button contained" data-action="show-callback-popup">Apply</a>
                       <a href='#' class="bs-button outlined">Share</a>
                     </div>
                     <div class="text">
@@ -343,7 +343,7 @@
                   </button>
                   <div class="toggled-container">
                     <div class="actions">
-                      <a href='#' class="bs-button contained">Apply</a>
+                      <a href='#' class="bs-button contained" data-action="show-callback-popup">Apply</a>
                       <a href='#' class="bs-button outlined">Share</a>
                     </div>
                     <div class="text">
@@ -399,7 +399,7 @@
                   </button>
                   <div class="toggled-container">
                     <div class="actions">
-                      <a href='#' class="bs-button contained">Apply</a>
+                      <a href='#' class="bs-button contained" data-action="show-callback-popup">Apply</a>
                       <a href='#' class="bs-button outlined">Share</a>
                     </div>
                     <div class="text">
@@ -438,7 +438,7 @@
                   </button>
                   <div class="toggled-container">
                     <div class="actions">
-                      <a href='#' class="bs-button contained">Apply</a>
+                      <a href='#' class="bs-button contained" data-action="show-callback-popup">Apply</a>
                       <a href='#' class="bs-button outlined">Share</a>
                     </div>
                     <div class="text">
@@ -595,6 +595,95 @@
       Copyright © 2020 All Rights Reserved by BellSoft LTD.
     </div>
   </footer>
+
+
+
+  <div class="bs-popup callback-popup" id="callback-popup">
+    <div class="overlay" data-action="close-callback-popup"></div>
+
+    <div class="bs-flex-container">
+      <div class="card">
+        <button class="button-close" type="button" data-action="close-callback-popup">
+          <svg class="image" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L11 11M1 11L11 1" stroke="white" stroke-width="2" />
+          </svg>
+        </button>
+
+        <h6 class="title">Contact us</h6>
+
+        <fieldset class="fieldset force-half-width">
+          <div class="col">
+            <label class="bs-form-label" for="firstName">First Name</label>
+            <input class="bs-form-input" id="firstName" name="firstName" type="text" placeholder="Your name" />
+          </div>
+          <div class="col">
+            <label class="bs-form-label" for="lastName">Last Name</label>
+            <input class="bs-form-input" id="lastName" name="lastName" type="text" placeholder="Your name" />
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <div class="col">
+            <label class="bs-form-label" for="email">E-mail</label>
+            <input class="bs-form-input" id="email" name="email" type="email" placeholder="Your email" />
+          </div>
+          <div class="col">
+            <label class="bs-form-label" for="phone">Phone</label>
+            <input class="bs-form-input" id="phone" name="phone" type="tel" placeholder="Your phone" />
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <div class="col">
+            <label class="bs-form-label" for="country">Country</label>
+            <div class="bs-form-select">
+              <select name="country">
+                <option placeholder>Select</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <label class="bs-form-label" for="City">City</label>
+            <input class="bs-form-input" id="City" name="City" type="text" placeholder="Your city" />
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="bs-form-label" for="address">Address</label>
+          <input class="bs-form-input" id="address" name="address" type="text" placeholder="Your address" />
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="bs-form-label" for="Resume">Resume</label>
+          <div class="file-upload">
+            <div class="dropzone">No file uploaded</div>
+            <button type="button" class="bs-button outlined button">
+              Upload file
+            </button>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="bs-form-label" for="message">Personal links (Personal website, GitHub, Linkedin, e.t.c.)</label>
+          <textarea class="bs-form-textarea" name="message" id="message" cols="30" rows="8"
+            placeholder="Copy your links here"></textarea>
+        </fieldset>
+
+        <button class="bs-button contained button-submit" type="submit">
+          Submit
+        </button>
+
+        <label class="bs-form-label-checkbox checkbox-privacy-policy" for="agree-with-terms">
+          <input type="checkbox" id="agree-with-terms" class="bs-form-checkbox" />
+          I agree to the&nbsp;<a href="#" class="link">terms & conditions</a>
+        </label>
+      </div>
+    </div>
+  </div>
+
+
 
 </body>
 
