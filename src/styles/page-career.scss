@@ -123,6 +123,9 @@ body.page-career {
   //    transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(50deg) scale(1);
   // transform-style: preserve-3d;
   .section-accordion {
+    $accordion-animation-duration: 600ms;
+    $accordion-animation-fn: cubic-bezier(0.65, 0, 0.35, 1);
+
     $default-area-z-index: 3;
     $collapsed-area-z-index: 2;
     $expanded-area-z-index: 1;
@@ -159,7 +162,7 @@ body.page-career {
       padding: spacing(3);
       position: relative;
       overflow: hidden;
-      transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
+      transition: all $accordion-animation-duration $accordion-animation-fn;
 
       @include media("sm-desktop", "desktop") {
         padding: spacing(6);
@@ -195,6 +198,11 @@ body.page-career {
         & + .expandable-content {
           flex-basis: calc(70% - #{$expanded-block-mobile-height});
           max-height: calc(70% - #{$expanded-block-mobile-height});
+          opacity: 1;
+
+          transition: all $accordion-animation-duration $accordion-animation-fn,
+            opacity $accordion-animation-duration $accordion-animation-fn
+              $accordion-animation-duration;
 
           @include media("sm-desktop", "desktop") {
             flex-basis: calc(75% - #{$expanded-block-desktop-width});
@@ -239,7 +247,7 @@ body.page-career {
         opacity: 1;
         visibility: visible;
         margin-top: 0;
-        transition: all 400ms cubic-bezier(0.65, 0, 0.35, 1);
+        transition: all 400ms $accordion-animation-fn;
 
         @include media("sm-desktop", "desktop") {
           margin-left: 0;
@@ -271,7 +279,7 @@ body.page-career {
         > .icon-toggle-indicator {
           margin-top: auto;
           transform: rotate(45deg);
-          transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
+          transition: all $accordion-animation-duration $accordion-animation-fn;
         }
       }
 
@@ -291,13 +299,13 @@ body.page-career {
 
         opacity: 0;
         visibility: hidden;
-        transition: all 400ms cubic-bezier(0.65, 0, 0.35, 1);
+        transition: all 400ms $accordion-animation-fn;
 
         @include media("sm-desktop", "desktop") {
           align-items: center;
           justify-content: flex-start;
           flex-direction: column-reverse;
-          padding: spacing(3) 0;
+          padding: spacing(6) 0;
           height: 100%;
           width: 100%;
         }
@@ -327,9 +335,12 @@ body.page-career {
       position: relative;
       overflow: hidden;
       z-index: $expanded-area-z-index;
+      opacity: 0;
 
       flex: 0 1 0;
-      transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1); // 400ms;
+      transition: all $accordion-animation-duration $accordion-animation-fn,
+        opacity $accordion-animation-duration $accordion-animation-fn
+          $accordion-animation-duration;
 
       .swiper-container {
         position: relative;
