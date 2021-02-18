@@ -187,6 +187,7 @@ window.addEventListener("load", () => {
       slidesPerView: "auto",
       freeMode: true,
       mousewheel: true,
+      watchOverflow: true,
       scrollbar: {
         el: ".swiper-scrollbar",
       },

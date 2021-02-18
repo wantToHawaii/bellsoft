@@ -450,15 +450,18 @@ body.page-career {
 
                 @include media("sm-desktop", "desktop") {
                   padding: 0;
-                  height: 100%;
-                  object-fit: cover;
-                  object-position: center;
                 }
 
                 img {
                   max-width: 100%;
                   height: auto;
                   width: 100%;
+
+                  @include media("sm-desktop", "desktop") {
+                    object-fit: cover;
+                    object-position: center;
+                    height: 100%;
+                  }
                 }
               }
             }
