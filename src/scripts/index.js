@@ -214,25 +214,28 @@ window.addEventListener("load", () => {
           el.classList.remove("collapsed");
           el.classList.remove("expanded");
         });
+        return false;
       } else {
         blocks
           .filter((b) => b !== block)
           .forEach((el) => el.classList.add("collapsed"));
         block.classList.add("expanded");
+        return true;
       }
     };
 
     for (let block of blocks) {
       block.addEventListener("click", () => {
-        switchBlocksClasses(block);
-        // after animation swiper height is broken
-        // so we need to be updated it using timeout kostil :)
-        setTimeout(() => {
-          for (let i = 0; i < scrollContainers.length; i += 1) {
-            const container = scrollContainers[i];
-            container.update();
-          }
-        }, 1000);
+        const isActive = switchBlocksClasses(block);
+        if (isActive) {
+          const activeContent = block.nextElementSibling;
+          const swiperContainer = scrollContainers.find((c) => {
+            return c.el === activeContent.firstElementChild;
+          });
+          // after animation swiper height is broken
+          // so we need to be updated it using timeout kostil :)
+          setTimeout(() => swiperContainer.update(), 600);
+        }
       });
     }
   };
