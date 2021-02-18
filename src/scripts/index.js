@@ -1,9 +1,17 @@
-import Swiper, { Pagination, EffectFade } from "swiper";
+import Swiper, {
+  Pagination,
+  Navigation,
+  EffectFade,
+  Scrollbar,
+  Mousewheel,
+} from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/effect-fade/effect-fade.scss";
 import "swiper/components/pagination/pagination.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
 
-Swiper.use([Pagination, EffectFade]);
+Swiper.use([Pagination, Navigation, EffectFade, Scrollbar, Mousewheel]);
 
 window.addEventListener("load", () => {
   const initHeaderMenu = () => {
@@ -94,9 +102,147 @@ window.addEventListener("load", () => {
     );
   };
 
+  const initPageCareerTabsSection = () => {
+    const sectionId = "#page-career-tabs-section";
+
+    const tabsButtons = document.querySelectorAll(`${sectionId} .tab-button`);
+    const tabs = new Swiper(`${sectionId} .tabs-contents`, {
+      effect: "fade",
+      slidesPerView: 1,
+      initialSlide: 3,
+      simulateTouch: false,
+      autoHeight: true,
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 800,
+    });
+    const slideDownButtons = document.querySelectorAll(
+      `${sectionId} .button-toggle-container`
+    );
+
+    const switchTabButtonClasses = (button, isActive = false) => {
+      button.classList.remove(isActive ? "outlined" : "contained");
+      button.classList.add(isActive ? "contained" : "outlined");
+    };
+
+    const addTabsButtonsListeners = () => {
+      for (let i = 0; i < tabsButtons.length; i += 1) {
+        const button = tabsButtons[i];
+        button.addEventListener("click", () => {
+          // make sure all buttons are not emphasized except the target
+          tabsButtons.forEach((b) => switchTabButtonClasses(b));
+          // switch classes of the target button
+          switchTabButtonClasses(button, true);
+          tabs.slideTo(i);
+        });
+      }
+    };
+
+    const addListenersToSlideDownButtons = () => {
+      for (let button of slideDownButtons) {
+        const className = "active";
+
+        button.addEventListener("click", () => {
+          const toggledContainerHeight = button.nextElementSibling.scrollHeight;
+          const initialTabsHeight = Number(
+            tabs.$wrapperEl[0].style.height.replace("px", "")
+          );
+
+          if (button.classList.contains(className)) {
+            button.classList.remove(className);
+            button.nextElementSibling.classList.remove("slide-down");
+            button.nextElementSibling.classList.add("slide-up");
+            // tabs.$wrapperEl[0].style.transitionDuration = "700ms";
+            // tabs.$wrapperEl[0].style.transitionDelay = "550ms";
+            tabs.$wrapperEl[0].style.height = `${
+              initialTabsHeight - toggledContainerHeight
+            }px`;
+          } else {
+            button.classList.add(className);
+            button.nextElementSibling.classList.remove("slide-up");
+            button.nextElementSibling.classList.add("slide-down");
+            // tabs.$wrapperEl[0].style.transitionDuration = "400ms";
+            // tabs.$wrapperEl[0].style.transitionDelay = "0ms";
+            tabs.$wrapperEl[0].style.height = `${
+              initialTabsHeight + toggledContainerHeight
+            }px`;
+          }
+        });
+      }
+    };
+
+    // change class of the initial active tab button
+    switchTabButtonClasses(tabsButtons[tabs.activeIndex], true);
+    addTabsButtonsListeners();
+    addListenersToSlideDownButtons();
+  };
+
+  const initPageCareerAccordionSection = () => {
+    const sectionId = "#page-career-accordion-section";
+    const blocks = [...document.querySelectorAll(`${sectionId} .block`)];
+
+    const scrollContainers = new Swiper(`${sectionId} .swiper-container`, {
+      direction: "vertical",
+      slidesPerView: "auto",
+      freeMode: true,
+      mousewheel: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      breakpoints: {
+        1024: {
+          direction: "horizontal",
+          slidesPerView: 1,
+          freeMode: false,
+          mousewheel: false,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        },
+      },
+    });
+
+    const switchBlocksClasses = (block) => {
+      if (
+        block.classList.contains("expanded") ||
+        block.classList.contains("collapsed")
+      ) {
+        blocks.forEach((el) => {
+          el.classList.remove("collapsed");
+          el.classList.remove("expanded");
+        });
+      } else {
+        blocks
+          .filter((b) => b !== block)
+          .forEach((el) => el.classList.add("collapsed"));
+        block.classList.add("expanded");
+      }
+    };
+
+    for (let block of blocks) {
+      block.addEventListener("click", () => {
+        switchBlocksClasses(block);
+        // after animation swiper height is broken
+        // so we need to be updated it using timeout kostil :)
+        setTimeout(() => {
+          for (let i = 0; i < scrollContainers.length; i += 1) {
+            const container = scrollContainers[i];
+            container.update();
+          }
+        }, 1000);
+      });
+    }
+  };
+
   initHeaderMenu();
   initFooterMenu();
   initCardsWithDropDownText();
   onContactFormSubmit("#contact-form");
+
   initLibericaNativeImageSlider();
+
+  initPageCareerTabsSection();
+  initPageCareerAccordionSection();
 });

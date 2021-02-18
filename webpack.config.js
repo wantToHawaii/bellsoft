@@ -38,6 +38,10 @@ module.exports = {
       template: "./src/liberica-native-image.html",
     }),
     new HtmlWebpackPlugin({
+      filename: "career.html",
+      template: "./src/career.html",
+    }),
+    new HtmlWebpackPlugin({
       filename: "components.html",
       template: "./src/components.html",
     }),

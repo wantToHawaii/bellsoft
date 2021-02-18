@@ -1,0 +1,797 @@
+$bs-section-hero-bg-color: $bs-black;
+$bs-section-hero-text-color: #f5f5f7;
+$bs-section-hero-secondary-color: $bs-cyan-2;
+
+$bs-section-tabs-bg-color: #e5e5e5;
+
+body.page-career {
+  /*
+  * Hero
+  */
+  .section-hero {
+    background-color: $bs-section-hero-bg-color;
+    color: $bs-section-hero-text-color;
+    padding-top: spacing(3);
+    padding-bottom: spacing(4);
+    overflow-x: hidden;
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media("sm-desktop", "desktop") {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          &.image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media("sm-desktop", "desktop") {
+              order: 2;
+              flex: 0 0 60%;
+              max-width: 60%;
+              justify-content: flex-start;
+            }
+
+            .image {
+              height: auto;
+              max-width: 100%;
+
+              @include media("desktop") {
+                min-height: 700px;
+                max-width: initial;
+              }
+            }
+          }
+
+          &.content {
+            text-align: center;
+            margin-top: spacing(4);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              text-align: left;
+              align-items: center;
+            }
+
+            @include media("sm-desktop", "desktop") {
+              flex: 0 0 40%;
+              max-width: 40%;
+              margin-top: spacing(8);
+            }
+
+            .bs-heading-h1 {
+              color: $bs-section-hero-text-color;
+              font-size: 40px;
+              line-height: 48px;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                font-size: 64px;
+                line-height: 72px;
+              }
+            }
+
+            .text {
+              font-size: 20px;
+              line-height: 32px;
+            }
+
+            .buttons-container {
+              display: flex;
+              flex-direction: column;
+              margin-top: spacing(4);
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                align-items: center;
+                flex-direction: row;
+                margin-top: spacing(6);
+              }
+
+              @include media("sm-desktop", "desktop") {
+                margin-top: spacing(8);
+              }
+
+              .bs-button {
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  flex: 0 0 auto;
+                }
+
+                & + .bs-button {
+                  margin-top: spacing(2);
+
+                  @include media("tablet", "sm-desktop", "desktop") {
+                    margin-top: 0;
+                    margin-left: spacing(2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Section Tabs
+   */
+  //    transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(50deg) scale(1);
+  // transform-style: preserve-3d;
+  .section-accordion {
+    $default-area-z-index: 3;
+    $collapsed-area-z-index: 2;
+    $expanded-area-z-index: 1;
+
+    $expanded-block-mobile-height: 80px;
+    $expanded-block-desktop-width: 120px;
+
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    overflow: hidden;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      min-height: 800px;
+      max-height: 100vh;
+    }
+
+    @include media("sm-desktop", "desktop") {
+      flex-direction: row;
+    }
+
+    .block {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      flex: 0 0 50%;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      cursor: pointer;
+      color: $bs-white;
+      max-width: 100%;
+      padding: spacing(3);
+      position: relative;
+      overflow: hidden;
+      transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
+
+      @include media("sm-desktop", "desktop") {
+        padding: spacing(6);
+      }
+
+      &.first-block {
+        background-image: url("../images/page-career-section-accordion-mobile-image-1.png");
+        @include media("sm-desktop", "desktop") {
+          background-image: url("../images/page-career-section-accordion-desktop-image-1.png");
+        }
+      }
+
+      &.second-block {
+        background-image: url("../images/page-career-section-accordion-mobile-image-2.png");
+        @include media("sm-desktop", "desktop") {
+          background-image: url("../images/page-career-section-accordion-desktop-image-2.png");
+        }
+      }
+
+      &.expanded {
+        flex-basis: 30%;
+
+        @include media("sm-desktop", "desktop") {
+          flex-basis: 25%;
+        }
+
+        .default-state-area {
+          > .icon-toggle-indicator {
+            transform: rotate(0);
+          }
+        }
+
+        & + .expandable-content {
+          flex-basis: calc(70% - #{$expanded-block-mobile-height});
+          max-height: calc(70% - #{$expanded-block-mobile-height});
+
+          @include media("sm-desktop", "desktop") {
+            flex-basis: calc(75% - #{$expanded-block-desktop-width});
+            max-height: 100%;
+          }
+        }
+      }
+
+      &.collapsed {
+        flex-basis: $expanded-block-mobile-height;
+
+        @include media("sm-desktop", "desktop") {
+          flex-basis: $expanded-block-desktop-width;
+        }
+
+        .default-state-area {
+          opacity: 0;
+          visibility: hidden;
+          margin-top: -100%;
+
+          @include media("sm-desktop", "desktop") {
+            margin-top: 0;
+            margin-left: -100%;
+          }
+        }
+
+        .collapsed-state-area {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .default-state-area {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: $default-area-z-index;
+
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+        transition: all 400ms cubic-bezier(0.65, 0, 0.35, 1);
+
+        @include media("sm-desktop", "desktop") {
+          margin-left: 0;
+        }
+
+        .title {
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 48px;
+          margin-bottom: spacing(2);
+
+          @include media("sm-desktop", "desktop") {
+            font-size: 64px;
+            line-height: 72px;
+          }
+
+          .small {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 32px;
+
+            @include media("sm-desktop", "desktop") {
+              font-size: 20px;
+              line-height: 32px;
+            }
+          }
+        }
+
+        > .icon-toggle-indicator {
+          margin-top: auto;
+          transform: rotate(45deg);
+          transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1);
+        }
+      }
+
+      .collapsed-state-area {
+        background-color: $bs-white;
+        color: $bs-black;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 spacing(3);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: $expanded-block-mobile-height;
+        width: 100%;
+        z-index: $collapsed-area-z-index;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 400ms cubic-bezier(0.65, 0, 0.35, 1);
+
+        @include media("sm-desktop", "desktop") {
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column-reverse;
+          padding: spacing(3) 0;
+          height: 100%;
+          width: 100%;
+        }
+
+        .label {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+          margin-left: spacing(1);
+          cursor: pointer;
+
+          @include media("sm-desktop", "desktop") {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            margin-left: 0;
+            margin-bottom: spacing(4);
+          }
+        }
+      }
+    }
+
+    .expandable-content {
+      background-color: $bs-cyan-4;
+      color: $bs-white;
+      font-size: 16px;
+      position: relative;
+      overflow: hidden;
+      z-index: $expanded-area-z-index;
+
+      flex: 0 1 0;
+      transition: all 600ms cubic-bezier(0.65, 0, 0.35, 1); // 400ms;
+
+      .swiper-container {
+        position: relative;
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+
+        .swiper-scrollbar {
+          @include media("sm-desktop", "desktop") {
+            display: none;
+          }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          display: none;
+
+          @include media("sm-desktop", "desktop") {
+            border: 1px solid $bs-white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: auto;
+            left: auto;
+            height: spacing(6);
+            width: spacing(6);
+            z-index: $expanded-area-z-index + 1;
+
+            &:after {
+              color: $bs-white;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .swiper-button-next {
+          right: spacing(6);
+          bottom: spacing(6);
+        }
+
+        .swiper-button-prev {
+          right: spacing(15);
+          bottom: spacing(6);
+        }
+
+        .swiper-wrapper {
+          .swiper-slide {
+            height: auto;
+
+            @include media("sm-desktop", "desktop") {
+              height: 100%;
+              margin-top: 0;
+            }
+
+            .content {
+              height: 100%;
+              width: 100%;
+
+              @include media("sm-desktop", "desktop") {
+                display: flex;
+                flex-wrap: wrap;
+              }
+
+              .flex-column {
+                @include media("sm-desktop", "desktop") {
+                  flex: 0 0 50%;
+                  max-width: 50%;
+                  display: flex;
+                  flex-direction: column;
+
+                  &:nth-of-type(even) {
+                    flex-direction: column-reverse;
+                  }
+
+                  > div {
+                    flex: 0 0 50%;
+                    max-height: 50%;
+                  }
+                }
+              }
+
+              .text-container {
+                padding: spacing(1) spacing(3);
+
+                @include media("sm-desktop", "desktop") {
+                  padding: spacing(6);
+                }
+
+                p {
+                  line-height: 24px;
+                  margin-top: spacing(2);
+
+                  @include media("sm-desktop", "desktop") {
+                    font-weight: 600;
+                    line-height: 30px;
+                  }
+                }
+
+                h6 {
+                  font-size: 24px;
+                  font-weight: 700;
+                  line-height: 24px;
+                  margin-top: spacing(2);
+
+                  @include media("sm-desktop", "desktop") {
+                    font-size: 36px;
+                    line-height: 56px;
+                    margin-top: 0;
+                  }
+                }
+              }
+
+              .image-container {
+                overflow: hidden;
+                padding: spacing(1) spacing(3);
+
+                @include media("sm-desktop", "desktop") {
+                  padding: 0;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center;
+                }
+
+                img {
+                  max-width: 100%;
+                  height: auto;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Section Tabs
+   */
+  .section-tabs {
+    background-color: $bs-section-tabs-bg-color;
+    padding: spacing(6) 0;
+
+    @include media("sm-desktop", "desktop") {
+      background-image: url("../images/page-career-section-tabs-bg-image.svg");
+      background-repeat: no-repeat;
+      background-position: center 56px;
+      padding: spacing(22) 0 spacing(12);
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        text-align: center;
+
+        @include media("sm-desktop", "desktop") {
+          font-size: 64px;
+          line-height: 72px;
+        }
+      }
+    }
+
+    .tabs {
+      .tabs-buttons {
+        display: flex;
+        padding-left: spacing(2);
+        margin-top: spacing(3);
+        overflow-x: auto;
+
+        @include media("tablet") {
+          padding-left: 0;
+          justify-content: center;
+        }
+
+        @include media("sm-desktop", "desktop") {
+          justify-content: center;
+          margin-top: spacing(6);
+        }
+
+        .tab-button {
+          & + .tab-button {
+            margin-left: spacing(3);
+          }
+        }
+      }
+
+      .bs-flex-container {
+        .tabs-contents {
+          margin-top: spacing(3);
+
+          @include media("sm-desktop", "desktop") {
+            margin-top: spacing(6);
+          }
+
+          .tab-content {
+            visibility: hidden;
+
+            &.swiper-slide-active {
+              visibility: visible;
+            }
+
+            .description {
+              background-color: $bs-black;
+              border-radius: 8px;
+              box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.05);
+              color: $bs-white;
+              padding: spacing(3);
+
+              @include media("sm-desktop", "desktop") {
+                display: flex;
+                padding: spacing(8) spacing(6) spacing(6);
+              }
+
+              > .content {
+                @include media("sm-desktop", "desktop") {
+                  flex: 0 0 50%;
+                  max-width: 50%;
+                }
+
+                > .bs-heading-h2 {
+                  color: inherit;
+                  margin-top: spacing(2);
+
+                  @include media("sm-desktop", "desktop") {
+                    text-align: left;
+                  }
+                }
+
+                > .text {
+                  font-size: 16px;
+                  font-weight: 600;
+                  line-height: 24px;
+                  margin-top: spacing(3);
+
+                  @include media("sm-desktop", "desktop") {
+                    font-size: 20px;
+                    line-height: 32px;
+                    margin-top: spacing(4);
+                  }
+                }
+              }
+
+              > .image-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: spacing(3);
+                padding: 0 spacing(2);
+
+                @include media("sm-desktop", "desktop") {
+                  flex: 0 0 50%;
+                  max-width: 50%;
+                  margin-top: 0;
+                }
+
+                .image {
+                  max-width: 100%;
+                }
+              }
+            }
+
+            .position-card {
+              background-color: $bs-white;
+              border-radius: 8px;
+              padding: spacing(6) spacing(3);
+              margin-top: spacing(2);
+
+              @include media("sm-desktop", "desktop") {
+                margin-top: spacing(3);
+                padding: spacing(6);
+              }
+
+              .button-toggle-container {
+                background-color: #fff;
+                color: $bs-black;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                position: relative;
+                text-align: left;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                z-index: 1;
+
+                @include media("sm-desktop", "desktop") {
+                  font-size: 36px;
+                  line-height: 56px;
+                }
+
+                &:focus {
+                  outline: none;
+                }
+
+                .label {
+                  flex: 0 0 calc(100% - 32px);
+                  max-width: calc(100% - 32px);
+                  margin-right: spacing(2);
+                }
+
+                .icon {
+                  width: 32px;
+                  transform: rotate(45deg);
+                  transition: $bs-transition-base;
+                }
+
+                &.active {
+                  .icon {
+                    transform: rotate(0);
+                  }
+                }
+              }
+
+              .toggled-container {
+                overflow: hidden;
+                max-height: 0;
+
+                &.slide-down {
+                  max-height: 5000px;
+                }
+                &.slide-up {
+                  max-height: 0;
+                }
+
+                > .actions {
+                  display: flex;
+                  margin-top: spacing(3);
+
+                  @include media("sm-desktop", "desktop") {
+                    margin-top: spacing(5);
+                  }
+
+                  .bs-button {
+                    & + .bs-button {
+                      margin-left: spacing(2);
+
+                      @include media("sm-desktop", "desktop") {
+                        margin-left: spacing(3);
+                      }
+                    }
+                  }
+                }
+
+                > .text {
+                  font-size: 16px;
+                  line-height: 24px;
+
+                  h5 {
+                    font-weight: 700;
+                    margin-top: spacing(3);
+                  }
+
+                  ul {
+                    list-style-type: none;
+                    margin-top: spacing(1);
+
+                    li {
+                      text-indent: 14px;
+                      position: relative;
+
+                      &:before {
+                        background-color: $bs-black;
+                        content: "";
+                        position: absolute;
+                        top: 12px;
+                        left: 0;
+                        height: 2px;
+                        width: 2px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Section Discover
+   */
+  .section-discover {
+    background-color: $bs-black;
+    color: $bs-white;
+    padding: spacing(6) 0 0 0;
+    overflow: hidden;
+
+    @include media("sm-desktop", "desktop") {
+      padding-top: spacing(26);
+    }
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media("sm-desktop", "desktop") {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .bs-flex-item {
+          @include media("sm-desktop") {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          @include media("desktop") {
+            flex: 0 0 45%;
+            max-width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            color: inherit;
+
+            @include media("sm-desktop", "desktop") {
+              font-size: 64px;
+              line-height: 72px;
+            }
+          }
+
+          .bs-subtitle {
+            color: inherit;
+            margin-top: spacing(3);
+
+            @include media("sm-desktop", "desktop") {
+              margin-top: spacing(6);
+            }
+          }
+
+          .bs-button {
+            margin-top: spacing(3);
+
+            @include media("sm-desktop", "desktop") {
+              margin-top: spacing(8);
+            }
+          }
+
+          .image {
+            margin-top: spacing(6);
+            max-width: 100%;
+
+            @include media("sm-desktop", "desktop") {
+              margin-top: 0;
+              max-width: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
