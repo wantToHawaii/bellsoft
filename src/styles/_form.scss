@@ -387,3 +387,38 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
     }
   }
 }
+
+.bs-file-upload-drop-zone {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+
+  .input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .drop-zone {
+    border: 1px dashed $bs-cyan-4;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8a9496;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    margin-top: spacing(1);
+    padding: 0 spacing(4);
+  }
+
+  .bs-button {
+    flex: 0 0 100%;
+    margin-top: spacing(2);
+    max-width: 100%;
+  }
+}

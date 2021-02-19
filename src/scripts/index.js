@@ -13,6 +13,8 @@ import "swiper/components/pagination/pagination.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 
+import { fileDropZone } from "./file-drop-zone";
+
 import "./page-career";
 
 Swiper.use([Pagination, Navigation, EffectFade, Scrollbar, Mousewheel]);
@@ -118,6 +120,7 @@ window.addEventListener("load", () => {
   initFooterMenu();
   initCardsWithDropDownText();
   applySelectLib();
+  fileDropZone();
   onContactFormSubmit("#contact-form");
 
   initLibericaNativeImageSlider();

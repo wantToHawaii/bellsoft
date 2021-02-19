@@ -102,14 +102,15 @@
         <option value="2">Option 2</option>
       </select>
     </div>
-    <script>
-      window.onload = function () {
-        const select = new Choices('.bs-form-select select', {
-          searchEnabled: false,
-          itemSelectText: '',
-        });
-      };
-    </script>
+    <h2>File upload drop zone:</h2>
+    <label for="file-upload-drop-zone" class="bs-file-upload-drop-zone">
+      <span>Upload a file</span>
+      <input type="file" id="file-upload-drop-zone" class="input" />
+      <div class="drop-zone">No file uploaded</div>
+      <div class="bs-button outlined">
+        Upload file
+      </div>
+    </label>
   </div>
 
   <br />
