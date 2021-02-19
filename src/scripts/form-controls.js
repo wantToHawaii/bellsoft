@@ -1,3 +1,18 @@
+import Choices from "choices.js";
+import "choices.js/src/styles/choices.scss";
+
+export const choicesSelect = () => {
+  try {
+    const select = new Choices(".bs-form-select select", {
+      searchEnabled: false,
+      itemSelectText: "",
+      placeholder: true,
+    });
+  } catch (e) {
+    console.warn("Choices.js", e.message);
+  }
+};
+
 export const fileDropZone = () => {
   // drop zone works only with one file
   const dropZoneContainers = document.querySelectorAll(

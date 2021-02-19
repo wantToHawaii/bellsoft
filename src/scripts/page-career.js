@@ -150,10 +150,6 @@ window.addEventListener("load", () => {
       '[data-action="show-callback-popup"]'
     );
 
-    // FIXME
-    body.style.setProperty("overflow", "hidden");
-    popup.classList.add("active");
-
     for (let btn of showPopupButton) {
       btn.addEventListener("click", (e) => {
         console.log("e.preventDefault", e.preventDefault);

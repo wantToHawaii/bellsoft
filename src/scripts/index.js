@@ -1,5 +1,3 @@
-import Choices from "choices.js";
-import "choices.js/src/styles/choices.scss";
 import Swiper, {
   Pagination,
   Navigation,
@@ -13,8 +11,9 @@ import "swiper/components/pagination/pagination.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 
-import { fileDropZone } from "./file-drop-zone";
+import { fileDropZone, choicesSelect } from "./form-controls";
 
+import "./page-native-image";
 import "./page-career";
 
 Swiper.use([Pagination, Navigation, EffectFade, Scrollbar, Mousewheel]);
@@ -67,14 +66,6 @@ window.addEventListener("load", () => {
     }
   };
 
-  const applySelectLib = () => {
-    const select = new Choices(".bs-form-select select", {
-      searchEnabled: false,
-      itemSelectText: "",
-      placeholder: true,
-    });
-  };
-
   const onContactFormSubmit = (selector) => {
     const form = document.querySelector(selector);
     const modal = form ? form.querySelector(".bs-callback-modal") : null;
@@ -95,33 +86,10 @@ window.addEventListener("load", () => {
     }
   };
 
-  const initLibericaNativeImageSlider = () => {
-    const libericaNativeImageFeaturesSlider = new Swiper(
-      "#liberica-native-image-features-carousel",
-      {
-        effect: "fade",
-        pagination: {
-          el: "#liberica-native-image-features-carousel .swiper-pagination",
-          clickable: true,
-          autoHeight: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-            effect: "slide",
-            direction: "horizontal",
-          },
-        },
-      }
-    );
-  };
-
   initHeaderMenu();
   initFooterMenu();
   initCardsWithDropDownText();
-  applySelectLib();
+  choicesSelect();
   fileDropZone();
   onContactFormSubmit("#contact-form");
-
-  initLibericaNativeImageSlider();
 });
