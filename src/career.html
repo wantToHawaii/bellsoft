@@ -612,29 +612,29 @@
         <h6 class="title">Contact us</h6>
 
         <fieldset class="fieldset force-half-width">
-          <div class="col">
+          <div class="col-6">
             <label class="bs-form-label" for="firstName">First Name</label>
             <input class="bs-form-input" id="firstName" name="firstName" type="text" placeholder="Your name" />
           </div>
-          <div class="col">
+          <div class="col-6">
             <label class="bs-form-label" for="lastName">Last Name</label>
             <input class="bs-form-input" id="lastName" name="lastName" type="text" placeholder="Your name" />
           </div>
         </fieldset>
 
         <fieldset class="fieldset">
-          <div class="col">
+          <div class="col-6">
             <label class="bs-form-label" for="email">E-mail</label>
             <input class="bs-form-input" id="email" name="email" type="email" placeholder="Your email" />
           </div>
-          <div class="col">
+          <div class="col-6">
             <label class="bs-form-label" for="phone">Phone</label>
             <input class="bs-form-input" id="phone" name="phone" type="tel" placeholder="Your phone" />
           </div>
         </fieldset>
 
         <fieldset class="fieldset">
-          <div class="col">
+          <div class="col-6">
             <label class="bs-form-label" for="country">Country</label>
             <div class="bs-form-select">
               <select name="country">
@@ -644,31 +644,38 @@
               </select>
             </div>
           </div>
-          <div class="col">
+          <div class="col-6">
             <label class="bs-form-label" for="City">City</label>
             <input class="bs-form-input" id="City" name="City" type="text" placeholder="Your city" />
           </div>
         </fieldset>
 
         <fieldset class="fieldset">
-          <label class="bs-form-label" for="address">Address</label>
-          <input class="bs-form-input" id="address" name="address" type="text" placeholder="Your address" />
-        </fieldset>
-
-        <fieldset class="fieldset">
-          <label class="bs-form-label" for="Resume">Resume</label>
-          <div class="file-upload">
-            <div class="dropzone">No file uploaded</div>
-            <button type="button" class="bs-button outlined button">
-              Upload file
-            </button>
+          <div class="col-12">
+            <label class="bs-form-label" for="address">Address</label>
+            <input class="bs-form-input" id="address" name="address" type="text" placeholder="Your address" />
           </div>
         </fieldset>
 
         <fieldset class="fieldset">
-          <label class="bs-form-label" for="message">Personal links (Personal website, GitHub, Linkedin, e.t.c.)</label>
-          <textarea class="bs-form-textarea" name="message" id="message" cols="30" rows="8"
-            placeholder="Copy your links here"></textarea>
+          <div class="col-12">
+            <label class="bs-form-label" for="Resume">Resume</label>
+            <div class="file-upload">
+              <div class="dropzone">No file uploaded</div>
+              <button type="button" class="bs-button outlined button">
+                Upload file
+              </button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <div class="col-12">
+            <label class="bs-form-label" for="message">Personal links (Personal website, GitHub, Linkedin,
+              e.t.c.)</label>
+            <textarea class="bs-form-textarea" name="message" id="message" cols="30" rows="8"
+              placeholder="Copy your links here"></textarea>
+          </div>
         </fieldset>
 
         <button class="bs-button contained button-submit" type="submit">
