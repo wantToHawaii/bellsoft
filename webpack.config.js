@@ -1,7 +1,20 @@
+const fs = require('fs');
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const generateHTMLPages = (pagesDir) => {
+  const files = fs.readdirSync(path.resolve(__dirname, pagesDir));
+  return files.map(filename => {
+    return new HtmlWebpackPlugin({
+      filename,
+      template: path.resolve(__dirname, `${pagesDir}/${filename}`),
+    });
+  });
+};
+
+const htmlPages = generateHTMLPages('./src/pages');
 
 module.exports = {
   devServer: {
@@ -17,35 +30,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css",
     }),
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "high-powered-support.html",
-      template: "./src/high-powered-support.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "road-map.html",
-      template: "./src/road-map.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "pricing.html",
-      template: "./src/pricing.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "liberica-native-image.html",
-      template: "./src/liberica-native-image.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "career.html",
-      template: "./src/career.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "components.html",
-      template: "./src/components.html",
-    }),
-  ],
+  ].concat(htmlPages),
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
