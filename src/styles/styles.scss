@@ -15,10 +15,15 @@
 @import "page-road-map";
 @import "page-pricing";
 @import "page-career";
+@import "page-partners-ru";
 
 body {
   background-color: #fff;
-  font-family: $bs-font-main;
+  font-family: "Titillium Web", sans-serif;
+
+  &.lang-ru {
+    font-family: 'Exo 2', sans-serif;
+  }
 }
 
 h1,

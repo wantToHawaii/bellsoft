@@ -2,42 +2,60 @@ $bs-heading-color-default: $bs-black;
 
 .bs-heading-h1 {
   color: $bs-heading-color-default;
-  font: 600 48px/73px $bs-font-main;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 73px;
   margin: 0;
   width: 100%;
 }
 
 .bs-heading-h2 {
   color: $bs-heading-color-default;
-  font: 600 40px/61px $bs-font-main;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 61px;
   margin: 0;
   width: 100%;
 }
 
 .bs-heading-h3 {
   color: $bs-heading-color-default;
-  font: 400 36px/55px $bs-font-main;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 55px;
   margin: 0;
   width: 100%;
 }
 
 .bs-heading-h4 {
   color: $bs-heading-color-default;
-  font: 400 30px/46px $bs-font-main;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 46px;
   margin: 0;
   width: 100%;
 }
 
 .bs-heading-h5 {
   color: $bs-heading-color-default;
-  font: 400 20px/30px $bs-font-main;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
   margin: 0;
   width: 100%;
 }
 
 .bs-subtitle {
   color: $bs-black;
-  font: 600 20px/30px $bs-font-main;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
   margin: 0;
   width: 100%;
 }
