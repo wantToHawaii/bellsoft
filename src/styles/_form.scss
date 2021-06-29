@@ -1,7 +1,7 @@
-$bs-form-input-background-color: #EFF0F2;
-$bs-form-input-border-color: #EFF0F2;
+$bs-form-input-background-color: #eff0f2;
+$bs-form-input-border-color: #eff0f2;
 $bs-form-input-text-color: $bs-black;
-$bs-form-input-placeholder-color: #8A9496;
+$bs-form-input-placeholder-color: #8a9496;
 
 $bs-form-input-border-color-hover: rgba(0, 120, 133, 0.1);
 
@@ -12,14 +12,14 @@ $bs-form-input-border-color-active: $bs-cyan-4;
 $bs-form-label-checkbox-hover-color: $bs-cyan-4;
 
 // Checkbox
-$bs-form-checkbox-background-color: #C0D0D3;
+$bs-form-checkbox-background-color: #c0d0d3;
 $bs-form-checkbox-border-color: #fff;
 
-$bs-form-checkbox-focus-background-color: #E6FDFC;
+$bs-form-checkbox-focus-background-color: #e6fdfc;
 $bs-form-checkbox-focus-border-color: $bs-cyan-4;
-$bs-form-checkbox-focus-before-border-color: #E6FDFC;
+$bs-form-checkbox-focus-before-border-color: #e6fdfc;
 
-$bs-form-checkbox-hover-background-color: #E6FDFC;
+$bs-form-checkbox-hover-background-color: #e6fdfc;
 $bs-form-checkbox-hover-border-color: $bs-cyan-4;
 
 $bs-form-checkbox-active-background-color: $bs-cyan-4;
@@ -27,21 +27,20 @@ $bs-form-checkbox-active-border-color: $bs-cyan-4;
 $bs-form-checkbox-active-mark-color: #fff;
 
 // Radio
-$bs-form-radio-border-color: #C0D0D3;
+$bs-form-radio-border-color: #c0d0d3;
 $bs-form-radio-background-color: #fff;
 
-$bs-form-radio-focus-before-border-color: #E6FDFC;
-$bs-form-radio-focus-background-color: #E6FDFC;
+$bs-form-radio-focus-before-border-color: #e6fdfc;
+$bs-form-radio-focus-background-color: #e6fdfc;
 $bs-form-radio-focus-border-color: $bs-cyan-4;
 
 $bs-form-radio-active-dot-color: $bs-cyan-4;
 
-$bs-form-radio-hover-background-color: #E6FDFC;
+$bs-form-radio-hover-background-color: #e6fdfc;
 $bs-form-radio-hover-border-color: $bs-cyan-4;
 
 $bs-form-radio-checked-background-color: #fff;
 $bs-form-radio-checked-border-color: $bs-cyan-4;
-
 
 @mixin textFieldPlaceholder() {
   font-size: 16px;
@@ -166,7 +165,7 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
   transition: all $bs-transition-base;
 
   &:before {
-    content: '';
+    content: "";
     border: 2px solid $bs-form-checkbox-focus-before-border-color;
     display: block;
     border-radius: 4px;
@@ -180,7 +179,7 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
   }
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     left: 0;
     top: 0;
@@ -238,7 +237,7 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
   transition: all $bs-transition-base;
 
   &:before {
-    content: '';
+    content: "";
     border: 2px solid $bs-form-radio-focus-before-border-color;
     border-radius: 50%;
     display: block;
@@ -252,7 +251,7 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
   }
 
   &:after {
-    content: '';
+    content: "";
     background-color: $bs-form-radio-active-dot-color;
     border-radius: 50%;
     position: absolute;
@@ -302,16 +301,18 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
     color: $bs-black;
     font-weight: 400;
     font-size: 16px;
+    height: 56px;
     line-height: 24px;
     padding: 14px spacing(2);
     transition: all $bs-transition-base;
   }
 
-  .choices[data-type*=select-one] {
+  .choices[data-type*="select-one"] {
     margin-top: spacing(1);
 
     &:after {
-      background: transparent url(../images/select-toggle-arrow-icon.svg) no-repeat center;
+      background: transparent url(../images/select-toggle-arrow-icon.svg)
+        no-repeat center;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -326,8 +327,8 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
 
     .choices__inner {
       display: block;
-      background-color: #EFF0F2;
-      border: 1px solid #EFF0F2;
+      background-color: #eff0f2;
+      border: 1px solid #eff0f2;
       border-radius: 4px;
       padding: 0;
       transition: all $bs-transition-base;
@@ -356,14 +357,14 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
       .choices__item {
         @include itemStyles();
         transition: all $bs-transition-base;
-  
+
         &.is-highlighted {
-          background-color: #EEFAF9;
+          background-color: #eefaf9;
           color: $bs-cyan-6;
         }
       }
     }
-    
+
     &.is-open {
       &:after {
         transform: rotate(180deg);
@@ -384,5 +385,40 @@ $bs-form-radio-checked-border-color: $bs-cyan-4;
         transform: translateY(#{spacing(1)});
       }
     }
+  }
+}
+
+.bs-file-upload-drop-zone {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+
+  .input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .drop-zone {
+    border: 1px dashed $bs-cyan-4;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8a9496;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    margin-top: spacing(1);
+    padding: 0 spacing(4);
+  }
+
+  .bs-button {
+    flex: 0 0 100%;
+    margin-top: spacing(2);
+    max-width: 100%;
   }
 }
