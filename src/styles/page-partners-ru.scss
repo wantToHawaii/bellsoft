@@ -1,0 +1,132 @@
+$bs-section-opportunities-card-bg: #EFF0F2;
+$bs-section-partners-bg: #EFF0F2;
+$bs-section-partner-descr-card-bg: #EFF0F2;
+$bs-section-partner-descr-card-text-color: #7B7C83;
+
+$bs-slider-slide-bg: #ffffff;
+$bs-slider-slide-text-color: #7B7C83;
+$bs-slider-arrow-bg: #ffffff;
+$bs-slider-arrow-color: #202020;
+$bs-slider-dot-bg: #7B7C83;
+$bs-slider-active-dot-bg: $bs-cyan-4;
+
+.page-career-ru {
+
+  /*
+   * HERO
+   */
+  .section-hero {
+    background-color: $bs-black;
+    padding-top: spacing(3);
+    padding-bottom: spacing(4);
+    overflow-x: hidden;
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media("sm-desktop", "desktop") {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .bs-flex-item {
+          &.image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media("sm-desktop", "desktop") {
+              order: 2;
+              flex: 0 0 40%;
+              max-width: 40%;
+              justify-content: flex-end;
+            }
+
+            .image {
+              height: auto;
+              max-width: 100%;
+            }
+          }
+
+          &.content {
+            text-align: center;
+            margin-top: spacing(2);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              text-align: left;
+              align-items: center;
+            }
+
+            @include media("sm-desktop", "desktop") {
+              flex: 0 0 55%;
+              max-width: 55%;
+              margin-top: spacing(8);
+            }
+
+            .bs-heading-h1 {
+              color: $bs-section-hero-text-color;
+              font-size: 40px;
+              line-height: 48px;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                font-size: 64px;
+                line-height: 72px;
+              }
+            }
+
+            .text {
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 32px;
+              color: #ffffff;
+              margin: spacing(2) 0;
+              @include media("tablet", "sm-desktop", "desktop") {
+                margin: spacing(3) 0;
+              }
+            }
+
+            .text-secondary {
+              font-size: 16px;
+              line-height: 24px;
+              color: #F5F5F7;
+              margin: spacing(2) 0;
+              @include media("tablet", "sm-desktop", "desktop") {
+                margin: spacing(3) 0;
+              }
+            }
+
+            .buttons-container {
+              display: flex;
+              justify-content: center;
+              margin-top: spacing(6);
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                justify-content: flex-start;
+                margin-top: spacing(6);
+              }
+
+              .bs-button {
+                flex: 0 0 240px;
+
+                @include media("tablet", "sm-desktop", "desktop") {
+                  flex: 0 0 auto;
+                }
+
+                & + .bs-button {
+                  margin-top: spacing(2);
+
+                  @include media("tablet", "sm-desktop", "desktop") {
+                    margin-top: 0;
+                    margin-left: spacing(2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
