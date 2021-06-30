@@ -389,9 +389,10 @@ body.page-career-ru {
    * Partner description
    */
   .section-partner-description {
+    padding-top: spacing(6);
+
     .bs-flex-container {
       position: relative;
-      padding-top: spacing(6);
 
       .partner-description-container {
         padding-bottom: calc(24px + #{$pagination-height});
@@ -448,6 +449,68 @@ body.page-career-ru {
         .swiper-pagination {
           @include media("sm-desktop", "desktop") {
             display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * How to become a partner
+   */
+  .section-how-to-become-a-partner {
+    padding-top: spacing(6);
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        margin-bottom: spacing(3);
+      }
+
+      .bs-flex-row {
+        list-style-type: none;
+        flex-wrap: wrap;
+
+        .bs-flex-item {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: spacing(3);
+
+          @include media("tablet") {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          @include media("sm-desktop", "desktop") {
+            flex: 0 0 25%;
+            max-width: 25%;
+          }
+
+          .number {
+            display: flex;
+            border-bottom: 1px solid $bs-cyan-4;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 72px;
+            padding-bottom: spacing(2);
+          }
+
+          .text {
+            font-size: 16px;
+            line-height: 24px;
+            margin: spacing(2) 0 0 0;
+
+            .link {
+              color: $bs-cyan-4;
+              text-decoration: none;
+            }
+
+            br {
+              display: none;
+
+              @include media("sm-desktop", "desktop") {
+                display: inline;
+              }
+            }
           }
         }
       }
