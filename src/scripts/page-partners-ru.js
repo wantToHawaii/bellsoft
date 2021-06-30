@@ -20,6 +20,7 @@ window.addEventListener("load", () => {
       }
     );
   };
+
   const partnersCarousel = () => {
     const id = '#partners-carousel';
     const slider = new Swiper(
@@ -39,6 +40,28 @@ window.addEventListener("load", () => {
     );
   };
 
+  const partnerDescriptionCarousel = () => {
+    const id = '#partner-description-carousel';
+    const slider = new Swiper(
+      id,
+      {
+        effect: "fade",
+        pagination: {
+          el: `${id} .swiper-pagination`,
+          clickable: true,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            effect: "slide",
+            direction: "horizontal",
+          },
+        },
+      }
+    );
+  };
+
   partnersCapabilitiesCarousel();
   partnersCarousel();
+  partnerDescriptionCarousel();
 });
