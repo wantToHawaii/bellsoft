@@ -1,4 +1,5 @@
 $bs-button-color: $bs-cyan-4;
+$bs-button-white-color: $bs-white;
 
 $bs-button-disabled-color: #D1D7D8;
 
@@ -47,6 +48,25 @@ $bs-button-outlined-background-active: rgba(0, 234, 220, 0.1);
     &:disabled {
       background-color: $bs-button-disabled-color;
       border-color: $bs-button-disabled-color;
+    }
+
+    &.white {
+      background-color: $bs-button-white-color;
+      border-color: $bs-button-white-color;
+      color: $bs-cyan-4;
+      transition: opacity $bs-transition-base;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:disabled {
+        opacity: 0.9;
+      }
     }
   }
 
