@@ -6,7 +6,6 @@ window.addEventListener("load", () => {
       "#partners-capabilities-carousel",
       {
         effect: "fade",
-        // autoHeight: true,
         pagination: {
           el: "#partners-capabilities-carousel .swiper-pagination",
           clickable: true,
@@ -21,6 +20,25 @@ window.addEventListener("load", () => {
       }
     );
   };
+  const partnersCarousel = () => {
+    const id = '#partners-carousel';
+    const slider = new Swiper(
+      id,
+      {
+        effect: "fade",
+        autoHeight: true,
+        pagination: {
+          el: `${id} .swiper-pagination`,
+          clickable: true,
+        },
+        navigation: {
+          nextEl: `${id} .swiper-button-next`,
+          prevEl: `${id} .swiper-button-prev`,
+        },
+      }
+    );
+  };
 
   partnersCapabilitiesCarousel();
+  partnersCarousel();
 });
