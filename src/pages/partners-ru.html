@@ -78,7 +78,7 @@
                         Эти продукты включены в Реестр Российского ПО и полностью отвечают требованиям цифрового суверенитета.                    </p>
                     </p>
                     <div class="buttons-container">
-                        <a class="bs-button contained" href="#">Стать партнером</a>
+                        <button class="bs-button contained" type="button" data-action="show-callback-popup">Стать партнером</button>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                                 Вы предоставляете своим клиентам полный стек технологий, отвечающих требованиям рынка
                             </p>
                         </div>
-                        <button class="bs-button contained white" type="button">Стать партнером</button>
+                        <button class="bs-button contained white" type="button" data-action="show-callback-popup">Стать партнером</button>
                     </div>
 
                     <div class="card swiper-slide">
@@ -238,7 +238,7 @@
                                 Вы предлагаете клиентам не только свои операционные системы, но и проверенный дистрибутив
                             </p>
                         </div>
-                        <button class="bs-button contained white" type="button">Стать партнером</button>
+                        <button class="bs-button contained white" type="button" data-action="show-callback-popup">Стать партнером</button>
                     </div>
 
                     <div class="card swiper-slide">
@@ -248,7 +248,7 @@
                                 Вы знаете, что наши продукты закрывают задачи импортозамещения и отвечают требованиям цифрового суверенитета
                             </p>
                         </div>
-                        <button class="bs-button contained white" type="button">Стать партнером</button>
+                        <button class="bs-button contained white" type="button" data-action="show-callback-popup">Стать партнером</button>
                     </div>
                 </div>
 
@@ -293,7 +293,7 @@
         <div class="bs-flex-container">
             <div class="callback-container">
                 <h4 class="title">Направьте запрос на получение пакета документов</h4>
-                <button type="button" class="bs-button contained white">Стать партнером</button>
+                <button type="button" class="bs-button contained white" data-action="show-callback-popup">Стать партнером</button>
             </div>
             <address class="contacts">
                 <h4 class="title">Если у вас есть вопросы, свяжитесь с нами:</h4>
@@ -303,7 +303,69 @@
         </div>
     </section>
 
+    <section class="section-events">
+        <div class="bs-flex-container">
+            <h2 class="bs-heading-h2">Мероприятия</h2>
+            <div class="bs-flex-row">
+                <div class="bs-flex-item">
+                    <div class="card">
+                        <h5 class="title">Вводная лекция о продуктах BellSoft</h5>
+                        <span class="date">01.04.2021</span>
+                    </div>
+                </div>
+                <div class="bs-flex-item">
+                    <div class="card">
+                        <h5 class="title">Семинар для менеджеров по продажам</h5>
+                        <span class="date">01.04.2021</span>
+                    </div>
+                </div>
+                <div class="bs-flex-item">
+                    <div class="card">
+                        <h5 class="title">Вебинар “Импортозамещение на 100%”</h5>
+                        <span class="date">01.04.2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
+
+<div class="bs-popup callback-popup" id="partners-callback-popup">
+    <div class="overlay" data-action="close-callback-popup"></div>
+
+    <div class="bs-flex-container">
+        <div class="card">
+            <button class="button-close" type="button" data-action="close-callback-popup"></button>
+
+            <h6 class="title">Оставьте данные</h6>
+            <p class="subtitle">Мы перезвоним вам, чтобы обсудить наиболее выгодные условия партнёрской программы</p>
+
+            <fieldset class="fieldset">
+                <input class="bs-form-input" id="name" name="name" type="text" placeholder="ФИО" />
+                <input class="bs-form-input" id="position" name="position" type="text" placeholder="Должность" />
+                <input class="bs-form-input" id="company" name="company" type="text" placeholder="Название компании" />
+                <input class="bs-form-input" id="person-id" name="person-id" type="text" placeholder="ИНН" />
+                <div class="bs-flex-row">
+                    <div class="bs-flex-item">
+                        <input class="bs-form-input" id="email" name="email" type="email" placeholder="E-mail" />
+                    </div>
+                    <div class="bs-flex-item">
+                        <input class="bs-form-input" id="phone" name="phone" type="tel" placeholder="Номер телефона" />
+                    </div>
+                </div>
+                <label class="bs-form-label-checkbox checkbox-privacy-policy" for="agree-with-terms">
+                    <input type="checkbox" id="agree-with-terms" class="bs-form-checkbox" />
+                    Я согласен на обработку персональных данных
+                </label>
+            </fieldset>
+
+            <button class="bs-button contained" type="submit">
+                Стать партнером
+            </button>
+        </div>
+    </div>
+</div>
 
 <footer class="site-footer" id="site-footer">
     <div class="bs-flex-container">
@@ -402,101 +464,6 @@
         Copyright © 2020 All Rights Reserved by BellSoft LTD.
     </div>
 </footer>
-
-
-
-<div class="bs-popup callback-popup" id="callback-popup">
-    <div class="overlay" data-action="close-callback-popup"></div>
-
-    <div class="bs-flex-container">
-        <div class="card">
-            <button class="button-close" type="button" data-action="close-callback-popup">
-                <svg class="image" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L11 11M1 11L11 1" stroke="white" stroke-width="2" />
-                </svg>
-            </button>
-
-            <h6 class="title">Contact us</h6>
-
-            <fieldset class="fieldset force-half-width">
-                <div class="col-6">
-                    <label class="bs-form-label" for="firstName">First Name</label>
-                    <input class="bs-form-input" id="firstName" name="firstName" type="text" placeholder="Your name" />
-                </div>
-                <div class="col-6">
-                    <label class="bs-form-label" for="lastName">Last Name</label>
-                    <input class="bs-form-input" id="lastName" name="lastName" type="text" placeholder="Your name" />
-                </div>
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <div class="col-6">
-                    <label class="bs-form-label" for="email">E-mail</label>
-                    <input class="bs-form-input" id="email" name="email" type="email" placeholder="Your email" />
-                </div>
-                <div class="col-6">
-                    <label class="bs-form-label" for="phone">Phone</label>
-                    <input class="bs-form-input" id="phone" name="phone" type="tel" placeholder="Your phone" />
-                </div>
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <div class="col-6">
-                    <label class="bs-form-label" for="country">Country</label>
-                    <div class="bs-form-select">
-                        <select name="country">
-                            <option placeholder>Select</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <label class="bs-form-label" for="City">City</label>
-                    <input class="bs-form-input" id="City" name="City" type="text" placeholder="Your city" />
-                </div>
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <div class="col-12">
-                    <label class="bs-form-label" for="address">Address</label>
-                    <input class="bs-form-input" id="address" name="address" type="text" placeholder="Your address" />
-                </div>
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <div class="col-12">
-                    <label for="resume" class="bs-file-upload-drop-zone">
-                        <span>Resume</span>
-                        <input type="file" id="resume" class="input" />
-                        <div class="drop-zone">No file uploaded</div>
-                        <div class="bs-button outlined">
-                            Upload file
-                        </div>
-                    </label>
-                </div>
-            </fieldset>
-
-            <fieldset class="fieldset">
-                <div class="col-12">
-                    <label class="bs-form-label" for="message">Personal links (Personal website, GitHub, Linkedin,
-                        e.t.c.)</label>
-                    <textarea class="bs-form-textarea" name="message" id="message" cols="30" rows="8"
-                              placeholder="Copy your links here"></textarea>
-                </div>
-            </fieldset>
-
-            <button class="bs-button contained button-submit" type="submit">
-                Submit
-            </button>
-
-            <label class="bs-form-label-checkbox checkbox-privacy-policy" for="agree-with-terms">
-                <input type="checkbox" id="agree-with-terms" class="bs-form-checkbox" />
-                I agree to the&nbsp;<a href="#" class="link">terms & conditions</a>
-            </label>
-        </div>
-    </div>
-</div>
 
 </body>
 

@@ -61,7 +61,36 @@ window.addEventListener("load", () => {
     );
   };
 
+  const callbackPopup = () => {
+    const body = document.querySelector('body');
+    const popup = document.querySelector('#partners-callback-popup');
+
+    const showPopup = () => {
+      if (!popup.classList.contains('active')) {
+        body.style.setProperty('overflow', 'hidden');
+        popup.classList.add('active');
+      }
+    };
+
+    const closePopup = () => {
+      if (popup.classList.contains('active')) {
+        body.style.removeProperty('overflow');
+        popup.classList.remove('active');
+      }
+    };
+
+    body.addEventListener('click', (e) => {
+      const dataset = e.target.dataset;
+      if (dataset.action === 'show-callback-popup') {
+        showPopup();
+      } else if (dataset.action === 'close-callback-popup') {
+        closePopup();
+      }
+    });
+  };
+
   partnersCapabilitiesCarousel();
   partnersCarousel();
   partnerDescriptionCarousel();
+  callbackPopup();
 });

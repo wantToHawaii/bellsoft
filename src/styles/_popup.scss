@@ -60,6 +60,7 @@ $bs-popup-card-service-background-color: #EFF0F2;
     }
 
     .button-close {
+      background: center / 12px no-repeat url("../images/popup-cross.svg");
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -79,11 +80,11 @@ $bs-popup-card-service-background-color: #EFF0F2;
       &:hover {
         opacity: .65;
       }
-  
+
       &:focus {
         outline: none;
       }
-  
+
       .image {
         path {
           stroke: $bs-cyan-4;
@@ -209,7 +210,7 @@ $bs-popup-card-service-background-color: #EFF0F2;
             margin-left: spacing(-1);
             margin-right: spacing(-1);
           }
-  
+
           .bs-flex-item {
             flex: 0 0 100%;
             max-width: 100%;
