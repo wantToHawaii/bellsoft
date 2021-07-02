@@ -207,6 +207,18 @@ body.page-career-ru {
             margin-top: spacing(3);
             padding: spacing(6) spacing(3);
 
+            &.swiper-slide {
+              visibility: hidden;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                visibility: visible;
+              }
+
+              &.swiper-slide-active {
+                visibility: visible;
+              }
+            }
+
             @include media("tablet", "sm-desktop", "desktop") {
               flex-direction: row;
               padding-left: spacing(12);
@@ -313,6 +325,18 @@ body.page-career-ru {
             background-color: $bs-white;
             border-radius: spacing(2);
             padding: spacing(6) spacing(3);
+
+            &.swiper-slide {
+              visibility: hidden;
+
+              @include media("tablet", "sm-desktop", "desktop") {
+                visibility: visible;
+              }
+
+              &.swiper-slide-active {
+                visibility: visible;
+              }
+            }
 
             @include media("sm-desktop", "desktop") {
               padding: spacing(6) spacing(12);
