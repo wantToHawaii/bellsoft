@@ -1,4 +1,4 @@
-$bs-pricing-section-hero-title-color: #F5F5F7;
+$bs-pricing-section-hero-title-color: $bs-light-gray;
 
 $bs-pricing-section-bg-color: #E5E5E5;
 $bs-pricing-section-card-bg-color: #fff;
@@ -74,28 +74,28 @@ $bs-subscription-services-section--bg-color: #E5E5E5;
               .header {
                 background: right center / auto 100% no-repeat url('../images/page-pricing-standard-prices-bg.svg'),
                             linear-gradient(90deg, #D4D7DE 0.01%, #EFF0F2 56.25%, #EFF0F2 100%);
-  
+
                 .title {
                   color: $bs-black;
                 }
               }
             }
-  
+
             &.premium {
               .header {
                 background: right center / auto 100% no-repeat url('../images/page-pricing-premium-prices-bg.svg'),
                             linear-gradient(90deg, #009CAD 0%, #00D6CD 100%);
-  
+
                 .title {
                   color: $bs-white;
                 }
               }
             }
-  
+
             .header {
               padding: spacing(4);
               height: $card-header-height;
-  
+
               .title {
                 font-size: 20px;
                 font-weight: 700;
@@ -109,7 +109,7 @@ $bs-subscription-services-section--bg-color: #E5E5E5;
                 }
               }
             }
-  
+
             .body {
               padding: 0 spacing(3);
 
@@ -118,7 +118,7 @@ $bs-subscription-services-section--bg-color: #E5E5E5;
                 flex-direction: column;
                 height: calc(100% - #{$card-header-height});
               }
-  
+
               .bs-list-check-mark-type {
                 font-size: 16px;
                 font-weight: 400;
@@ -130,11 +130,11 @@ $bs-subscription-services-section--bg-color: #E5E5E5;
                 .item {
                   $check-mark-size: 16px;
                   padding-left: $check-mark-size + 10px;
-  
+
                   & + .item {
                     margin-top: spacing(2);
                   }
-  
+
                   &:before {
                     font-size: 12px;
                     font-weight: 600;
@@ -150,7 +150,7 @@ $bs-subscription-services-section--bg-color: #E5E5E5;
                   }
                 }
               }
-  
+
               .bordered-list {
                 font-size: 16px;
                 font-weight: 400;
@@ -164,7 +164,7 @@ $bs-subscription-services-section--bg-color: #E5E5E5;
                   line-height: 30px;
                   margin-top: auto;
                 }
-  
+
                 .item {
                   display: flex;
                   align-items: center;
