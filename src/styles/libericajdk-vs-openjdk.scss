@@ -1,0 +1,158 @@
+body.page-libericajdk-vs-openjdk {
+  $hero-bg-color: #0D093D;
+
+  /*
+   * HERO
+   */
+  .section-hero {
+    background: $hero-bg-color center top 51px / contain no-repeat url('../images/linericajdk-vs-openjdk/hero-bg-mobile.png');
+
+    @include media('sm-desktop', 'desktop') {
+      background-image: url('../images/linericajdk-vs-openjdk/hero-bg.png');
+      background-size: auto;
+      background-position: center top;
+    }
+
+    .page-anchors {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: $header-mobile-height;
+
+      @include media('sm-desktop', 'desktop') {
+        top: $header-height;
+      }
+
+      .bs-flex-container {
+        .bs-flex-row {
+          .bs-flex-item {
+            &:first-child {
+              display: none;
+
+              @include media('sm-desktop', 'desktop') {
+                display: flex;
+                flex: 0 0 auto;
+                align-items: center;
+
+                .logo {
+                  color: $bs-white;
+                }
+              }
+            }
+
+            &:last-child {
+              flex: 0 0 100%;
+              max-width: 100%;
+
+              @include media('sm-desktop', 'desktop') {
+                flex: 0 0 auto;
+                margin-left: auto;
+              }
+
+              .nav {
+                .menu {
+                  color: $bs-white;
+                  display: flex;
+                  list-style-type: none;
+                  padding: spacing(2) 0;
+                  overflow-x: auto;
+                  margin: 0;
+
+                  @include media('tablet') {
+                    justify-content: center;
+                  }
+
+                  .item {
+                    flex: 0 0 auto;
+
+                    & + .item {
+                      margin-left: spacing(3);
+                    }
+
+                    .link {
+                      color: $bs-light-gray;
+                      text-decoration: none;
+
+                      &:hover {
+                        color: $bs-white;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bs-flex-container {
+      &.content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding-top: 260px;
+        padding-bottom: spacing(6);
+
+        @include media('tablet') {
+          padding-top: 350px;
+        }
+
+        @include media('sm-desktop', 'desktop') {
+          padding-top: 450px;
+        }
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          padding-bottom: spacing(12);
+        }
+
+        .bs-heading-h1 {
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 48px;
+          color: $bs-white;
+          max-width: 735px;
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            font-size: 64px;
+            line-height: 72px;
+          }
+        }
+
+        .bs-subtitle {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 32px;
+          color: $bs-light-gray;
+          margin-top: spacing(4);
+          max-width: 580px;
+        }
+
+        .buttons-container {
+          margin-top: spacing(5);
+          width: 100%;
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: spacing(6);
+          }
+
+          .bs-button {
+            &:last-child {
+              margin-top: spacing(2);
+              color: $bs-white;
+
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                margin-top: 0;
+                margin-left: spacing(3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
