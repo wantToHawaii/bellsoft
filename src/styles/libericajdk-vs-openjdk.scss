@@ -85,6 +85,11 @@ body.page-libericajdk-vs-openjdk {
     margin-bottom: 0;
   }
 
+  .bs-list {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .bs-card-review {
     // note: card parent should be: display: flex; align-items: center;
     background-color: $bs-white;
@@ -588,7 +593,7 @@ body.page-libericajdk-vs-openjdk {
 
         .bs-button {
           font-size: 16px;
-          padding-left: spacing(1);
+          padding-left: spacing(2);
           padding-right: spacing(2);
           margin: spacing(6) auto 0;
           max-width: 440px;
@@ -678,7 +683,7 @@ body.page-libericajdk-vs-openjdk {
           line-height: 32px;
         }
 
-        .list {
+        .bs-list {
           list-style-type: none;
           margin: 0;
           padding: 0;
@@ -692,8 +697,6 @@ body.page-libericajdk-vs-openjdk {
             }
 
             .text {
-              font-size: 16px;
-              line-height: 24px;
               margin-top: spacing(2);
               margin-bottom: 0;
 
@@ -710,10 +713,50 @@ body.page-libericajdk-vs-openjdk {
         margin-top: spacing(6);
       }
 
-      .list-advantages {
-        font-size: 16px;
-        line-height: 24px;
+      .bs-list-advantages {
         padding-left: spacing(4);
+      }
+    }
+  }
+
+  .section-support {
+    background-color: #0D093D;
+    color: $bs-white;
+    padding: $section-gaps-mobile 0;
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      background: #0D093D center top / auto no-repeat url('../images/linericajdk-vs-openjdk/support-business-bg.svg');
+      padding: $section-gaps 0;
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2,
+      .bs-subtitle {
+        color: $bs-white;
+      }
+
+      .bs-list {
+        margin: spacing(6) 0 0;
+        padding-left: spacing(4);
+      }
+
+      .bs-text {
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          margin-top: spacing(6);
+        }
+      }
+
+      .bs-button {
+        font-size: 16px;
+        padding-left: spacing(2);
+        padding-right: spacing(2);
+        margin: spacing(6) auto 0;
+        width: 100%;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          font-size: 20px;
+          width: auto;
+        }
       }
     }
   }
