@@ -738,6 +738,10 @@ body.page-libericajdk-vs-openjdk {
       .bs-list {
         margin: spacing(6) 0 0;
         padding-left: spacing(4);
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          columns: 2;
+        }
       }
 
       .bs-text {
@@ -778,6 +782,49 @@ body.page-libericajdk-vs-openjdk {
       .bs-subtitle {
         color: $bs-gray;
         text-align: left;
+      }
+    }
+  }
+
+  .section-links {
+    padding: spacing(6) 0;
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      padding: spacing(12) 0;
+    }
+
+    .bs-flex-container {
+      .title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          font-size: 36px;
+          line-height: 48px;
+        }
+      }
+
+      .bs-list {
+        list-style-type: none;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .item {
+          margin-top: spacing(3);
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            flex: 0 0 50%;
+          }
+
+          .link {
+            color: $bs-cyan-4;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
