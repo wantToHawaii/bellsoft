@@ -167,7 +167,7 @@
             <p class="bs-text">
                 <strong>Liberica JDK</strong>, in contrast, is a product for which BellSoft has full responsibility. As a leading OpenJDK contributor, this company cares for security, stability, and conformance. The company’s engineers personally fix bugs for the clients and then ensure the corrections will eventually be available to everyone, as they send patches to the mainline branch of the OpenJDK. As mentioned above, BellSoft is part of the Vulnerability Group alongside other major JDK distributors to ensure your critical applications are safe from common vulnerabilities and exposures.
             </p>
-            <table class="table">
+            <table class="bs-table">
                 <thead>
                 <tr>
                     <th></th>
@@ -227,7 +227,7 @@
             <p class="bs-text">
                 <strong>Liberica JDK</strong> releases concurrently with Oracle Java and never delays updates. BellSoft provides regular Critical Patch Updates (CPUs) in accordance with the quarterly schedule. Feature releases roll out twice a year. It means entirely new JDK versions every March and September plus fixes for known bugs and common vulnerabilities around the 17th day of January, April, July and October.
             </p>
-            <div class="card-review">
+            <div class="bs-card-review">
                 <div class="customer-photo">
                     <img class="image" src="../images/linericajdk-vs-openjdk/image-reviewer-konstantin.png" alt="Konstantin Bulenkov Head of JetBrains Runtime" />
                 </div>
@@ -246,7 +246,7 @@
                 <h3 class="bs-heading-h3">Benefit from extended support</h3>
                 <p class="bs-text">
                     LTS releases are called “long-term” for a reason. Does your enterprise have tens, hundreds, or even thousands of instances? It’s reasonable to choose the vendor that guarantees its Java™
-                    <a class="link" href="https://bell-sw.com/pages/libericajdk/support">https://bell-sw.com/pages/libericajdk/support</a> to last for extra 4–5 years.
+                    support to last for extra 4–5 years.
                 </p>
                 <p class="bs-text">
                     <strong>AdoptOpenJDK</strong> receives commercial support from a third party. This means no guarantees that your JDK version will get supported after the OpenJDK community stops providing updates (the case of Java 6 and 7, non-LTS releases). AdoptOpenJDK will only continue to build binaries for releases as long as the corresponding upstream repository is actively maintained, unless the situation changes in view of Eclipse Adoptium.
@@ -263,6 +263,425 @@
             </div>
         </div>
     </section>
+
+    <section class="section-unify-runtimes">
+        <div class="bs-flex-container">
+            <h2 class="bs-heading-h2">Unify runtimes</h2>
+            <p class="bs-subtitle">Forget about migration and compatibility issues</p>
+            <p class="bs-text">
+                You want to be 100% sure that your Java apps will launch and run properly. Besides, when you switch from Oracle Java, easy migration is something you’d expect from your OpenJDK pick.
+            </p>
+            <p class="bs-text">
+                <strong>AdoptOpenJDK</strong> is considered a de facto hub for the OpenJDK community to collaborate on. And yet, these binaries are not TCK-verified. Technology Compatibility Kit is a suite of tests for Java provided by Oracle. Without the verification, there is no guarantee for your application to be compliant with Java SE. The move to Adoptium was meant to change that, but this project has decided to produce separate Eclipse Temurin binaries with certain licensing restrictions (the Java SE TCKs will be used solely for implementations that include only HotSpot based JREs and no other JVM). It should be noted that Martijn Verburg, a Project Management Committee member for Eclipse Adoptium, was elected to the Java Community Process Executive Committee (JCP EC), but as a London Java Community representative. So, TCK verification is still pending for the full scope of AdoptOpenJDK binaries.
+            </p>
+            <p class="bs-text">
+                <strong>For Liberica JDK</strong> quality testing is among the highest priorities. Apart from undergoing internal QA/QC procedures before every release, Liberica binaries — from version 11 to the latest — are fully ratified in the Java Community Process with TCK for Java SE specifications. This indicates that this runtime is highly performant and will not damage your critical applications. Moreover, BellSoft CTO Aleksei Voitylov holds a ratified seat at the JCP EC, which proves the company’s commitment to the standard and future of Java.
+            </p>
+            <div class="bs-card-review">
+                <div class="customer-photo">
+                    <img class="image" src="../images/linericajdk-vs-openjdk/image-reviewer-yury.png" alt="Yury Vasyutinskiy Team Lead at FlowTraders" />
+                </div>
+                <div class="customer-info">
+                    <img class="quotes-image" src="../images/quotes-image.svg" alt="Quotes">
+                    <p class="review">
+                        Stability, speed and accuracy are all very important factors for us. Liberica, our main JDK distribution, was onboarded without any hiccups. We are happy with the level of support provided by the BellSoft team.
+                    </p>
+                    <div class="name">Yury Vasyutinskiy</div>
+                    <div class="position">Team Lead at FlowTraders</div>
+                </div>
+            </div>
+            <h3 class="bs-heading-h3">Develop on all platforms with a single JDK</h3>
+            <p class="bs-text">
+                One runtime for servers on Windows, another for new and shiny Apple silicon devices, and one for your cloud nodes... Irritating? That's why you should opt for the JDK with the highest number of supported configurations.
+            </p>
+            <p class="bs-text">
+                <strong>Liberica JDK</strong> has one of the widest support ranges, including all present-day architectures (x86 64/32 bit, ARM, PowerPC, SPARC) and the majority of known operating systems. While both OpenJDK distributions support numerous configurations, some unique options for Liberica JDK are the full-fledged support for <span class="colored">lightweight Alpine Linux musl</span>, which was recently merged into OpenJDK, and for <span class="colored">Windows AArch64</span> available in JDK 11 and 16. This makes Liberica JDK the Unified Java Runtime: one runtime for cloud, server and desktop use cases.
+            </p>
+            <table class="bs-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center" colspan="3">AdoptOpenJDK</th>
+                    <th class="has-colored-overlay text-center" colspan="3">Liberica JDK</th>
+                </tr>
+                <tr>
+                    <th class="thin"></th>
+                    <th class="thin text-center">JDK 8</th>
+                    <th class="thin text-center">JDK 11</th>
+                    <th class="thin text-center">JDK 16</th>
+                    <th class="thin has-colored-overlay text-center">JDK 8</th>
+                    <th class="thin has-colored-overlay text-center">JDK 11</th>
+                    <th class="thin has-colored-overlay text-center">JDK 16</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Windows Server x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows Desktop x86 (64/32 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows Desktop AArch64</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>macOS x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>macOS AArch64</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ubuntu Linux x86 (64/32 bit), AArch64, ARMv7, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debian Linux x86 (64/32 bit), AArch64, ARMv7, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>RHEL x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>CentOS x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>OEL x86 (64/32 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>SLES x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        No<br />AArch64
+                    </td>
+                    <td class="text-center">
+                        No<br />AArch64
+                    </td>
+                    <td class="text-center">
+                        No<br />AArch64
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>OpenSUSE x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alpine Linux x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alpine Linux AArch64</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Raspbian ARMv7</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solaris 10 SPARC, x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solaris 11 SPARC, x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="bs-text">
+                When AdoptOpenJDK moves on to become Adoptium, the matrix may change, but it’s unwise to wait until then. No matter which platform/OS combination your project requires, BellSoft guarantees Liberica JDK’s consistent operation, as well as provides appropriate installers and packages, verification, and commercial support. Contact expert Java engineers and discover the optimized solution.
+            </p>
+            <a href="#" class="bs-button outlined">Request licensing</a>
+        </div>
+    </section>
+
+
 
 </main>
 
