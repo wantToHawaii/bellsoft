@@ -1,9 +1,23 @@
 body.page-career-ru {
+  // TODO: V2 move to typography
   /*
    * COMMON
    */
+  .bs-heading-h1 {
+    color: $bs-white;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      font-size: 64px;
+      line-height: 72px;
+    }
+  }
+
   .bs-heading-h2 {
     text-align: center;
+    font-weight: 700;
     font-size: 40px;
     line-height: 48px;
 
@@ -106,17 +120,6 @@ body.page-career-ru {
               flex: 0 0 55%;
               max-width: 55%;
               margin-top: spacing(8);
-            }
-
-            .bs-heading-h1 {
-              color: $bs-section-hero-text-color;
-              font-size: 40px;
-              line-height: 48px;
-
-              @include media("tablet", "sm-desktop", "desktop") {
-                font-size: 64px;
-                line-height: 72px;
-              }
             }
 
             .text {

@@ -97,27 +97,60 @@
         </div>
     </section>
 
-    <section class="section-description" style="display: none;">
+    <section class="section-overview">
         <div class="bs-flex-container">
-            <div class="bs-flex-row">
-                <div class="bs-flex-item">
-                    <h3 class="bs-heading-h3">Optimize and minimize</h3>
-                    <p class="text">
-                        Liberica Native Image is a utility that converts your JVM-based application into a fully compiled native
-                        executable ahead-of-time under the closed-world assumption with an almost instant startup time. Being
-                        compatible with various platforms, including lightweight musl-based Alpine Linux, it optimizes resource
-                        consumption and minimizes the static footprint.
+            <h2 class="bs-heading-h2">Overview</h2>
+            <p class="subtitle">There are multiple OpenJDK options, and it’s often hard to choose one that will suit your organization. To make it easier, this page gives an extensive comparison of Liberica JDK and AdoptOpenJDK (now rebranding as “Eclipse Adoptium”), two of the most popular distributions.</p>
+
+            <div class="bs-flex-row products-description">
+                <div class="bs-flex-item liberica-jdk">
+                    <h3 class="bs-heading-h3">Liberica JDK</h3>
+                    <p class="bs-text">
+                        Liberica JDK is a free cloud-oriented OpenJDK implementation for modern Java deployments. It aids in development on the broadest number of configurations, good for building microservice architecture and keeping software secure. It includes the HotSpot JVM, which guarantees Oracle certification. Liberica JDK is also known as a human-oriented Java runtime backed by professional engineers.
+                    </p>
+                    <p class="bs-text">
+                        This distribution is produced and supported by BellSoft, a company that has established itself in the OpenJDK community. As the sole developer and decision-maker, BellSoft is fully responsible for the product and all the updated versions. Its engineers are recognized for having 15+ years of experience with Java plus working previously with Sun Microsystems and Oracle. The key people in the company are members of the OpenJDK Vulnerability Group2 and Java Community Process Executive Committee.3
                     </p>
                 </div>
-                <div class="bs-flex-item">
-                    <h3 class="bs-heading-h3">Discover the possibilities </h3>
-                    <p class="text">
-                        Liberica Native Image allows seamless polyglot projects, such as microservices in different programming
-                        languages. Software components consume less RAM, communicate with total ease, and run at high speed.
-                        Developing with Liberica Native Image equals efficiency and expert support from BellSoft engineers.
+                <div class="bs-flex-item open-jdk">
+                    <h3 class="bs-heading-h3">AdoptOpenJDK</h3>
+                    <p class="bs-text">
+                        AdoptOpenJDK uses its own build infrastructure and scripts to make prebuilt binaries from the OpenJDK source code. They consist of class libraries and a Java virtual machine, either HotSpot or the Eclipse OpenJ9.
+                    </p>
+                    <p class="bs-text">
+                        The project is defined as community-led, where “community” means the AdoptOpenJDK community rather than purely OpenJDK. It is run by the Technical Steering Committee (TSC), contributed to by individuals and a handful of sponsors such as IBM, Red Hat, and Microsoft. Before starting to join the Eclipse Foundation in June 2019 under the name of Eclipse Adoptium,4 it was considered the go-to build for migration with more than 20 million downloads. However, as of May 2021, AdoptOpenJDK is still undergoing the transition to Adoptium.
                     </p>
                 </div>
             </div>
+
+            <div class="card-certificate">
+                <div class="bs-flex-row">
+                    <div class="bs-flex-item image-container">
+                        <img src="../images/linericajdk-vs-openjdk/image-certified.png" alt="Official Oracle Certification">
+                    </div>
+                    <div class="bs-flex-item">
+                        <h3 class="bs-heading-h3">Official Oracle Certification</h3>
+                        <p class="bs-text">Liberica JDK is verified for compliance with Java SE specifications by Oracle’s Technology Compatibility Kit (TCK). It ensures that the Java runtime conforms to the standard and that your company can migrate without problems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal">
+                <h3 class="bs-heading-h3">Leading OpenJDK Contributor</h3>
+                <p class="bs-text">BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.</p>
+                <button type="button" class="button-open-popup">
+                    <img src="../images/linericajdk-vs-openjdk/image-external-contributions.jpg" alt="External contributions to JDK" class="image">
+                </button>
+                <a href="#" class="bs-button outlined">Read more about contributions to Java 16</a>
+            </div>
+
+            <div class="card-decision">
+                <h3 class="bs-heading-h3">Which OpenJDK build is ideal for businesses?</h3>
+                <p class="bs-text">Below you will find the rationale behind switching to BellSoft’s Liberica JDK. But if you would rather talk to experts and find out the reasons for migration from experienced Java engineers, get in touch! The team will do its best to consult you on further steps in your digital transformation, all for free.</p>
+                <a href="#" class="bs-button contained">Book a free consultation</a>
+            </div>
+
+            <p class="bs-text">Java™ is one of the most widely used programming languages. Trusted and stable, it is often the preferred choice for banking & fintech, retail, telecom, and social media back end. A viable OpenJDK distribution should reflect Java’s nature, guaranteeing the safety of your and your clients’ critical data. On the other hand, to be competitive, you need flexible software able to adapt to the market: support as many system configurations as possible, be lightning fast and lightweight, and deflate expenses rather than inflate them. Let’s see the most important JDK Criteria for Modern Enterprise.</p>
         </div>
     </section>
 
