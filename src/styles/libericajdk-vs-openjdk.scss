@@ -4,6 +4,7 @@ body.page-libericajdk-vs-openjdk {
   /*
    * COMMON
    */
+  $page-container-width: 776px;
   $section-gaps-mobile: spacing(6);
   $section-gaps: spacing(12);
 
@@ -60,6 +61,10 @@ body.page-libericajdk-vs-openjdk {
     @include media('tablet', 'sm-desktop', 'desktop') {
       padding: spacing(6);
     }
+  }
+
+  .bs-flex-container {
+    max-width: $page-container-width;
   }
 
   /*
