@@ -8,8 +8,23 @@ body.page-libericajdk-vs-openjdk {
   $section-gaps-mobile: spacing(6);
   $section-gaps: spacing(12);
 
+  @mixin bs-card-container {
+    background-color: $bs-white;
+    border-radius: spacing(1);
+    padding: spacing(3);
+    margin-top: spacing(6);
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      padding: spacing(6);
+    }
+  }
+
   .bs-flex-container {
     max-width: $page-container-width;
+  }
+
+  .colored {
+    color: $bs-cyan-4;
   }
 
   .bs-heading-h1 {
@@ -242,17 +257,6 @@ body.page-libericajdk-vs-openjdk {
           }
         }
       }
-    }
-  }
-
-  @mixin bs-card-container {
-    background-color: $bs-white;
-    border-radius: spacing(1);
-    padding: spacing(3);
-    margin-top: spacing(6);
-
-    @include media('tablet', 'sm-desktop', 'desktop') {
-      padding: spacing(6);
     }
   }
 
@@ -617,12 +621,6 @@ body.page-libericajdk-vs-openjdk {
         }
       }
 
-      .bs-text {
-        .colored {
-          color: $bs-cyan-4;
-        }
-      }
-
       .bs-heading-h3 {
         margin-top: spacing(6);
       }
@@ -654,6 +652,68 @@ body.page-libericajdk-vs-openjdk {
         @include media('tablet', 'sm-desktop', 'desktop') {
           width: auto;
         }
+      }
+    }
+  }
+
+  /*
+   * Modern tech
+   */
+  .section-modern-tech {
+    background-color: $bs-gray-2;
+    padding: $section-gaps-mobile 0;
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      padding: $section-gaps 0;
+    }
+
+    .bs-flex-container {
+      .card-advantages {
+        @include bs-card-container;
+        margin-bottom: spacing(3);
+
+        .title {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        .list {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+
+          .item {
+            margin-top: spacing(3);
+
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              display: flex;
+              align-items: center;
+            }
+
+            .text {
+              font-size: 16px;
+              line-height: 24px;
+              margin-top: spacing(2);
+              margin-bottom: 0;
+
+              @include media('tablet', 'sm-desktop', 'desktop') {
+                margin-top: 0;
+                margin-left: spacing(2);
+              }
+            }
+          }
+        }
+      }
+
+      .bs-heading-h3 {
+        margin-top: spacing(6);
+      }
+
+      .list-advantages {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: spacing(4);
       }
     }
   }
