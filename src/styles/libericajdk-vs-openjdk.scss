@@ -1,12 +1,17 @@
 body.page-libericajdk-vs-openjdk {
-  // FIXME: anchors menu, hero title width, make modal, page refres on change width
+  // FIXME: make modal
   // TODO: V2 move to typography
   /*
    * COMMON
    */
+  $scroll-margin-top: $header-mobile-height;
+  @include media('tablet', 'sm-desktop', 'desktop') {
+    $scroll-margin-top: $header-height;
+  }
   $page-container-width: 776px;
   $section-gaps-mobile: spacing(6);
   $section-gaps: spacing(12);
+  $color-blue: #0D093D;
 
   @mixin bs-card-container {
     background-color: $bs-white;
@@ -270,7 +275,7 @@ body.page-libericajdk-vs-openjdk {
    * HERO
    */
   .section-hero {
-    background: #0D093D center top 51px / contain no-repeat url('../images/linericajdk-vs-openjdk/hero-bg-mobile.png');
+    background: $color-blue center top 51px / contain no-repeat url('../images/linericajdk-vs-openjdk/hero-bg-mobile.png');
 
     @include media('sm-desktop', 'desktop') {
       background-image: url('../images/linericajdk-vs-openjdk/hero-bg.png');
@@ -279,9 +284,21 @@ body.page-libericajdk-vs-openjdk {
     }
 
     .page-anchors {
+      background-color: transparent;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      position: sticky;
+      position: fixed;
       top: $header-mobile-height;
+      left: 0;
+      width: 100%;
+      transition: background-color 300ms ease-in-out;
+
+      &.blue {
+        background-color: $color-blue;
+      }
+
+      @include media('tablet') {
+        top: $header-tablet-height;
+      }
 
       @include media('sm-desktop', 'desktop') {
         top: $header-height;
@@ -334,7 +351,7 @@ body.page-libericajdk-vs-openjdk {
                     }
 
                     .link {
-                      color: $bs-gray;
+                      color: #d0d0d4;
                       text-decoration: none;
 
                       &:hover {
@@ -537,6 +554,7 @@ body.page-libericajdk-vs-openjdk {
    */
   .section-security {
     padding: $section-gaps-mobile 0;
+    scroll-margin-top: $scroll-margin-top;
 
     @include media('tablet', 'sm-desktop', 'desktop') {
       padding: $section-gaps 0;
@@ -555,6 +573,7 @@ body.page-libericajdk-vs-openjdk {
   .section-free-up-time {
     background-color: $bs-gray-2;
     padding: $section-gaps-mobile 0;
+    scroll-margin-top: $scroll-margin-top;
 
     @include media('tablet', 'sm-desktop', 'desktop') {
       padding: $section-gaps 0;
@@ -613,6 +632,7 @@ body.page-libericajdk-vs-openjdk {
    */
   .section-unify-runtimes {
     padding: $section-gaps-mobile 0;
+    scroll-margin-top: $scroll-margin-top;
 
     @include media('tablet', 'sm-desktop', 'desktop') {
       padding: $section-gaps 0;
@@ -668,6 +688,7 @@ body.page-libericajdk-vs-openjdk {
   .section-modern-tech {
     background-color: $bs-gray-2;
     padding: $section-gaps-mobile 0;
+    scroll-margin-top: $scroll-margin-top;
 
     @include media('tablet', 'sm-desktop', 'desktop') {
       padding: $section-gaps 0;
@@ -721,12 +742,13 @@ body.page-libericajdk-vs-openjdk {
   }
 
   .section-support {
-    background-color: #0D093D;
+    background-color: $color-blue;
     color: $bs-white;
     padding: $section-gaps-mobile 0;
+    scroll-margin-top: $scroll-margin-top;
 
     @include media('tablet', 'sm-desktop', 'desktop') {
-      background: #0D093D center top / auto no-repeat url('../images/linericajdk-vs-openjdk/support-business-bg.svg');
+      background: $color-blue center top / auto no-repeat url('../images/linericajdk-vs-openjdk/support-business-bg.svg');
       padding: $section-gaps 0;
     }
 
