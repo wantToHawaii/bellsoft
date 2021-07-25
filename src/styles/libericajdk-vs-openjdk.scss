@@ -20,7 +20,9 @@ body.page-libericajdk-vs-openjdk {
   }
 
   .bs-flex-container {
-    max-width: $page-container-width;
+    &.small {
+      max-width: $page-container-width;
+    }
   }
 
   .colored {
@@ -91,7 +93,6 @@ body.page-libericajdk-vs-openjdk {
   }
 
   .bs-card-review {
-    // note: card parent should be: display: flex; align-items: center;
     background-color: $bs-white;
     border-radius: spacing(1);
     overflow: hidden;
@@ -104,10 +105,10 @@ body.page-libericajdk-vs-openjdk {
       display: flex;
       flex-direction: row-reverse;
       height: 420px;
-      max-width: 1120px;
       margin-left: 0;
       margin-right: 0;
-      width: 1120px;
+      max-width: 100%;
+      width: 100%;
     }
 
     .customer-info {
@@ -713,7 +714,7 @@ body.page-libericajdk-vs-openjdk {
         margin-top: spacing(6);
       }
 
-      .bs-list-advantages {
+      .bs-list {
         padding-left: spacing(4);
       }
     }
@@ -844,7 +845,6 @@ body.page-libericajdk-vs-openjdk {
 
         @include media('sm-desktop', 'desktop') {
           flex-direction: row;
-          justify-content: center;
         }
 
         .bs-flex-item {
@@ -852,8 +852,8 @@ body.page-libericajdk-vs-openjdk {
           justify-content: center;
 
           @include media('sm-desktop', 'desktop') {
-            flex: 0 0 360px;
-            max-width: 360px;
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
           }
 
           &:first-child {
@@ -870,6 +870,7 @@ body.page-libericajdk-vs-openjdk {
               display: flex;
               flex-direction: column;
               margin-top: 0;
+              min-height: 436px;
             }
 
             @include media('tablet', 'sm-desktop', 'desktop') {
@@ -901,6 +902,59 @@ body.page-libericajdk-vs-openjdk {
               font-size: 16px;
               padding: spacing(1) spacing(2);
               margin-top: spacing(3);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-articles {
+    padding: $section-gaps-mobile 0;
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      padding: $section-gaps 0;
+    }
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          display: flex;
+          justify-content: center;
+          margin-top: spacing(3);
+          margin-bottom: spacing(3);
+
+          @include media('tablet', 'sm-desktop', 'desktop') {
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-bottom: 0;
+          }
+
+          .card {
+            text-decoration: none;
+            max-width: 550px;
+
+            .image {
+              max-width: 100%;
+            }
+
+            .title {
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 32px;
+              color: $bs-cyan-4;
+              margin-top: spacing(3);
+            }
+
+            .bs-text {
+              color: $bs-black;
+              margin-top: spacing(2);
             }
           }
         }
