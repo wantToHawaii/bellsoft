@@ -154,8 +154,6 @@ body.page-libericajdk-vs-openjdk {
       justify-content: center;
       background-color: $bs-white;
       min-height: 230px;
-      padding: spacing(2);
-      padding-bottom: 0;
 
       @include media("sm-desktop", "desktop") {
         flex: 0 0 50%;
@@ -289,6 +287,7 @@ body.page-libericajdk-vs-openjdk {
       top: $header-mobile-height;
       left: 0;
       width: 100%;
+      z-index: $bs-z-index-middle;
       transition: background-color 300ms ease-in-out;
 
       &.blue {
@@ -583,6 +582,17 @@ body.page-libericajdk-vs-openjdk {
         align-items: center;
       }
 
+      .bs-card-review {
+        opacity: 0;
+        transform: translateY(200px);
+        transition: all 600ms 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+        &.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .benefits {
         .bs-text {
           &:first-child {
@@ -641,8 +651,13 @@ body.page-libericajdk-vs-openjdk {
       align-items: center;
 
       .bs-card-review {
-        .customer-photo {
-          padding: 0;
+        opacity: 0;
+        transform: translateY(200px);
+        transition: all 600ms 600ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+        &.animate {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
 
