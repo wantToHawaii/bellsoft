@@ -1,5 +1,5 @@
 body.page-libericajdk-vs-openjdk {
-  // TODO: V2 move to typography
+  // TODO: V2
   /*
    * COMMON
    */
@@ -268,6 +268,53 @@ body.page-libericajdk-vs-openjdk {
     }
   }
 
+  .bs-popup {
+    align-items: flex-start;
+    padding-top: spacing(6);
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      padding-top: spacing(2);
+    }
+
+    .button-close {
+      background: center/12px no-repeat url('../images/popup-cross-white.svg');
+      border-color: $bs-white;
+      position: absolute;
+      top: spacing(-5);
+      right: spacing(2);
+      height: spacing(4);
+      width: spacing(4);
+      transform: none;
+
+      @include media('sm-desktop', 'desktop') {
+        top: 0;
+        right: spacing(-7);
+      }
+    }
+
+    .bs-flex-container {
+      height: 100%;
+      position: relative;
+
+      .card {
+        padding: 0 0 spacing(3);
+
+        @include media('tablet', 'sm-desktop', 'desktop') {
+          padding: 0;
+        }
+
+        .image {
+          border-radius: spacing(2);
+          max-width: 100%;
+        }
+
+        .bs-text {
+          padding: 0 spacing(3) spacing(6);
+        }
+      }
+    }
+  }
+
   /*
    * HERO
    */
@@ -488,7 +535,7 @@ body.page-libericajdk-vs-openjdk {
         }
       }
 
-      .modal {
+      .popup {
         .bs-heading-h3 {
           margin-top: spacing(6);
         }
@@ -605,7 +652,7 @@ body.page-libericajdk-vs-openjdk {
         }
       }
 
-      .modal {
+      .popup {
         margin-top: spacing(6);
 
         .button-open-popup {

@@ -135,10 +135,10 @@
                 </div>
             </div>
 
-            <div class="modal">
+            <div class="popup">
                 <h3 class="bs-heading-h3">Leading OpenJDK Contributor</h3>
                 <p class="bs-text">BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.</p>
-                <button type="button" class="button-open-popup">
+                <button type="button" class="button-open-popup" data-action="show-popup" data-target=".popup-1">
                     <img src="../images/linericajdk-vs-openjdk/image-external-contributions.jpg" alt="External contributions to JDK" class="image">
                 </button>
                 <a href="#" class="bs-button outlined">Read more about contributions to Java 16</a>
@@ -259,8 +259,8 @@
                     <strong>Liberica JDK</strong> versions are supported longer than most OpenJDK implementations. BellSoft contributes to the mainline JDK branch. That’s why its engineers have a clear understanding of the roadmap. Liberica JDK will support JDK 8, the most prevalent distribution among Java developers, until 2031. While others, including AdoptOpenJDK, revoke support for versions 6 and 7, BellSoft still ensures their work, provided that your company has commercial support. Finally, the company already knows the support timelines for the next LTS releases, 17 and 21.
                 </p>
             </div>
-            <div class="modal">
-                <button type="button" class="button-open-popup">
+            <div class="popup">
+                <button type="button" class="button-open-popup" data-action="show-popup" data-target=".popup-2">
                     <img src="../images/linericajdk-vs-openjdk/image-support-timelines.jpg" alt="Support timelines" class="image" />
                 </button>
                 <a href="#" class="bs-button outlined">Learn about BellSoft High-Powered Support</a>
@@ -971,6 +971,36 @@
         Copyright © 2020 All Rights Reserved by BellSoft LTD.
     </div>
 </footer>
+
+<div class="bs-popup popup-1">
+    <div class="overlay" data-action="close"></div>
+
+    <div class="bs-flex-container small">
+        <button class="button-close" type="button" data-action="close"></button>
+
+        <div class="card">
+            <img src="../images/linericajdk-vs-openjdk/image-external-contributions.jpg" alt="External contributions to JDK" class="image">
+            <p class="bs-text">
+                BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="bs-popup popup-2">
+    <div class="overlay" data-action="close"></div>
+
+    <div class="bs-flex-container small">
+        <button class="button-close" type="button" data-action="close"></button>
+
+        <div class="card">
+            <img src="../images/linericajdk-vs-openjdk/image-support-timelines.jpg" alt="Support timelines" class="image" />
+            <p class="bs-text">
+                BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.
+            </p>
+        </div>
+    </div>
+</div>
 
 </body>
 

@@ -44,6 +44,40 @@ $bs-popup-card-service-background-color: #EFF0F2;
     }
   }
 
+  .button-close {
+    background: center / 12px no-repeat url("../images/popup-cross.svg");
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid $bs-cyan-4;
+    border-radius: 50%;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    transition: opacity $bs-transition-base;
+    z-index: $bs-z-index-popup + 1;
+
+    @include media('sm-desktop', 'desktop') {
+      transform: translateX(spacing(-8));
+    }
+
+    &:hover {
+      opacity: .65;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .image {
+      path {
+        stroke: $bs-cyan-4;
+      }
+    }
+  }
+
   .card {
     background-color: $bs-popup-card-background-color;
     box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.25);
@@ -57,39 +91,6 @@ $bs-popup-card-service-background-color: #EFF0F2;
 
     @include media('sm-desktop', 'desktop') {
       padding: spacing(4) spacing(10) spacing(8);
-    }
-
-    .button-close {
-      background: center / 12px no-repeat url("../images/popup-cross.svg");
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border: 2px solid $bs-cyan-4;
-      border-radius: 50%;
-      padding: 0;
-      height: 32px;
-      width: 32px;
-      transition: opacity $bs-transition-base;
-
-      @include media('sm-desktop', 'desktop') {
-        transform: translateX(spacing(-8));
-      }
-
-      &:hover {
-        opacity: .65;
-      }
-
-      &:focus {
-        outline: none;
-      }
-
-      .image {
-        path {
-          stroke: $bs-cyan-4;
-        }
-      }
     }
 
     .title {

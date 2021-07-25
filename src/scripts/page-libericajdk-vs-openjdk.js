@@ -31,8 +31,35 @@ window.addEventListener('load', () => {
     })
   };
 
+  const initPopups = () => {
+    const popupButtons = document.querySelectorAll('[data-action="show-popup"]');
+    popupButtons.forEach(item => {
+      item.addEventListener('click', () => {
+        const { target } = item.dataset;
+        const popup = document.querySelector(target);
+        const closePopupButtons = popup.querySelectorAll('[data-action="close"]');
+
+        if (!popup.classList.contains('active')) {
+          document.body.style.setProperty('overflow', 'hidden');
+          popup.classList.add('active');
+        }
+
+        for (btn of closePopupButtons) {
+          btn.addEventListener('click', () => {
+            if (popup.classList.contains('active')) {
+              document.body.style.removeProperty('overflow');
+              popup.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+  };
+
+
   changeAnchorsMenuBackgroundOnScroll(anchorsMenu, sectionHero)
   addClassToReviewCardsOnScroll(reviewCard1, reviewCard2);
+  initPopups();
 
   window.addEventListener('scroll', () => {
     changeAnchorsMenuBackgroundOnScroll(anchorsMenu, sectionHero)
