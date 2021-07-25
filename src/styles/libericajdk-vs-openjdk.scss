@@ -1,5 +1,5 @@
 body.page-libericajdk-vs-openjdk {
-  // FIXME: anchors menu, hero title width, make modal
+  // FIXME: anchors menu, hero title width, make modal, page refres on change width
   // TODO: V2 move to typography
   /*
    * COMMON
@@ -757,6 +757,27 @@ body.page-libericajdk-vs-openjdk {
           font-size: 20px;
           width: auto;
         }
+      }
+    }
+  }
+
+  .section-conclusion {
+    background-color: $bs-cyan-4;
+    padding: spacing(9) 0 spacing(6);
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      background: $bs-cyan-4 left bottom / 100% auto no-repeat url('../images/linericajdk-vs-openjdk/conclusion-bg.svg');
+      padding: spacing(12) 0 spacing(20);
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        color: $bs-white;
+      }
+
+      .bs-subtitle {
+        color: $bs-gray;
+        text-align: left;
       }
     }
   }
