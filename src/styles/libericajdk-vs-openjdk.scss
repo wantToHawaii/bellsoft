@@ -1,5 +1,4 @@
 body.page-libericajdk-vs-openjdk {
-  // FIXME: make modal
   // TODO: V2 move to typography
   /*
    * COMMON
@@ -887,6 +886,11 @@ body.page-libericajdk-vs-openjdk {
           .card {
             @include bs-card-container;
             max-width: 360px;
+            transition: box-shadow 150ms linear;
+
+            &:hover {
+              box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08), 0 0 15px 0 rgba(0, 0, 0, 0.02), 0 0 20px 4px rgba(0, 0, 0, 0.06);
+            }
 
             @include media('sm-desktop', 'desktop') {
               display: flex;
