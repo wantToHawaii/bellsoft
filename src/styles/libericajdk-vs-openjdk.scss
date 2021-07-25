@@ -828,4 +828,83 @@ body.page-libericajdk-vs-openjdk {
       }
     }
   }
+
+  .section-features {
+    background-color: $bs-gray-2;
+    padding: $section-gaps-mobile 0;
+    overflow-x: hidden;
+
+    @include media('tablet', 'sm-desktop', 'desktop') {
+      padding: $section-gaps 0;
+    }
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media('sm-desktop', 'desktop') {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .bs-flex-item {
+          display: flex;
+          justify-content: center;
+
+          @include media('sm-desktop', 'desktop') {
+            flex: 0 0 360px;
+            max-width: 360px;
+          }
+
+          &:first-child {
+            .card {
+              margin-top: 0;
+            }
+          }
+
+          .card {
+            @include bs-card-container;
+            max-width: 360px;
+
+            @include media('sm-desktop', 'desktop') {
+              display: flex;
+              flex-direction: column;
+              margin-top: 0;
+            }
+
+            @include media('tablet', 'sm-desktop', 'desktop') {
+              padding: spacing(4);
+            }
+
+            .image-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .image {
+                max-width: 100%;
+              }
+            }
+
+            .title {
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 32px;
+              margin-top: spacing(4);
+
+              @include media('sm-desktop', 'desktop') {
+                margin-top: auto;
+              }
+            }
+
+            .bs-button {
+              font-size: 16px;
+              padding: spacing(1) spacing(2);
+              margin-top: spacing(3);
+            }
+          }
+        }
+      }
+    }
+  }
 }
