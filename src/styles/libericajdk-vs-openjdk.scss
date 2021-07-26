@@ -327,9 +327,8 @@ body.page-libericajdk-vs-openjdk {
     background: $color-blue center top 51px / contain no-repeat url('../images/linericajdk-vs-openjdk/hero-bg-mobile.png');
 
     @include media('sm-desktop', 'desktop') {
-      background-image: url('../images/linericajdk-vs-openjdk/hero-bg.png');
-      background-size: auto;
-      background-position: center top;
+      background: center top / auto no-repeat url('../images/linericajdk-vs-openjdk/hero-bg-cubes.svg'),
+      $color-blue center top / auto no-repeat url('../images/linericajdk-vs-openjdk/hero-bg.png');
     }
 
     .page-anchors {
