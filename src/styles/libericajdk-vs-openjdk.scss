@@ -33,6 +33,11 @@ body.page-libericajdk-vs-openjdk {
     color: $bs-cyan-4;
   }
 
+  .link {
+    color: $bs-cyan-4;
+    text-decoration: none;
+  }
+
   .bs-heading-h1 {
     color: $bs-white;
     font-weight: 700;
@@ -397,7 +402,6 @@ body.page-libericajdk-vs-openjdk {
 
                     .link {
                       color: #dcdce2;
-                      text-decoration: none;
 
                       &:hover {
                         color: $bs-white;
@@ -902,11 +906,6 @@ body.page-libericajdk-vs-openjdk {
 
           @include media('tablet', 'sm-desktop', 'desktop') {
             flex: 0 0 50%;
-          }
-
-          .link {
-            color: $bs-cyan-4;
-            text-decoration: none;
           }
         }
       }
