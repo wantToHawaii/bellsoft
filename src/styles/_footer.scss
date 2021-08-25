@@ -1,6 +1,6 @@
 $bs-footer-heading-color: $bs-cyan-5;
 $bs-footer-bg-color: $bs-black;
-$bs-footer-link-color: #F5F5F7;
+$bs-footer-link-color: $bs-gray;
 $bs-footer-link-active-color: $bs-cyan-5;
 $bs-copyright-text-color: #7A7A7A;
 $bs-copyright-bg-color: #000;
@@ -83,24 +83,24 @@ $bs-footer-input-text-color: #fff;
 
           .email-subscription {
             margin-top: spacing(5);
-      
+
             .form {
               display: flex;
               align-items: stretch;
-      
+
               .bs-button {
                 padding: spacing(1) spacing(4);
                 font-size: 14px;
                 line-height: 21px;
                 margin-top: spacing(1);
               }
-        
+
               .bs-form-input {
                 background-color: $bs-footer-input-bg-color;
                 border-color: $bs-footer-input-bg-color;
                 margin-right: spacing(1);
                 color: $bs-footer-input-text-color;
-        
+
                 &:focus {
                   box-shadow: none;
                 }

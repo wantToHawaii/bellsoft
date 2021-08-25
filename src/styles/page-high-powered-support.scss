@@ -1,5 +1,5 @@
 $bs-section-hero-bg-color: #1D1D1F;
-$bs-section-hero-text-color: #F5F5F7;
+$bs-section-hero-text-color: $bs-gray;
 $bs-section-hero-secondary-color: $bs-cyan-2;
 
 $bs-section-benefits-bg-color: #EFF0F2;
@@ -96,68 +96,68 @@ body.page-high-powered-support {
               color: $bs-section-hero-text-color;
               font-size: 24px;
               line-height: 37px;
-      
+
               @include media('tablet', 'sm-desktop', 'desktop') {
                 font-size: 48px;
                 line-height: 73px;
               }
             }
-      
+
             .heading-h2 {
               font-weight: 600;
               font-size: 20px;
               line-height: 30px;
               color: $bs-section-hero-secondary-color;
               margin: spacing(2) 0 0 0;
-      
+
               @include media('tablet', 'sm-desktop', 'desktop') {
                 font-size: 24px;
                 line-height: 37px;
                 margin: 0;
               }
             }
-      
+
             .text {
               font-weight: 400;
               font-size: 16px;
               line-height: 24px;
               margin: spacing(1) 0 0 0;
-      
+
               br {
                 display: none;
-      
+
                 @include media('tablet', 'sm-desktop', 'desktop') {
                   display: initial;
                 }
               }
             }
-      
+
             .buttons-container {
               display: flex;
               flex-direction: column;
               margin-top: spacing(3);
-      
+
               @include media('tablet', 'sm-desktop', 'desktop') {
                 align-items: center;
                 flex-direction: row;
                 margin-top: spacing(6);
               }
-      
+
               @include media('sm-desktop', 'desktop') {
                 margin-top: spacing(12);
               }
-      
+
               .bs-button {
                 flex: 0 0 100%;
                 max-width: 100%;
-      
+
                 @include media('tablet', 'sm-desktop', 'desktop') {
                   flex: 0 0 auto;
                 }
-        
+
                 & + .bs-button {
                   margin-top: spacing(2);
-      
+
                   @include media('tablet', 'sm-desktop', 'desktop') {
                     margin-top: 0;
                     margin-left: spacing(3);
@@ -222,11 +222,11 @@ body.page-high-powered-support {
             @include media('sm-desktop', 'desktop') {
               padding: spacing(7) spacing(7) spacing(6);
             }
-    
+
             .bs-heading-h5 {
               color: $bs-section-benefits-heading-color;
             }
-    
+
             .text {
               color: $bs-section-benefits-text-color;
               font-size: 19px;
@@ -279,7 +279,7 @@ body.page-high-powered-support {
         margin-top: spacing(6);
       }
 
-      .text { 
+      .text {
         font-size: 17px;
         font-weight: 400;
         line-height: 25px;

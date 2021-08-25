@@ -16,6 +16,7 @@ import { fileDropZone, choicesSelect } from "./form-controls";
 import "./page-native-image";
 import "./page-career";
 import "./page-partners-ru";
+import "./page-libericajdk-vs-openjdk";
 
 Swiper.use([Pagination, Navigation, EffectFade, Scrollbar, Mousewheel]);
 

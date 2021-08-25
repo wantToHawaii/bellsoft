@@ -116,20 +116,22 @@ window.addEventListener("load", () => {
     });
   };
 
-  partnersCapabilitiesCarousel();
-  partnersCarousel();
-  partnerDescriptionCarousel();
-  // update carousels to correctly apply settings in breakpoints, swiper.methods don't update correctly
-  watchBreakpoint(
-    '(min-width: 768px)',
-    () => location.reload(),
-    () => location.reload(),
-  );
-  watchBreakpoint(
-    '(min-width: 1024px)',
-    () => location.reload(),
-    () => location.reload(),
-  );
+  if (document.querySelector('.page-partners-ru')) {
+    partnersCapabilitiesCarousel();
+    partnersCarousel();
+    partnerDescriptionCarousel();
+    // update carousels to correctly apply settings in breakpoints, swiper.methods don't update correctly
+    watchBreakpoint(
+      '(min-width: 768px)',
+      () => location.reload(),
+      () => location.reload(),
+    );
+    watchBreakpoint(
+      '(min-width: 1024px)',
+      () => location.reload(),
+      () => location.reload(),
+    );
 
-  callbackPopup();
+    callbackPopup();
+  }
 });

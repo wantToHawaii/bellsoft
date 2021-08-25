@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoptOpenJDK vs Liberica JDK Product Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-libericajdk-vs-openjdk">
+
+<header class="site-header" id="site-header">
+    <div class="bs-flex-container">
+        <nav class="nav">
+            <svg class="icon-menu-button" id="icon-menu-button" width="24" height="14" viewBox="0 0 24 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="2" />
+                <rect y="6" width="24" height="2" />
+                <rect y="12" width="24" height="2" />
+            </svg>
+
+            <ul class="menu" id="header-menu">
+                <li class="item">
+                    <a href="#" class="link">Products</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Downloads</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Services</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Blog</a>
+                </li>
+                <li class="item">
+                    <a href="high-powered-support.html" class="link">Support</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="logo-container">
+            <a href="/">
+                <img src="../images/bellsoft-logo.svg" class="image" alt="BellSoft">
+                <img src="../images/bellsoft-logo-no-text.svg" class="image-mobile" alt="BellSoft">
+            </a>
+        </div>
+
+        <div class="contact-container">
+            <svg class="icon-info-button" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M2 2H18V14H3.17L2 15.17V2ZM2 0C0.9 0 0.00999999 0.9 0.00999999 2L0 20L4 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0H2ZM4 10H12V12H4V10ZM4 7H16V9H4V7ZM4 4H16V6H4V4Z" />
+            </svg>
+            <button class="bs-button outlined small" type="button">Contact us</button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="section-hero" id="page-libericajdk-vs-openjdk-hero">
+        <div class="page-anchors" id="page-libericajdk-vs-openjdk-anchors">
+            <div class="bs-flex-container">
+                <div class="bs-flex-row">
+                    <div class="bs-flex-item">
+                        <div class="logo">
+                            AdoptOpenJDK vs Liberica JDK
+                        </div>
+                    </div>
+                    <div class="bs-flex-item">
+                        <nav class="nav">
+                            <ul class="menu">
+                                <li class="item"><a href="#protect-systems" class="link">Protect systems</a></li>
+                                <li class="item"><a href="#free-up-time" class="link">Free up time</a></li>
+                                <li class="item"><a href="#unify-runtimes" class="link">Unify runtimes</a></li>
+                                <li class="item"><a href="#modern-tech" class="link">Get modern tech</a></li>
+                                <li class="item"><a href="#support-business" class="link">Support business</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bs-flex-container small content">
+                <h1 class="bs-heading-h1">AdoptOpenJDK vs Liberica JDK Product Comparison</h1>
+                <p class="bs-subtitle">
+                    In 2019 alone, one in three developers migrated from Oracle JDK to OpenJDK distributions. Make an informative choice in finding the right Java toolset. Check out a progressive, reliable, and supported Java runtime or get the shortened version of this article.
+                </p>
+                <div class="buttons-container">
+                    <a class="bs-button contained" href="#">Download Comparison</a>
+                    <a class="bs-button outlined" href="#">Discover Liberica JDK</a>
+                </div>
+        </div>
+    </section>
+
+    <section class="section-overview">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Overview</h2>
+            <p class="bs-subtitle">There are multiple OpenJDK options, and it’s often hard to choose one that will suit your organization. To make it easier, this page gives an extensive comparison of Liberica JDK and AdoptOpenJDK (now rebranding as “Eclipse Adoptium”), two of the most popular distributions.</p>
+
+            <div class="bs-flex-row products-description">
+                <div class="bs-flex-item liberica-jdk">
+                    <h3 class="bs-heading-h3">Liberica JDK</h3>
+                    <p class="bs-text">
+                        Liberica JDK is a free cloud-oriented OpenJDK implementation for modern Java deployments. It aids in development on the broadest number of configurations, good for building microservice architecture and keeping software secure. It includes the HotSpot JVM, which guarantees Oracle certification. Liberica JDK is also known as a human-oriented Java runtime backed by professional engineers.
+                    </p>
+                    <p class="bs-text">
+                        This distribution is produced and supported by BellSoft, a company that has established itself in the OpenJDK community. As the sole developer and decision-maker, BellSoft is fully responsible for the product and all the updated versions. Its engineers are recognized for having 15+ years of experience with Java plus working previously with Sun Microsystems and Oracle. The key people in the company are members of the OpenJDK Vulnerability Group2 and Java Community Process Executive Committee.3
+                    </p>
+                </div>
+                <div class="bs-flex-item open-jdk">
+                    <h3 class="bs-heading-h3">AdoptOpenJDK</h3>
+                    <p class="bs-text">
+                        AdoptOpenJDK uses its own build infrastructure and scripts to make prebuilt binaries from the OpenJDK source code. They consist of class libraries and a Java virtual machine, either HotSpot or the Eclipse OpenJ9.
+                    </p>
+                    <p class="bs-text">
+                        The project is defined as community-led, where “community” means the AdoptOpenJDK community rather than purely OpenJDK. It is run by the Technical Steering Committee (TSC), contributed to by individuals and a handful of sponsors such as IBM, Red Hat, and Microsoft. Before starting to join the Eclipse Foundation in June 2019 under the name of Eclipse Adoptium,4 it was considered the go-to build for migration with more than 20 million downloads. However, as of May 2021, AdoptOpenJDK is still undergoing the transition to Adoptium.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-certificate">
+                <div class="bs-flex-row">
+                    <div class="bs-flex-item image-container">
+                        <img src="../images/linericajdk-vs-openjdk/image-certified.png" alt="Official Oracle Certification">
+                    </div>
+                    <div class="bs-flex-item">
+                        <h3 class="bs-heading-h3">Official Oracle Certification</h3>
+                        <p class="bs-text">Liberica JDK is verified for compliance with Java SE specifications by Oracle’s Technology Compatibility Kit (TCK). It ensures that the Java runtime conforms to the standard and that your company can migrate without problems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup">
+                <h3 class="bs-heading-h3">Leading OpenJDK Contributor</h3>
+                <p class="bs-text">BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.</p>
+                <button type="button" class="button-open-popup" data-action="show-popup" data-target=".popup-1">
+                    <img src="../images/linericajdk-vs-openjdk/image-external-contributions.jpg" alt="External contributions to JDK" class="image">
+                </button>
+                <a href="#" class="bs-button outlined">Read more about contributions to Java 16</a>
+            </div>
+
+            <div class="card-decision">
+                <h3 class="bs-heading-h3">Which OpenJDK build is ideal for businesses?</h3>
+                <p class="bs-text">Below you will find the rationale behind switching to BellSoft’s Liberica JDK. But if you would rather talk to experts and find out the reasons for migration from experienced Java engineers, get in touch! The team will do its best to consult you on further steps in your digital transformation, all for free.</p>
+                <a href="#" class="bs-button contained">Book a free consultation</a>
+            </div>
+
+            <p class="bs-text">Java™ is one of the most widely used programming languages. Trusted and stable, it is often the preferred choice for banking & fintech, retail, telecom, and social media back end. A viable OpenJDK distribution should reflect Java’s nature, guaranteeing the safety of your and your clients’ critical data. On the other hand, to be competitive, you need flexible software able to adapt to the market: support as many system configurations as possible, be lightning fast and lightweight, and deflate expenses rather than inflate them. Let’s see the most important JDK Criteria for Modern Enterprise.</p>
+        </div>
+    </section>
+
+    <section class="section-security" id="protect-systems">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Protect systems</h2>
+            <p class="bs-subtitle">Rest assured about Java security</p>
+            <p class="bs-text">
+                Investing in a trustworthy Java runtime is one of the very first things a company should do. A safe JDK lets you run the business without ever worrying about the stability of your software development environment.
+            </p>
+            <p class="bs-text">
+                <strong>AdoptOpenJDK</strong> is as secure as open source code can be. Its contributors are working together on hunting down, reviewing, and eliminating security issues. The latest OpenJDK versions are much safer than sticking with outdated releases. That being said, remember that AdoptOpenJDK is an open source project, not a product. It is an environment for software development rather than production. A community of individuals cannot ensure releases concurrent with Oracle Java, security updates or bug fixes. Although IBM support is eligible for OpenJDK binaries from the AdoptOpenJDK community, the company offers its own OpenJDK distribution. Until AdoptOpenJDK finishes rebranding to Adoptium, it’s hard to say how it will be supported. You want a reliable runtime to meet your customers’ standards. Not a project in a transition state.
+            </p>
+            <p class="bs-text">
+                <strong>Liberica JDK</strong>, in contrast, is a product for which BellSoft has full responsibility. As a leading OpenJDK contributor, this company cares for security, stability, and conformance. The company’s engineers personally fix bugs for the clients and then ensure the corrections will eventually be available to everyone, as they send patches to the mainline branch of the OpenJDK. As mentioned above, BellSoft is part of the Vulnerability Group alongside other major JDK distributors to ensure your critical applications are safe from common vulnerabilities and exposures.
+            </p>
+            <table class="bs-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center">AdoptOpenJDK</th>
+                    <th class="has-colored-overlay text-center">Liberica JDK</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Vulnerability tracking</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Own technical support</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Security response team</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Performance engineering team</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section-free-up-time" id="free-up-time">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Free up time</h2>
+            <p class="bs-subtitle">Never miss an update</p>
+            <p class="bs-text">
+                Getting timely releases means being on top of the latest features that aid in Java development. Security updates are equally, if not more, important, especially for your customers’ safety.
+            </p>
+            <p class="bs-text">
+                <strong>Liberica JDK</strong> releases concurrently with Oracle Java and never delays updates. BellSoft provides regular Critical Patch Updates (CPUs) in accordance with the quarterly schedule. Feature releases roll out twice a year. It means entirely new JDK versions every March and September plus fixes for known bugs and common vulnerabilities around the 17th day of January, April, July and October.
+            </p>
+        </div>
+        <div class="bs-flex-container">
+            <div class="bs-card-review one">
+                <div class="customer-photo">
+                    <img class="image" src="../images/linericajdk-vs-openjdk/image-reviewer-konstantin.png" alt="Konstantin Bulenkov Head of JetBrains Runtime" />
+                </div>
+                <div class="customer-info">
+                    <img class="quotes-image" src="../images/quotes-image.svg" alt="Quotes">
+                    <p class="review">
+                        We rely on the Liberica team’s experience and expertise to provide timely updates for our customers; together, we keep JetBrains Runtime secure and performant.                    </p>
+                    <div class="name">Konstantin Bulenkov</div>
+                    <div class="position">Head of JetBrains Runtime</div>
+                </div>
+            </div>
+        </div>
+        <div class="bs-flex-container small">
+            <div class="benefits">
+                <p class="bs-text">
+                    <strong>AdoptOpenJDK</strong> follows the same cadence. However, due to its community-led nature, the project sometimes cannot keep up with the strict deadlines. Delaying security patches even for a day or two might be harmful, especially for organizations. Until your company gets an update, all the networks and desktops are easy to hit and thus in grave danger.
+                </p>
+                <h3 class="bs-heading-h3">Benefit from extended support</h3>
+                <p class="bs-text">
+                    LTS releases are called “long-term” for a reason. Does your enterprise have tens, hundreds, or even thousands of instances? It’s reasonable to choose the vendor that guarantees its Java™
+                    support to last for extra 4–5 years.
+                </p>
+                <p class="bs-text">
+                    <strong>AdoptOpenJDK</strong> receives commercial support from a third party. This means no guarantees that your JDK version will get supported after the OpenJDK community stops providing updates (the case of Java 6 and 7, non-LTS releases). AdoptOpenJDK will only continue to build binaries for releases as long as the corresponding upstream repository is actively maintained, unless the situation changes in view of Eclipse Adoptium.
+                </p>
+                <p class="bs-text">
+                    <strong>Liberica JDK</strong> versions are supported longer than most OpenJDK implementations. BellSoft contributes to the mainline JDK branch. That’s why its engineers have a clear understanding of the roadmap. Liberica JDK will support JDK 8, the most prevalent distribution among Java developers, until 2031. While others, including AdoptOpenJDK, revoke support for versions 6 and 7, BellSoft still ensures their work, provided that your company has commercial support. Finally, the company already knows the support timelines for the next LTS releases, 17 and 21.
+                </p>
+            </div>
+            <div class="popup">
+                <button type="button" class="button-open-popup" data-action="show-popup" data-target=".popup-2">
+                    <img src="../images/linericajdk-vs-openjdk/image-support-timelines.jpg" alt="Support timelines" class="image" />
+                </button>
+                <a href="#" class="bs-button outlined">Learn about BellSoft High-Powered Support</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-unify-runtimes" id="unify-runtimes">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Unify runtimes</h2>
+            <p class="bs-subtitle">Forget about migration and compatibility issues</p>
+            <p class="bs-text">
+                You want to be 100% sure that your Java apps will launch and run properly. Besides, when you switch from Oracle Java, easy migration is something you’d expect from your OpenJDK pick.
+            </p>
+            <p class="bs-text">
+                <strong>AdoptOpenJDK</strong> is considered a de facto hub for the OpenJDK community to collaborate on. And yet, these binaries are not TCK-verified. Technology Compatibility Kit is a suite of tests for Java provided by Oracle. Without the verification, there is no guarantee for your application to be compliant with Java SE. The move to Adoptium was meant to change that, but this project has decided to produce separate Eclipse Temurin binaries with certain licensing restrictions (the Java SE TCKs will be used solely for implementations that include only HotSpot based JREs and no other JVM). It should be noted that Martijn Verburg, a Project Management Committee member for Eclipse Adoptium, was elected to the Java Community Process Executive Committee (JCP EC), but as a London Java Community representative. So, TCK verification is still pending for the full scope of AdoptOpenJDK binaries.
+            </p>
+            <p class="bs-text">
+                <strong>For Liberica JDK</strong> quality testing is among the highest priorities. Apart from undergoing internal QA/QC procedures before every release, Liberica binaries — from version 11 to the latest — are fully ratified in the Java Community Process with TCK for Java SE specifications. This indicates that this runtime is highly performant and will not damage your critical applications. Moreover, BellSoft CTO Aleksei Voitylov holds a ratified seat at the JCP EC, which proves the company’s commitment to the standard and future of Java.
+            </p>
+        </div>
+        <div class="bs-flex-container">
+            <div class="bs-card-review two">
+                <div class="customer-photo">
+                    <img class="image" src="../images/linericajdk-vs-openjdk/image-reviewer-yury.png" alt="Yury Vasyutinskiy Team Lead at FlowTraders" />
+                </div>
+                <div class="customer-info">
+                    <img class="quotes-image" src="../images/quotes-image.svg" alt="Quotes">
+                    <p class="review">
+                        Stability, speed and accuracy are all very important factors for us. Liberica, our main JDK distribution, was onboarded without any hiccups. We are happy with the level of support provided by the BellSoft team.
+                    </p>
+                    <div class="name">Yury Vasyutinskiy</div>
+                    <div class="position">Team Lead at FlowTraders</div>
+                </div>
+            </div>
+        </div>
+        <div class="bs-flex-container small">
+            <h3 class="bs-heading-h3">Develop on all platforms with a single JDK</h3>
+            <p class="bs-text">
+                One runtime for servers on Windows, another for new and shiny Apple silicon devices, and one for your cloud nodes... Irritating? That's why you should opt for the JDK with the highest number of supported configurations.
+            </p>
+            <p class="bs-text">
+                <strong>Liberica JDK</strong> has one of the widest support ranges, including all present-day architectures (x86 64/32 bit, ARM, PowerPC, SPARC) and the majority of known operating systems. While both OpenJDK distributions support numerous configurations, some unique options for Liberica JDK are the full-fledged support for <span class="colored">lightweight Alpine Linux musl</span>, which was recently merged into OpenJDK, and for <span class="colored">Windows AArch64</span> available in JDK 11 and 16. This makes Liberica JDK the Unified Java Runtime: one runtime for cloud, server and desktop use cases.
+            </p>
+            <table class="bs-table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="text-center" colspan="3">AdoptOpenJDK</th>
+                    <th class="has-colored-overlay text-center" colspan="3">Liberica JDK</th>
+                </tr>
+                <tr>
+                    <th class="thin"></th>
+                    <th class="thin text-center">JDK 8</th>
+                    <th class="thin text-center">JDK 11</th>
+                    <th class="thin text-center">JDK 16</th>
+                    <th class="thin has-colored-overlay text-center">JDK 8</th>
+                    <th class="thin has-colored-overlay text-center">JDK 11</th>
+                    <th class="thin has-colored-overlay text-center">JDK 16</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Windows Server x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows Desktop x86 (64/32 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows Desktop AArch64</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>macOS x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>macOS AArch64</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ubuntu Linux x86 (64/32 bit), AArch64, ARMv7, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debian Linux x86 (64/32 bit), AArch64, ARMv7, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>RHEL x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>CentOS x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>OEL x86 (64/32 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>SLES x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        No<br />AArch64
+                    </td>
+                    <td class="text-center">
+                        No<br />AArch64
+                    </td>
+                    <td class="text-center">
+                        No<br />AArch64
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>OpenSUSE x86 (64/32 bit), AArch64, PowerPC</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alpine Linux x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alpine Linux AArch64</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Raspbian ARMv7</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solaris 10 SPARC, x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Solaris 11 SPARC, x86 (64 bit)</td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-check-mark.svg" />
+                    </td>
+                    <td class="has-colored-overlay text-center">
+                        <img src="../images/linericajdk-vs-openjdk/icon-dash.svg" />
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="bs-text">
+                When AdoptOpenJDK moves on to become Adoptium, the matrix may change, but it’s unwise to wait until then. No matter which platform/OS combination your project requires, BellSoft guarantees Liberica JDK’s consistent operation, as well as provides appropriate installers and packages, verification, and commercial support. Contact expert Java engineers and discover the optimized solution.
+            </p>
+            <a href="#" class="bs-button outlined">Request licensing</a>
+        </div>
+    </section>
+
+    <section class="section-modern-tech" id="modern-tech">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Get modern tech</h2>
+            <p class="bs-subtitle">Reduce cloud expenses</p>
+            <p class="bs-text">
+                Every company’s objective is to maximize gains and minimize costs. In today’s world, where <span class="colored">cloud-native solutions</span> are inevitably taking over, this applies to cloud resources as well as any other.
+            </p>
+            <p class="bs-text">
+                <strong>Liberica JDK</strong> proves it’s long past the time when people believed that Java™ is unsuitable for cloud-native development. First, this distribution is the Runtime in <span class="colored">VMware</span> Cloud, one of the largest global cloud services, and is part of the VMware Tanzu containers. Second, you can easily up your business game with <span class="colored">Liberica JDK microcontainers</span> built upon lightweight Alpine Linux, cutting down on traffic, storage, and deployment time. And third, BellSoft has recently released Liberica NIK, which, combined with Spring Native, can optimize your applications for even more savings.
+            </p>
+            <div class="card-advantages">
+                <h3 class="title">Maximizing business value with containers: less is more</h3>
+                <ul class="bs-list">
+                    <li class="item">
+                        <img src="../images/linericajdk-vs-openjdk/icon-gear.svg" alt="ci/cd" class="icon">
+                        <p class="text">Save time and traffic expenditures: bug fixes and changes are delivered continuously and fast</p>
+                    </li>
+                    <li class="item">
+                        <img src="../images/linericajdk-vs-openjdk/icon-save.svg" alt="performance" class="icon">
+                        <p class="text">Save space and money on extra cloud storage and boost overall performance</p>
+                    </li>
+                    <li class="item">
+                        <img src="../images/linericajdk-vs-openjdk/icon-cube-in-cube.svg" alt="time" class="icon">
+                        <p class="text">Reduce programmer’s time for deployment to a minimum</p>
+                    </li>
+                </ul>
+            </div>
+            <p class="bs-text">
+                Since AdoptOpenJDK depends on the official OpenJDK project in terms of new features, it started supporting Alpine Linux with <span class="colored">JDK 16</span> (and only for the current release). Unless the new ones are released as part of the Adoptium project, your enterprise may now download these binaries to try out tiny containers. However, for production use with the LTS versions, it is recommended going to the engineers who ported the JDK on this OS in the first place, the ones from BellSoft.
+            </p>
+            <h3 class="bs-heading-h3">Take advantage of tooling and services</h3>
+            <p class="bs-text">
+                BellSoft is not only about Liberica JDK. The company offers something extra that makes Java development easier and faster:            </p>
+            <ul class="bs-list">
+                <li class="item">
+                    Special <a href="https://bell-sw.com/announcements/2020/01/15/Liberica-JDK-8u242-11.0.6-13.0.2/" class="link colored">Lite flavor</a> of Liberica JDK to allow high-density cloud deployments. Unlike unofficial and redacted Adoptium builds without certain necessary components like Swing, Liberica JDK Lite is a production ready Java runtime optimized for size;
+                </li>
+                <li class="item">
+                    <a href="https://bell-sw.com/announcements/2020/11/02/TeXnical-Writing-Part-1-Foundations/" class="link colored">JavaFX support</a> to preserve your graphically rich applications in the Full version of Liberica JDK. JFX is not present in AdoptOpenJDK/Adoptium distribution so far;
+                </li>
+                <li class="item">
+                    Migration services to lift the burden off your organization and make sure every single detail is accounted for;
+                </li>
+                <li class="item">
+                    Unsigned builds to help your Java applications pass the <a href="https://bell-sw.com/announcements/2020/06/10/How-to-Notarize-a-Mac-Application-with-Liberica-JDK/" class="link colored">Apple notarization procedure</a>;
+                </li>
+                <li class="item">
+                    Liberica Administration Center (LAC), the first-ever automated dashboard to check the state of runtimes and see if they are relevant
+                </li>
+                <li class="item">
+                    Free access to <a href="https://bell-sw.com/announcements/2020/06/24/Java-Flight-Recorder-a-gem-hidden-in-OpenJDK/" class="link colored">JDK Flight Recorder</a> and Mission Control to collect, monitor and better analyze events in a JVM;
+                </li>
+                <li class="item">
+                    Liberica Native Image Kit (<a href="https://bell-sw.com/pages/liberica-native-image-kit/" class="link colored">Liberica NIK</a>) to optimize and minimize your JVM-based applications.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-support" id="support-business">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Support business</h2>
+            <p class="bs-subtitle">Switching to Liberica JDK with High-Powered Support will provide you the following benefits:</p>
+            <ul class="bs-list">
+                <li class="item">
+                    Versatile support plans with per-instance pay customized to your company’s size, number of desktops and servers;
+                </li>
+                <li class="item">
+                    BellSoft has the engineering capacity to root-cause and fix bugs, plus provide out-of-cycle critical updates—all independently from OpenJDK;
+                </li>
+                <li class="item">
+                    24x7x365 support with response times as fast as one hour based on SLA;
+                </li>
+                <li class="item">
+                    Working with a leading OpenJDK contributor that grants access to the latest features, tools, and breaking news in the Java™ world.
+                </li>
+            </ul>
+            <p class="bs-text">
+                Eager to switch to Liberica JDK? We have prepared a resume of its advantages to AdoptOpenJDK / Adoptium. Click the button below, leave your company information, and get your comparative white paper today!
+            </p>
+            <a href="#" class="bs-button contained">Order Liberica JDK vs AdoptOpenJDK white paper</a>
+        </div>
+    </section>
+
+    <section class="section-conclusion">
+        <div class="bs-flex-container small">
+            <h2 class="bs-heading-h2">Conclusion</h2>
+            <p class="bs-subtitle">
+                Finding a reliable runtime may seem like a challenge. And yet, you can always count on truly open source products backed by professionals. Liberica JDK checks all the boxes for enterprise Java™. You get not only a quality environment for your applications but also support via affordable and flexible subscription service. Let BellSoft tackle security threats and other problems, while you are busy developing the most high-end software.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-links">
+        <div class="bs-flex-container small">
+            <h2 class="title">Useful links</h2>
+            <ul class="bs-list">
+                <li class="item">
+                    <a href="#" class="link">JVM Ecosystem Report 2020</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">OpenJDK Vulnerability Group</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">2020 Executive Committee (EC) Elections</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">AdoptOpenJDK to join the Eclipse Foundation — more about Adoptium </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-features">
+        <div class="bs-flex-container">
+            <div class="bs-flex-row">
+                <div class="bs-flex-item">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="../images/linericajdk-vs-openjdk/image-card-optimize-and-minimize.svg" alt="Optimize and minimize your JVM-based applications" class="image">
+                        </div>
+                        <h4 class="title">Optimize and minimize your JVM-based applications</h4>
+                        <a href="#" class="bs-button outlined">Discover Liberica NIK</a>
+                    </div>
+                </div>
+                <div class="bs-flex-item">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="../images/linericajdk-vs-openjdk/card-automate.svg" alt="Automate your work with Liberica Administration Center " class="image">
+                        </div>
+                        <h4 class="title">Automate your work with Liberica Administration Center </h4>
+                        <a href="#" class="bs-button outlined">Book a LAC demo</a>
+                    </div>
+                </div>
+                <div class="bs-flex-item">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="../images/linericajdk-vs-openjdk/card-java-runtime.svg" alt="Get your free and supported Progressive Java Runtime" class="image">
+                        </div>
+                        <h4 class="title">Get your free and supported Progressive Java Runtime</h4>
+                        <a href="#" class="bs-button outlined">Download Liberica JDK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-articles">
+        <div class="bs-flex-container">
+            <h3 class="bs-heading-h3">Find more articles on OpenJDK</h3>
+            <div class="bs-flex-row">
+                <div class="bs-flex-item">
+                    <a href="#" class="card">
+                        <img src="../images/linericajdk-vs-openjdk/image-article-1.png" alt="Efficient code vs string concatenation" class="image">
+                        <h4 class="title">Efficient code vs string concatenation</h4>
+                        <p class="bs-text">BellSoft is starting a series called Solve This Java™ Snippet! The premise is straightforward: our expert engineers will give a short piece of code and then explain what is wrong with it.</p>
+                    </a>
+                </div>
+                <div class="bs-flex-item">
+                    <a href="#" class="card">
+                        <img src="../images/linericajdk-vs-openjdk/image-article-2.png" alt="Take Deployment by the Horns!" class="image">
+                        <h4 class="title">Take Deployment by the Horns!</h4>
+                        <p class="bs-text">
+                            BellSoft is starting a series called Solve This Java™ Snippet! The premise is straightforward: our expert engineers will give a short piece of code and then explain what is wrong with it.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer">
+    <div class="bs-flex-container">
+        <div class="bs-flex-row">
+            <div class="menu-container bs-flex-item">
+                <h5 class="bs-heading-h5">About us</h5>
+                <button type="button" class="button-toggle-menu">About us</button>
+                <ul class="menu expandable">
+                    <li class="item">
+                        <a href="#" class="link">Our team</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">News</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Contact us</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-container bs-flex-item">
+                <h5 class="bs-heading-h5">Products</h5>
+                <button type="button" class="button-toggle-menu">Products</button>
+                <ul class="menu">
+                    <li class="item">
+                        <a href="#" class="link">Liberica JDC for Embedded</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Liberica JDC</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Liberica Mission Control</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">JVM Tools</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">IANAUpdater</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-container bs-flex-item">
+                <h5 class="bs-heading-h5">Services</h5>
+                <button type="button" class="button-toggle-menu">Services</button>
+                <ul class="menu">
+                    <li class="item">
+                        <a href="#" class="link">Java embedded development</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Java runtime development & support</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Application performance optimization</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Migrating application to Java 9</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">Big Data / Fast Data</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">UI / Full stack development</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-container socials bs-flex-item">
+                <h5 class="bs-heading-h5">Follow us</h5>
+                <ul class="menu">
+                    <li class="item">
+                        <a href="#" class="link">
+                            <img class="image" src="../images/social-icons/tweeter.svg" alt="Tweeter" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">
+                            <img class="image" src="../images/social-icons/youtube.svg" alt="YouTube" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">
+                            <img class="image" src="../images/social-icons/telegram.svg" alt="Telegram" />
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link">
+                            <img class="image" src="../images/social-icons/github.svg" alt="GitHub" />
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="email-subscription">
+                    <h5 class="bs-heading-h5">Newsletter</h5>
+                    <form class="form">
+                        <input class="bs-form-input" type="email" placeholder="E-mail" />
+                        <button type="button" class="bs-button contained">Join</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        Copyright © 2020 All Rights Reserved by BellSoft LTD.
+    </div>
+</footer>
+
+<div class="bs-popup popup-1">
+    <div class="overlay" data-action="close"></div>
+
+    <div class="bs-flex-container small">
+        <button class="button-close" type="button" data-action="close"></button>
+
+        <div class="card">
+            <img src="../images/linericajdk-vs-openjdk/image-external-contributions.jpg" alt="External contributions to JDK" class="image">
+            <p class="bs-text">
+                BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="bs-popup popup-2">
+    <div class="overlay" data-action="close"></div>
+
+    <div class="bs-flex-container small">
+        <button class="button-close" type="button" data-action="close"></button>
+
+        <div class="card">
+            <img src="../images/linericajdk-vs-openjdk/image-support-timelines.jpg" alt="Support timelines" class="image" />
+            <p class="bs-text">
+                BellSoft is consistently fixing issues in the OpenJDK mainline branch. Apart from patches, the company contributed one Java Enhancement Proposal (JEP) to the current JDK, adding a whole new feature to the Java™ language.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

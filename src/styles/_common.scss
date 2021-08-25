@@ -9,6 +9,10 @@ $bs-cyan-6: #007885;
 $bs-cyan-7: #006c78;
 $bs-cyan-8: #079faf;
 
+$bs-gray: #F5F5F7;
+$bs-gray-2: #EFF0F2;
+$bs-gray-3: #F9F9F9;
+
 $bs-black: #202020;
 $bs-white: #fff;
 
@@ -20,6 +24,10 @@ $bs-z-index-below: -1;
 $bs-z-index-popup: $bs-z-index-top + 10;
 
 $bs-transition-base: 150ms ease-in-out;
+
+$header-height: 80px;
+$header-tablet-height: 72px;
+$header-mobile-height: 60px;
 
 // Media queries
 

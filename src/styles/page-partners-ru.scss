@@ -1,9 +1,23 @@
-body.page-career-ru {
+body.page-partners-ru {
+  // TODO: V2 move to typography
   /*
    * COMMON
    */
+  .bs-heading-h1 {
+    color: $bs-white;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      font-size: 64px;
+      line-height: 72px;
+    }
+  }
+
   .bs-heading-h2 {
     text-align: center;
+    font-weight: 700;
     font-size: 40px;
     line-height: 48px;
 
@@ -108,17 +122,6 @@ body.page-career-ru {
               margin-top: spacing(8);
             }
 
-            .bs-heading-h1 {
-              color: $bs-section-hero-text-color;
-              font-size: 40px;
-              line-height: 48px;
-
-              @include media("tablet", "sm-desktop", "desktop") {
-                font-size: 64px;
-                line-height: 72px;
-              }
-            }
-
             .text {
               font-size: 24px;
               font-weight: 600;
@@ -133,7 +136,7 @@ body.page-career-ru {
             .text-secondary {
               font-size: 16px;
               line-height: 24px;
-              color: #F5F5F7;
+              color: $bs-gray;
               margin: spacing(2) 0;
               @include media("tablet", "sm-desktop", "desktop") {
                 margin: spacing(3) 0;
