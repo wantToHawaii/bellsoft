@@ -456,6 +456,7 @@ body.page-alpaca-linux {
     $section-bg: #eee;
     background-color: $section-bg;
     padding: spacing(4) 0;
+    overflow: hidden;
 
     @include media("sm-desktop", "desktop") {
       padding: spacing(10) 0 spacing(4);
@@ -631,6 +632,7 @@ body.page-alpaca-linux {
     $section-bg: #eee;
     background-color: $section-bg;
     padding-top: spacing(4);
+    overflow: hidden;
 
     .bs-flex-container {
       .experience-container {
