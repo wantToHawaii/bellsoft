@@ -1,18 +1,5 @@
 import Swiper from "swiper";
-
-const watchBreakpoint = (breakpoint, onMatch, onUnmatch) => {
-  const mediaQuery = window.matchMedia(breakpoint);
-  let checked = mediaQuery.matches;
-  window.addEventListener('resize', () => {
-    if (!checked && mediaQuery.matches) {
-      checked = true;
-      onMatch();
-    } else if (checked && !mediaQuery.matches) {
-      checked = false;
-      onUnmatch();
-    }
-  });
-};
+import { watchResizeBreakpoint } from './utils';
 
 window.addEventListener("load", () => {
   const partnersCapabilitiesCarousel = () => {
@@ -121,12 +108,12 @@ window.addEventListener("load", () => {
     partnersCarousel();
     partnerDescriptionCarousel();
     // update carousels to correctly apply settings in breakpoints, swiper.methods don't update correctly
-    watchBreakpoint(
+    watchResizeBreakpoint(
       '(min-width: 768px)',
       () => location.reload(),
       () => location.reload(),
     );
-    watchBreakpoint(
+    watchResizeBreakpoint(
       '(min-width: 1024px)',
       () => location.reload(),
       () => location.reload(),

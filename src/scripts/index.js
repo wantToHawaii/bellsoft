@@ -17,6 +17,7 @@ import "./page-native-image";
 import "./page-career";
 import "./page-partners-ru";
 import "./page-libericajdk-vs-openjdk";
+import "./page-almaca-linux";
 
 Swiper.use([Pagination, Navigation, EffectFade, Scrollbar, Mousewheel]);
 

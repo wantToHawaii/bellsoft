@@ -21,8 +21,8 @@ window.addEventListener("load", () => {
     );
 
     const switchTabButtonClasses = (button, isActive = false) => {
-      button.classList.remove(isActive ? "outlined" : "contained");
-      button.classList.add(isActive ? "contained" : "outlined");
+      button?.classList.remove(isActive ? "outlined" : "contained");
+      button?.classList.add(isActive ? "contained" : "outlined");
     };
 
     const addTabsButtonsListeners = () => {
