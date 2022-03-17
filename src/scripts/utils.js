@@ -11,3 +11,12 @@ export const watchResizeBreakpoint = (breakpoint, onMatch, onUnmatch) => {
     }
   });
 };
+
+export const copyToClipboard = (value) => {
+  const field = document.createElement("textarea");
+  field.value = value;
+  document.body.appendChild(field);
+  field.select();
+  document.execCommand('copy');
+  document.body.removeChild(field);
+};

@@ -52,8 +52,8 @@ window.addEventListener("load", () => {
     initGetStartedCarousel();
     watchResizeBreakpoint(
       '(min-width: 1024px)',
-      () => location.update(),
-      () => location.update(),
+      () => location.reload(),
+      () => location.reload(),
     );
 
     watchResizeBreakpoint(

@@ -1,0 +1,1671 @@
+body.page-alpaca-linux-download {
+  $gradient: linear-gradient(96.51deg, #00ffa6 -10.52%, #008cff 50.85%, #0026ff 112.81%);
+
+  @mixin text-gradient {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient {
+    @include text-gradient();
+  }
+
+  .list {
+    margin: spacing(1) 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    .item {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: spacing(1);
+      .link {
+        color: #0195f9;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .list-type-squares {
+    .item {
+      padding-left: 18px;
+      position: relative;
+      &::before {
+        background: no-repeat center url("../images/page-alpaca-linux-download/icon-square.svg");
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;
+        height: 10px;
+        width: 10px;
+      }
+    }
+  }
+
+  .list-type-decimal {
+    list-style-type: decimal;
+    padding-left: spacing(3);
+  }
+
+  h2.bs-heading-h2 {
+    font-size: 32px;
+    line-height: 49px;
+    font-weight: 300;
+
+    @include media("tablet", "sm-desktop", "desktop") {
+      font-size: 46px;
+      line-height: 70px;
+    }
+  }
+
+  $pagination-height: 18px;
+  .swiper-pagination {
+    bottom: 0;
+
+    .swiper-pagination-bullet {
+      background-color: $bs-white;
+      opacity: 1;
+      border-radius: spacing(2);
+      height: 6px;
+      width: 8px;
+      transition: width 200ms ease-in-out;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $gradient;
+      width: 24px;
+    }
+  }
+
+  .link-circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    height: 150px;
+    width: 150px;
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      height: calc(100% - 2px);
+      width: calc(100% - 2px);
+      z-index: 1;
+    }
+
+    .text {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: inherit;
+      z-index: 2;
+
+      &.text-secondary {
+        font-size: 15px;
+      }
+    }
+
+    &.link-circle-white {
+      background-color: $bs-white;
+      color: $bs-white;
+      &::after {
+        background-color: $bs-black;
+      }
+      &:hover {
+        background: $gradient;
+        &:after {
+          opacity: 0;
+        }
+      }
+    }
+
+    &.link-circle-gradient {
+      background: $gradient;
+      &::after {
+        background-color: #eee;
+      }
+      &:hover {
+        background: $gradient;
+        &:after {
+          opacity: 0;
+        }
+        .text {
+          @include text-gradient();
+          -webkit-text-fill-color: $bs-white;
+        }
+      }
+      .text {
+        @include text-gradient();
+      }
+    }
+  }
+
+  .copy-tooltip {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    display: none;
+    position: fixed;
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    padding: spacing(1);
+    z-index: 10;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -8px;
+      margin: auto 0;
+      width: 0px;
+      height: 0px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid #fff;
+    }
+  }
+
+  /*
+  * Hero
+  */
+  .section-hero {
+    background-color: $bs-black;
+    color: $bs-gray;
+    padding-top: spacing(3);
+    padding-bottom: spacing(4);
+    overflow-x: hidden;
+
+    @include media("sm-desktop", "desktop") {
+      padding-bottom: spacing(8);
+    }
+
+    .bs-flex-container {
+      max-width: 960px;
+
+      .bs-flex-row {
+        flex-direction: column;
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          justify-content: space-between;
+          flex-direction: row-reverse;
+        }
+
+        .bs-flex-item {
+          &.image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 200px;
+            margin: 0 auto;
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              min-width: 260px;
+              margin: auto 0;
+              justify-content: flex-start;
+            }
+
+            @include media("sm-desktop", "desktop") {
+              min-width: 290px;
+            }
+
+            .image {
+              flex: 0 0 50%;
+              max-width: 50%;
+              padding: spacing(2);
+
+              @include media("desktop") {
+                padding: spacing(3);
+              }
+
+              &:nth-child(1) {
+                padding-left: 0;
+                padding-top: 0;
+              }
+              &:nth-child(2) {
+                padding-top: 0;
+                padding-right: 0;
+              }
+              &:nth-child(3) {
+                padding-left: 0;
+                padding-bottom: 0;
+              }
+              &:nth-child(4) {
+                padding-bottom: 0;
+                padding-right: 0;
+              }
+            }
+          }
+
+          &.content {
+            margin-top: spacing(4);
+
+            @include media("tablet", "sm-desktop", "desktop") {
+              align-items: center;
+            }
+
+            @include media("sm-desktop", "desktop") {
+              max-width: 530px;
+              margin-top: spacing(8);
+            }
+
+            .bs-heading-h1 {
+              color: $bs-section-hero-text-color;
+              font-size: 52px;
+              font-weight: 300;
+              line-height: 60px;
+
+              @include media("tablet") {
+                font-size: 64px;
+                line-height: 72px;
+              }
+
+              @include media("sm-desktop", "desktop") {
+                font-size: 92px;
+                line-height: 100px;
+              }
+            }
+
+            .subtitle {
+              font-size: 16px;
+              line-height: 24px;
+
+              @include media("sm-desktop", "desktop") {
+                font-size: 20px;
+                line-height: 32px;
+                margin-bottom: spacing(5);
+              }
+            }
+
+            .buttons-container {
+              display: flex;
+              align-items: center;
+
+              .link-text {
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 30px;
+                color: $bs-white;
+                text-decoration: none;
+                position: relative;
+
+                &:hover {
+                  @include text-gradient();
+
+                  &:after {
+                    background: $gradient;
+                  }
+
+                  .icon {
+                    display: none;
+                    &.icon-gradient {
+                      display: inline;
+                    }
+                  }
+                }
+
+                &:after {
+                  content: "";
+                  background-color: $bs-white;
+                  height: 1px;
+                  position: absolute;
+                  bottom: -2px;
+                  left: 0;
+                  width: 100%;
+                }
+
+                .icon {
+                  margin-left: 4px;
+                  &.icon-gradient {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Builds
+   */
+  .section-builds {
+    padding-top: spacing(4);
+
+    @include media("sm-desktop", "desktop") {
+      padding-top: spacing(10);
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        @include media("sm-desktop", "desktop") {
+          text-align: center;
+        }
+      }
+
+      .subtitle {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+
+        @include media("sm-desktop", "desktop") {
+          font-size: 20px;
+          line-height: 32px;
+          text-align: center;
+        }
+      }
+
+      > .links-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: spacing(1) 0 0 0;
+        list-style-type: none;
+
+        @include media("sm-desktop", "desktop") {
+          justify-content: center;
+          margin-top: spacing(2);
+        }
+
+        .item {
+          margin-right: spacing(3);
+
+          @include media("sm-desktop", "desktop") {
+            margin-right: spacing(7);
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+          .link {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 32px;
+            color: #0195f9;
+            text-decoration: underline;
+
+            @include media("sm-desktop", "desktop") {
+              font-size: 20px;
+            }
+
+            &:hover {
+              .text {
+                @include text-gradient();
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .builds-info {
+      margin-top: spacing(2);
+
+      @include media("sm-desktop", "desktop") {
+        margin-top: spacing(5);
+      }
+
+      .bs-flex-container {
+        .tabs-buttons {
+          display: flex;
+
+          @include media("sm-desktop", "desktop") {
+            justify-content: center;
+          }
+
+          .tab-button {
+            background-color: transparent;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 32px;
+            color: #000;
+            border: 0;
+            padding: 0 0 2px 0;
+            position: relative;
+
+            @include media("sm-desktop", "desktop") {
+              font-size: 30px;
+              padding-bottom: spacing(3);
+            }
+
+            &::after {
+              background: $gradient;
+              content: "";
+              bottom: 0;
+              left: 0;
+              opacity: 0;
+              position: absolute;
+              height: 2px;
+              width: 100%;
+            }
+
+            & + .tab-button {
+              margin-left: spacing(4);
+
+              @include media("sm-desktop", "desktop") {
+                margin-left: spacing(9);
+              }
+            }
+
+            &.active {
+              &::after {
+                opacity: 1;
+              }
+              .text {
+                @include text-gradient();
+              }
+            }
+          }
+        }
+      }
+
+      .tabs-content {
+        $content-bg: #eee;
+
+        background: $content-bg;
+        box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+        padding: spacing(3) 0;
+        width: 100%;
+
+        @include media("sm-desktop", "desktop") {
+          padding: spacing(6) 0 spacing(5);
+        }
+
+        .bs-flex-container {
+          .tab-content {
+            display: none;
+
+            &.active {
+              display: block;
+            }
+
+            .content-head {
+              @include media("sm-desktop", "desktop") {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              }
+
+              .title {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+
+                @include media("sm-desktop", "desktop") {
+                  font-size: 30px;
+                  line-height: 46px;
+                }
+              }
+
+              > .links-list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                margin-top: spacing(2);
+
+                @include media("sm-desktop", "desktop") {
+                  display: flex;
+                  margin-top: 0;
+                }
+
+                .item {
+                  background: $gradient;
+                  padding: 1px;
+                  border-radius: 2px;
+
+                  @include media("sm-desktop", "desktop") {
+                    min-width: 180px;
+                  }
+
+                  & + .item {
+                    margin-top: spacing(1);
+
+                    @include media("sm-desktop", "desktop") {
+                      margin-top: 0;
+                      margin-left: spacing(1);
+                    }
+                  }
+
+                  .link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $content-bg;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #000;
+                    text-decoration: none;
+                    padding: 0 spacing(1);
+                    height: 32px;
+
+                    &:hover {
+                      background-color: transparent;
+                      color: #fff;
+                    }
+                  }
+                }
+              }
+            }
+
+            .cards {
+              margin-top: spacing(3);
+
+              .card-primary {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                background: #323232;
+                border-radius: 7px;
+                margin-top: spacing(1);
+                padding-top: spacing(2);
+
+                @include media("sm-desktop", "desktop") {
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  align-items: center;
+                  padding-top: 0;
+                }
+
+                .logo-container {
+                  background-color: #fff;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto;
+                  height: 80px;
+                  width: 80px;
+
+                  @include media("sm-desktop", "desktop") {
+                    margin-left: spacing(4);
+                    margin-right: spacing(3);
+                  }
+                }
+
+                .name {
+                  font-weight: 300;
+                  font-size: 30px;
+                  line-height: 46px;
+                  color: #fff;
+                  flex: 0 0 100%;
+                  margin-top: spacing(1);
+                  text-align: center;
+
+                  @include media("sm-desktop", "desktop") {
+                    flex: 0 0 auto;
+                    margin-top: 0;
+                  }
+                }
+
+                .platforms {
+                  display: flex;
+                  align-items: center;
+                  border-right: 1px solid #4b4b4b;
+                  margin-top: spacing(3);
+                  padding: 0 spacing(4) 0 spacing(3);
+
+                  @include media("sm-desktop", "desktop") {
+                    border-left: 1px solid #4b4b4b;
+                    margin-top: 0;
+                    margin-left: auto;
+                    padding: 2px spacing(3);
+                  }
+
+                  .input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    margin-right: spacing(1);
+                    position: relative;
+
+                    &::before {
+                      content: "";
+                      border-radius: 50%;
+                      background: $gradient;
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      left: 0;
+                      right: 0;
+                      margin: auto;
+                      height: 20px;
+                      width: 20px;
+                      opacity: 0;
+                    }
+
+                    &:checked {
+                      &::before {
+                        opacity: 1;
+                      }
+                    }
+                  }
+
+                  .label {
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-right: spacing(4);
+
+                    &:last-child {
+                      margin-right: 0;
+                    }
+                  }
+                }
+
+                .tooltip {
+                  position: relative;
+                  margin: spacing(3) spacing(3) 0 spacing(4);
+
+                  @include media("sm-desktop", "desktop") {
+                    margin-top: 0;
+                    margin-right: spacing(4);
+                  }
+
+                  .label {
+                    background-color: #4b4b4b;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 37px;
+                    color: #fff;
+                    height: 30px;
+                    width: 30px;
+
+                    @include media("sm-desktop", "desktop") {
+                      &:hover {
+                        & + .input ~ .text {
+                          display: block;
+                        }
+                      }
+                    }
+                  }
+
+                  .input {
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    left: -9999px;
+
+                    &:checked {
+                      & ~ .text {
+                        display: block;
+
+                        @include media("sm-desktop", "desktop") {
+                          display: none;
+                        }
+                      }
+                    }
+                  }
+
+                  .text {
+                    background-color: #fff;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+                    border-radius: 7px;
+                    display: none;
+                    position: absolute;
+                    right: calc(100% + #{spacing(2)});
+                    top: 50%;
+                    color: #000;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 21px;
+                    padding: spacing(1);
+                    width: 180px;
+                    transform: translateY(-50%);
+                    z-index: 10;
+
+                    @include media("sm-desktop", "desktop") {
+                      top: auto;
+                      left: 50%;
+                      bottom: calc(100% + #{spacing(2)});
+                      transform: translate(-50%, 0);
+                    }
+
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      bottom: 0;
+                      right: -8px;
+                      margin: auto 0;
+                      width: 0px;
+                      height: 0px;
+                      border-top: 10px solid transparent;
+                      border-bottom: 10px solid transparent;
+                      border-left: 10px solid #fff;
+
+                      @include media("sm-desktop", "desktop") {
+                        top: auto;
+                        right: 0;
+                        left: 0;
+                        bottom: -8px;
+                        margin: 0 auto;
+                        border-bottom: 0;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-top: 10px solid #fff;
+                      }
+                    }
+                  }
+                }
+
+                .downloads {
+                  background-color: #4b4b4b;
+                  border-radius: 0 0 7px 7px;
+                  margin-top: spacing(4);
+                  flex: 0 0 100%;
+                  display: none;
+
+                  &.active {
+                    display: block;
+                  }
+
+                  @include media("sm-desktop", "desktop") {
+                    border-radius: 0 7px 7px 0;
+                    flex: 0 0 50%;
+                    margin-top: 0;
+                  }
+
+                  .downloads-list {
+                    padding: 0 spacing(3);
+                    margin: 0;
+                    list-style-type: none;
+
+                    @include media("sm-desktop", "desktop") {
+                      padding: spacing(1) spacing(4);
+                    }
+
+                    .item {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      border-bottom: 1px solid #888888;
+                      padding: spacing(3) 0;
+
+                      @include media("sm-desktop", "desktop") {
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 0;
+
+                        &:last-child {
+                          border-bottom: 0;
+                        }
+                      }
+
+                      .link-download {
+                        background: no-repeat left top 4px url("../images/page-alpaca-linux-download/icon-download.svg");
+                        color: #ffffff;
+                        text-decoration: none;
+                        padding-left: spacing(3);
+
+                        &:hover {
+                          background-image: url("../images/page-alpaca-linux-download/icon-download-gradient.svg");
+                          .text {
+                            @include text-gradient();
+                            &::after {
+                              background: $gradient;
+                            }
+                          }
+                        }
+
+                        .text {
+                          font-weight: 300;
+                          font-size: 18px;
+                          line-height: 27px;
+                          position: relative;
+
+                          @include media("sm-desktop", "desktop") {
+                            font-size: 20px;
+                            line-height: 30px;
+                          }
+
+                          &::after {
+                            background-color: #fff;
+                            content: "";
+                            position: absolute;
+                            bottom: 1px;
+                            left: 0;
+                            height: 1px;
+                            width: 100%;
+                          }
+                        }
+
+                        .size {
+                          font-weight: 300;
+                          font-size: 14px;
+                          line-height: 21px;
+                          color: #aaa;
+                          text-decoration: none;
+                          margin-left: 4px;
+
+                          @include media("sm-desktop", "desktop") {
+                            font-size: 16px;
+                            line-height: 24px;
+                          }
+                        }
+                      }
+
+                      .button-copy {
+                        background: no-repeat right top 4px url("../images/page-alpaca-linux-download/icon-copy.svg");
+                        border: 0;
+                        padding: 0;
+                        cursor: pointer;
+                        padding-right: spacing(3);
+                        margin-top: spacing(1);
+
+                        @include media("sm-desktop", "desktop") {
+                          margin-top: 0;
+                        }
+
+                        &:hover {
+                          background-image: url("../images/page-alpaca-linux-download/icon-copy-gradient.svg");
+                          .text {
+                            @include text-gradient();
+                            &::after {
+                              background: $gradient;
+                            }
+                          }
+                        }
+
+                        .text {
+                          color: #fff;
+                          font-weight: 300;
+                          font-size: 16px;
+                          line-height: 24px;
+                          position: relative;
+
+                          &::after {
+                            background-color: #fff;
+                            content: "";
+                            position: absolute;
+                            bottom: 1px;
+                            left: 0;
+                            height: 1px;
+                            width: 100%;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .card-secondary {
+                background-color: #ffffff;
+                border-radius: 4px;
+                margin-top: spacing(3);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: spacing(3);
+
+                @include media("sm-desktop", "desktop") {
+                  flex-direction: row;
+                  padding: spacing(3) spacing(4);
+                }
+
+                .logo-container {
+                  background-color: #eee;
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 80px;
+                  width: 80px;
+
+                  @include media("sm-desktop", "desktop") {
+                    margin-right: spacing(4);
+                  }
+                }
+
+                .name {
+                  font-weight: 300;
+                  font-size: 30px;
+                  line-height: 46px;
+                  margin-top: spacing(1);
+
+                  @include media("sm-desktop", "desktop") {
+                    margin-top: 0;
+                  }
+                }
+
+                .links-list {
+                  display: flex;
+                  align-items: center;
+                  padding: 0;
+                  margin: 0;
+                  margin-top: spacing(2);
+                  list-style-type: none;
+
+                  @include media("sm-desktop", "desktop") {
+                    margin-top: 0;
+                    margin-left: auto;
+                  }
+
+                  .item {
+                    padding: 0 spacing(2);
+
+                    @include media("sm-desktop", "desktop") {
+                      padding: 0 spacing(6);
+
+                      &:first-child {
+                        padding-left: spacing(2);
+                      }
+
+                      &:last-child {
+                        padding-right: 0;
+                      }
+                    }
+
+                    & + .item {
+                      border-left: 1px solid #ccc;
+                    }
+
+                    .link {
+                      font-weight: 300;
+                      font-size: 16px;
+                      line-height: 32px;
+                      text-decoration: none;
+                      color: #0195f9;
+                      position: relative;
+
+                      @include media("sm-desktop", "desktop") {
+                        font-size: 20px;
+                      }
+
+                      &:hover {
+                        @include text-gradient();
+                        &::after {
+                          background: $gradient;
+                        }
+                      }
+
+                      &::after {
+                        background-color: #0195f9;
+                        content: "";
+                        position: absolute;
+                        bottom: 1px;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Description
+   */
+  .section-description {
+    padding: spacing(4) 0;
+
+    @include media("sm-desktop", "desktop") {
+      padding: spacing(8) 0 spacing(5);
+    }
+
+    .bs-flex-container {
+      .bs-flex-row {
+        flex-direction: column;
+        margin-top: spacing(3);
+
+        @include media("sm-desktop", "desktop") {
+          flex-direction: row;
+        }
+
+        .bs-flex-item {
+          flex: 0 0 100%;
+          max-width: 100%;
+
+          @include media("sm-desktop", "desktop") {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          & + .bs-flex-item {
+            margin-top: spacing(1);
+
+            @include media("sm-desktop", "desktop") {
+              margin-top: 0;
+            }
+          }
+
+          .card {
+            background: #f5f5f5;
+            border-radius: 7px;
+            padding: spacing(3);
+
+            @include media("sm-desktop", "desktop") {
+              padding: spacing(4);
+              height: 100%;
+            }
+
+            .text {
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 24px;
+              margin: 0;
+
+              @include media("sm-desktop", "desktop") {
+                font-size: 20px;
+                line-height: 32px;
+              }
+            }
+
+            .list {
+              margin-left: spacing(2);
+            }
+          }
+        }
+      }
+
+      .advantages {
+        margin-top: spacing(4);
+
+        @include media("sm-desktop", "desktop") {
+          margin-top: spacing(5);
+        }
+
+        .title {
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 37px;
+
+          @include media("sm-desktop", "desktop") {
+            font-size: 30px;
+            line-height: 46px;
+          }
+        }
+
+        .list {
+          margin-top: spacing(1);
+
+          @include media("sm-desktop", "desktop") {
+            column-count: 2;
+          }
+
+          .item {
+            margin-top: spacing(2);
+
+            @include media("sm-desktop", "desktop") {
+              break-inside: avoid;
+              padding: 0 spacing(4);
+              max-width: 540px;
+            }
+
+            .name {
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 32px;
+            }
+
+            .description {
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 24px;
+              margin: spacing(1) 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Features
+   */
+  .section-features {
+    background-color: #eee;
+    padding: spacing(3) 0 spacing(4);
+    overflow: hidden;
+
+    @include media("sm-desktop", "desktop") {
+      padding: spacing(5) 0 spacing(4);
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 37px;
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          font-size: 30px;
+          line-height: 46px;
+        }
+      }
+
+      .features-container {
+        position: relative;
+        padding-bottom: calc(#{$pagination-height} + #{spacing(2)});
+
+        .swiper-wrapper {
+          align-items: initial;
+          margin-top: spacing(3);
+
+          @include media("sm-desktop", "desktop") {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto !important;
+            justify-content: space-between;
+            margin-top: spacing(1);
+          }
+
+          .card {
+            background-color: #fff;
+            border-radius: 7px;
+            padding: spacing(3);
+
+            @include media("sm-desktop", "desktop") {
+              display: flex;
+              flex: 0 0 calc(50% - #{spacing(1)});
+              margin-top: spacing(2);
+            }
+
+            &.swiper-slide {
+              visibility: hidden;
+
+              @include media("sm-desktop", "desktop") {
+                visibility: visible;
+              }
+
+              @include media("sm-desktop", "desktop") {
+                // clear slides styles
+                opacity: 1 !important;
+                transform: translate3d(0, 0, 0) !important;
+                width: 100% !important;
+              }
+
+              &.swiper-slide-active {
+                visibility: visible;
+              }
+            }
+
+            .image-container {
+              @include media("sm-desktop", "desktop") {
+                margin-right: spacing(3);
+              }
+            }
+
+            .content {
+              .title {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: spacing(1);
+              }
+
+              .list {
+                list-style-type: none;
+
+                @include media("sm-desktop", "desktop") {
+                  margin-left: spacing(2);
+                }
+              }
+            }
+          }
+        }
+
+        .swiper-pagination {
+          .swiper-pagination-bullet {
+            background-color: #b4b4b4;
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Required-download
+   */
+  .section-required-downloads {
+    padding: spacing(4) 0;
+    position: relative;
+
+    @include media("sm-desktop", "desktop") {
+      padding: spacing(8) 0;
+    }
+
+    &::after {
+      background-color: #eeeeee;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1100px;
+      width: 100%;
+      z-index: -1;
+
+      @include media("tablet", "sm-desktop", "desktop") {
+        height: 475px;
+      }
+    }
+
+    // common
+    .subtitle {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 32px;
+      margin-top: spacing(2);
+      @include media("sm-desktop", "desktop") {
+        font-size: 20px;
+        margin-top: spacing(3);
+      }
+    }
+    .list-type-squares {
+      .item {
+        margin-left: spacing(2);
+      }
+    }
+    // end common
+
+    .bs-flex-container {
+      .bs-flex-row {
+        margin-top: spacing(4);
+        flex-direction: column;
+
+        @include media("sm-desktop", "desktop") {
+          flex-direction: row;
+          margin-top: spacing(7);
+        }
+
+        .bs-flex-item {
+          @include media("sm-desktop", "desktop") {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+
+          & + .bs-flex-item {
+            margin-top: spacing(1);
+
+            @include media("sm-desktop", "desktop") {
+              margin-top: 0;
+            }
+          }
+
+          .content {
+            background-color: #f5f5f5;
+            border-radius: 7px;
+            padding: spacing(2);
+
+            @include media("sm-desktop", "desktop") {
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+              padding: spacing(4);
+            }
+
+            .title {
+              font-weight: 300;
+              font-size: 32px;
+              line-height: 40px;
+            }
+
+            .subtitle {
+              line-height: 27px;
+            }
+
+            .list {
+              display: flex;
+              flex-wrap: wrap;
+
+              &.installation-steps {
+                display: block;
+                margin-top: spacing(2);
+
+                .item {
+                  @include media("sm-desktop", "desktop") {
+                    font-size: 20px;
+                    line-height: 32px;
+                  }
+                }
+              }
+            }
+
+            .text {
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 24px;
+              margin: spacing(2) 0 0 0;
+
+              @include media("sm-desktop", "desktop") {
+                font-size: 20px;
+                margin-top: auto;
+              }
+
+              .link {
+                color: #0195f9;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .documentation {
+        background-color: #fff;
+        border-radius: 4px;
+        padding: spacing(2);
+        margin-top: spacing(3);
+
+        @include media("sm-desktop", "desktop") {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: spacing(3);
+          margin-top: spacing(5);
+        }
+
+        .title {
+          font-weight: 300;
+          font-size: 32px;
+          line-height: 49px;
+
+          @include media("sm-desktop", "desktop") {
+            font-size: 46px;
+            line-height: 70px;
+          }
+        }
+
+        .list {
+          @include media("sm-desktop", "desktop") {
+            display: flex;
+            margin-top: 0;
+          }
+
+          .item {
+            margin-left: 0;
+            @include media("sm-desktop", "desktop") {
+              & + .item {
+                margin-left: spacing(2);
+              }
+            }
+            @include media("desktop") {
+              font-size: 20px;
+              line-height: 32px;
+              &::before {
+                top: 12px;
+              }
+            }
+          }
+
+          .link {
+            color: #0195f9;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Questions
+   */
+  .section-questions {
+    padding: spacing(4) 0;
+
+    @include media("sm-desktop", "desktop") {
+      padding: spacing(10) 0;
+    }
+
+    .bs-flex-container {
+      .list {
+        list-style-type: none;
+        padding: 0;
+        margin: spacing(4) 0 0 0;
+
+        @include media("sm-desktop", "desktop") {
+          margin-top: spacing(5);
+        }
+
+        .item {
+          border-bottom: 1px solid #c4c4c4;
+          padding: spacing(2) 0;
+          padding-right: spacing(1);
+
+          &:first-child {
+            border-top: 1px solid #c4c4c4;
+          }
+
+          &.active {
+            .button {
+              &::after {
+                transform: rotate(45deg);
+              }
+            }
+            .content {
+              opacity: 1;
+            }
+          }
+
+          .button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #000;
+            padding: 0;
+            text-align: left;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 27px;
+            position: relative;
+            padding-right: spacing(5);
+            width: 100%;
+
+            @include media("sm-desktop", "desktop") {
+              font-size: 20px;
+              line-height: 30px;
+            }
+
+            &::after {
+              background: no-repeat center url("../images/page-alpaca-linux-download/icon-cross.svg");
+              content: "";
+              position: absolute;
+              top: 2px;
+              right: 0;
+              height: 22px;
+              width: 22px;
+              transition: 300ms ease;
+            }
+          }
+
+          .content {
+            max-height: 0;
+            overflow: hidden;
+            will-change: max-height;
+            transition: all 0.25s ease-out;
+            opacity: 0;
+
+            .text {
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 24px;
+              padding-right: spacing(5);
+              margin: spacing(1) 0 0 0;
+
+              @include media("sm-desktop", "desktop") {
+                line-height: 32px;
+              }
+
+              .link {
+                color: #0195f9;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*
+   * Get-started
+   */
+  .section-get-started {
+    background-color: #1d1d1d;
+    color: $bs-white;
+    padding: spacing(4) 0;
+    overflow: hidden;
+
+    @include media("sm-desktop", "desktop") {
+      padding: spacing(10) 0;
+    }
+
+    .bs-flex-container {
+      .bs-heading-h2 {
+        color: inherit;
+
+        @include media("tablet", "sm-desktop", "desktop") {
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .get-started-container {
+        margin-top: spacing(5);
+        position: relative;
+        padding-bottom: calc(#{$pagination-height} + #{spacing(2)});
+
+        .swiper-wrapper {
+          width: 100%;
+          height: 100%;
+
+          .card {
+            border-radius: 8px;
+            max-width: 324px;
+
+            &.swiper-slide {
+            }
+
+            .card-header {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              background-color: #323232;
+              padding: spacing(3);
+              min-height: 206px;
+
+              .icon {
+                height: 70px;
+              }
+
+              .title {
+                font-weight: 300;
+                font-size: 30px;
+                line-height: 46px;
+                margin-top: spacing(3);
+              }
+            }
+
+            .card-body {
+              background-color: #4b4b4b;
+              padding: spacing(3);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              min-height: 324px;
+
+              > .text {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 32px;
+                text-align: center;
+                margin: 0;
+              }
+
+              .link-circle {
+                margin-top: auto;
+                &.link-circle-white {
+                  &::after {
+                    background-color: #4b4b4b;
+                  }
+                }
+              }
+
+              .link-rectangle {
+                border-radius: 4px;
+                background: $bs-white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 22px;
+                color: $bs-white;
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin-top: auto;
+                height: 56px;
+                width: 100%;
+
+                &::after {
+                  background-color: #4b4b4b;
+                  border-radius: 4px;
+                  content: "";
+                  position: absolute;
+                  top: 1px;
+                  left: 1px;
+                  height: calc(100% - 2px);
+                  width: calc(100% - 2px);
+                  z-index: 1;
+                }
+
+                &:hover {
+                  background: $gradient;
+                  &::after {
+                    background-color: transparent;
+                  }
+                }
+
+                .text {
+                  color: inherit;
+                  z-index: 2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

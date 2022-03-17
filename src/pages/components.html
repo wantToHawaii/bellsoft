@@ -167,7 +167,7 @@
       window.addEventListener('load', () => {
         const body = document.querySelector('body');
         const popup = document.querySelector('#popup');
-        const closePopupButtons = popup.querySelectorAll('[data-action="close"]');
+        const closePopupButtons = popup?.querySelectorAll('[data-action="close"]');
         const showPopupButton = document.querySelector('#show-popup');
 
         showPopupButton.addEventListener('click', () => {

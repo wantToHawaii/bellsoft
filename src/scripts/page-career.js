@@ -143,31 +143,35 @@ window.addEventListener("load", () => {
   const initCallbackPopup = () => {
     const body = document.querySelector("body");
     const popup = document.querySelector("#callback-popup");
-    const closePopupButtons = popup.querySelectorAll(
+    const closePopupButtons = popup?.querySelectorAll(
       '[data-action="close-callback-popup"]'
     );
     const showPopupButton = document.querySelectorAll(
       '[data-action="show-callback-popup"]'
     );
 
-    for (let btn of showPopupButton) {
-      btn.addEventListener("click", (e) => {
-        console.log("e.preventDefault", e.preventDefault);
-        e.preventDefault();
-        if (!popup.classList.contains("active")) {
-          body.style.setProperty("overflow", "hidden");
-          popup.classList.add("active");
-        }
-      });
+    if (showPopupButton) {
+      for (let btn of showPopupButton) {
+        btn.addEventListener("click", (e) => {
+          console.log("e.preventDefault", e.preventDefault);
+          e.preventDefault();
+          if (!popup.classList.contains("active")) {
+            body.style.setProperty("overflow", "hidden");
+            popup.classList.add("active");
+          }
+        });
+      }
     }
 
-    for (let btn of closePopupButtons) {
-      btn.addEventListener("click", () => {
-        if (popup.classList.contains("active")) {
-          body.style.removeProperty("overflow");
-          popup.classList.remove("active");
-        }
-      });
+    if (closePopupButtons) {
+      for (let btn of closePopupButtons) {
+        btn.addEventListener("click", () => {
+          if (popup.classList.contains("active")) {
+            body.style.removeProperty("overflow");
+            popup.classList.remove("active");
+          }
+        });
+      }
     }
   };
 
