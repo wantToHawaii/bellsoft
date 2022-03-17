@@ -1,4 +1,5 @@
 import Swiper from "swiper";
+import './common';
 
 window.addEventListener("load", () => {
   const initPageCareerTabsSection = () => {

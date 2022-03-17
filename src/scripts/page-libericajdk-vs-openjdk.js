@@ -1,3 +1,5 @@
+import './common';
+
 window.addEventListener('load', () => {
   if (!document.querySelector('.page-libericajdk-vs-openjdk')) return;
 

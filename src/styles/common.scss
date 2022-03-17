@@ -1,4 +1,4 @@
-@import "common";
+@import "variables-and-mixins";
 @import "normalize";
 @import "typography";
 @import "buttons";
@@ -8,17 +8,6 @@
 @import "popup";
 @import "header";
 @import "footer";
-
-@import "page-liberica-jdk";
-@import "page-liberica-native-image";
-@import "page-high-powered-support";
-@import "page-road-map";
-@import "page-pricing";
-@import "page-career";
-@import "page-partners-ru";
-@import "page-alpaca-linux";
-@import "page-alpaca-linux-download";
-@import "libericajdk-vs-openjdk";
 
 body {
   background-color: #fff;

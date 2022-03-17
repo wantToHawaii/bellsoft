@@ -1,5 +1,8 @@
+@import "common";
+
 body.page-alpaca-linux-download {
   $gradient: linear-gradient(96.51deg, #00ffa6 -10.52%, #008cff 50.85%, #0026ff 112.81%);
+  $bs-section-hero-text-color: $bs-gray;
 
   @mixin text-gradient {
     background: $gradient;
