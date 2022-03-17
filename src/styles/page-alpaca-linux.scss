@@ -1,5 +1,8 @@
+@import "common";
+
 body.page-alpaca-linux {
   $gradient: linear-gradient(96.51deg, #00ffa6 -10.52%, #008cff 50.85%, #0026ff 112.81%);
+  $bs-section-hero-text-color: $bs-gray;
 
   @mixin text-gradient {
     background: $gradient;
@@ -1072,7 +1075,7 @@ body.page-alpaca-linux {
         width: 100%;
 
         & + .block {
-          margin-top: spacing(1/2);
+          margin-top: 4px;
         }
 
         &.block-1 {
@@ -1133,7 +1136,7 @@ body.page-alpaca-linux {
           position: relative;
 
           & + .item {
-            margin-top: spacing(1/2);
+            margin-top: 4px;
           }
 
           &.filled {

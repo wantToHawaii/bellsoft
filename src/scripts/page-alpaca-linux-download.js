@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import './common';
 import { watchResizeBreakpoint, copyToClipboard } from './utils';
 
 const initCarousel = () => {

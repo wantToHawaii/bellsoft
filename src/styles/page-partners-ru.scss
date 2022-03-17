@@ -1,3 +1,5 @@
+@import "common";
+
 body.page-partners-ru {
   // TODO: V2 move to typography
   /*
@@ -761,8 +763,8 @@ body.page-partners-ru {
           }
 
           .bs-flex-row {
-            margin-left: spacing(-1/2);
-            margin-right: spacing(-1/2);
+            margin-left: -4px;
+            margin-right: -4px;
 
             @include media("tablet", "sm-desktop", "desktop") {
               margin-left: -12px;
@@ -772,8 +774,8 @@ body.page-partners-ru {
             .bs-flex-item {
               flex: 0 0 50%;
               max-width: 50%;
-              padding-left: spacing(1/2);
-              padding-right: spacing(1/2);
+              padding-left: 4px;
+              padding-right: 4px;
 
               @include media("tablet", "sm-desktop", "desktop") {
                 padding-left: 12px;
