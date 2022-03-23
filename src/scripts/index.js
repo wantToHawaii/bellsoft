@@ -19,6 +19,7 @@ import "./page-partners-ru";
 import "./page-libericajdk-vs-openjdk";
 import "./page-almaca-linux";
 import "./page-alpaca-linux-download";
+import "./page-template-blocks";
 
 Swiper.use([Pagination, Navigation, EffectFade, Scrollbar, Mousewheel]);
 

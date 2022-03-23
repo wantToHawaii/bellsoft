@@ -277,3 +277,58 @@ $bs-popup-card-service-background-color: #EFF0F2;
     }
   }
 }
+
+.bs-popup.bs-image-popup {
+  align-items: flex-start;
+  padding-top: spacing(6);
+
+  @include media('desktop') {
+    padding-top: spacing(2);
+  }
+
+  .button-close {
+    background: center/12px no-repeat url('../images/popup-cross-white.svg');
+    border-color: $bs-white;
+    position: absolute;
+    top: spacing(-5);
+    right: spacing(2);
+    height: spacing(4);
+    width: spacing(4);
+    transform: none;
+
+    @include media('desktop') {
+      top: 0;
+      right: spacing(-7);
+    }
+  }
+
+
+  .bs-flex-container {
+    height: 100%;
+    position: relative;
+    max-width: $bs-sm-desktop;
+
+    .card {
+      padding: spacing(1) spacing(1) spacing(2);
+      height: auto;
+
+      .figure {
+        margin: 0;
+        padding: 0 0 spacing(1);
+    
+        .image {
+          border-radius: spacing(2);
+          width: 100%;
+        }
+    
+        .caption {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 24px;
+          margin: spacing(1) 0 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
